@@ -28,12 +28,12 @@ const CATEGORIES: ConditionCategory[] = [
   {
     label: "Knee Conditions",
     items: [
-      { label: "Knee osteoarthritis", href: "/knee-decompression-therapy/" },
-      { label: "Meniscus tears", href: "/knee-decompression-therapy/" },
-      { label: "Patellofemoral pain", href: "/knee-decompression-therapy/" },
+      { label: "Knee osteoarthritis", href: "/knee-pain-treatment/" },
+      { label: "Meniscus tears", href: "/knee-pain-treatment/" },
+      { label: "Patellofemoral pain", href: "/knee-pain-treatment/" },
       {
         label: "Chronic knee joint compression pain",
-        href: "/knee-decompression-therapy/",
+        href: "/knee-pain-treatment/",
       },
       { label: "General knee pain", href: "/knee-pain-treatment/" },
     ],
@@ -51,39 +51,6 @@ const CATEGORIES: ConditionCategory[] = [
         label: "Numbness & tingling in hands and feet",
         href: "/neuropathy-treatment/",
       },
-    ],
-  },
-  {
-    label: "Joint & Extremity Conditions",
-    items: [
-      { label: "Shoulder pain", href: "/regenerative-medicine/" },
-      { label: "Hip pain", href: "/regenerative-medicine/" },
-      { label: "Tennis elbow", href: "/shockwave-therapy/" },
-      { label: "Golfer's elbow", href: "/shockwave-therapy/" },
-      { label: "Plantar fasciitis", href: "/shockwave-therapy/" },
-      { label: "Joint stiffness", href: "/prp-trigger-point-injections/" },
-    ],
-  },
-  {
-    label: "Muscle & Soft Tissue Conditions",
-    items: [
-      { label: "Muscle strains", href: "/laser-therapy/" },
-      { label: "Tendinopathy", href: "/shockwave-therapy/" },
-      { label: "Chronic inflammation", href: "/laser-therapy/" },
-      { label: "Poor circulation & swelling", href: "/compression-therapy/" },
-      {
-        label: "Post-surgical / post-injury recovery",
-        href: "/treatment-programs/",
-      },
-    ],
-  },
-  {
-    label: "Headaches",
-    items: [
-      { label: "Migraines", href: "/headache-treatment/" },
-      { label: "Tension headaches", href: "/headache-treatment/" },
-      { label: "Cervicogenic headaches", href: "/headache-treatment/" },
-      { label: "Cluster headaches", href: "/headache-treatment/" },
     ],
   },
 ];

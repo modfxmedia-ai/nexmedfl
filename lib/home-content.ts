@@ -6,7 +6,7 @@ export const HERO = {
   eyebrow: "Happy Patients",
   heading: "Wellness Starts Here!",
   subheading:
-    "From advanced neuropathy care and innovative wound healing solutions, we combine medical expertise with technology to restore health, confidence, and quality of life.",
+    "From advanced neuropathy care to spinal decompression, knee pain relief, and chiropractic care, we combine medical expertise with technology to restore health, confidence, and quality of life.",
   ctaLabel: "Book An Appointment",
   ctaHref: "/contact-us/",
   backgroundImage:
@@ -63,29 +63,19 @@ export const WELCOME_PROGRAMS: WelcomeProgram[] = [
       "Tailored therapies that target nerve-related conditions to reduce pain, improve function, and help you regain independence.",
   },
   {
-    name: "Advanced Wound Care",
+    name: "Spinal Decompression Therapy",
     description:
-      "Cutting-edge treatments, including skin substitute grafts, to promote healing for chronic wounds that haven't closed with traditional care.",
+      "Non-surgical, computer-controlled traction that relieves pressure on spinal discs and nerves to ease chronic back and neck pain.",
   },
   {
-    name: "Regenerative Medicine",
+    name: "Knee Pain Treatment",
     description:
-      "PRP therapy, peptide therapy, and other advanced options to repair tissue, decrease inflammation, and restore mobility.",
+      "Targeted therapies that relieve knee pain, improve mobility, and help you return to an active, pain-free lifestyle.",
   },
   {
-    name: "Hormone Replacement Therapy",
+    name: "Chiropractic Care",
     description:
-      "Customized programs for men and women to restore balance, improve energy, support weight management, and enhance overall vitality.",
-  },
-  {
-    name: "Medical Weight Loss & Laser Lipolysis",
-    description:
-      "A powerful combination of compounded Semaglutide and Laser Lipolysis, delivering effective solutions for sustainable weight management.",
-  },
-  {
-    name: "IV Therapy",
-    description:
-      "Hydration and nutrient-rich infusions designed to boost energy, strengthen immunity, support recovery, and promote overall wellness.",
+      "Hands-on spinal adjustments and posture correction to relieve back and neck pain and restore long-term mobility.",
   },
 ];
 
@@ -154,36 +144,19 @@ export interface ServiceGridItem {
   href: string;
 }
 
-// The live homepage's 9-card services carousel. NOTE: on the live site,
-// the "Regenerative Medicine" and "Hormone Replacement Therapy" cards both
-// mistakenly link to /neuropathy-treatment/ (an authoring bug). Per
-// project convention, real/correct hrefs are used here instead
-// (/regenerative-medicine/ and /hormone-replacement-therapy/) rather than
-// reproducing the broken links.
+// The homepage services list — scoped to NexMed's four core services.
 export const SERVICES_GRID: ServiceGridItem[] = [
   {
-    name: "Medical Weight Loss",
+    name: "Neuropathy Treatment",
     description:
-      "Our medical weight loss program offers safe, personalized plans designed to help you achieve lasting results. With expert guidance, proven strategies, and ongoing support, we help you reach your health and fitness goals effectively.",
-    href: "/medical-weight-loss/",
+      "Neuropathy can cause pain, numbness, tingling, or weakness—making everyday life difficult. At NexMed, we provide safe and effective neuropathy treatments designed to relieve symptoms, restore nerve function, and improve your quality of life.",
+    href: "/neuropathy-treatment/",
   },
   {
-    name: "Peptide Therapy",
+    name: "Spinal Decompression Therapy",
     description:
-      "Peptide therapy uses natural amino acid chains to support healing, improve energy, balance hormones, and enhance overall wellness. Our personalized treatments help restore vitality and promote long-term health benefits safely and effectively.",
-    href: "/peptide-therapy/",
-  },
-  {
-    name: "PRP & Trigger Point Injections",
-    description:
-      "Our PRP and trigger point injections promote natural healing, reduce pain, and restore function. By targeting the source of discomfort, we help relieve muscle tension, improve mobility, and support long-term recovery.",
-    href: "/prp-trigger-point-injections/",
-  },
-  {
-    name: "Erectile Dysfunction Treatment",
-    description:
-      "Our erectile dysfunction treatments focus on restoring confidence, improving performance, and enhancing intimacy. With personalized care, we address the root causes and support long-term sexual wellness.",
-    href: "/erectile-dysfunction-treatment/",
+      "Non-surgical spinal decompression gently stretches the spine to relieve pressure on discs and nerves, easing chronic back and neck pain and offering a conservative alternative to surgery.",
+    href: "/spinal-decompression-therapy/",
   },
   {
     name: "Knee Pain Treatment",
@@ -192,28 +165,10 @@ export const SERVICES_GRID: ServiceGridItem[] = [
     href: "/knee-pain-treatment/",
   },
   {
-    name: "Wound Care",
+    name: "Chiropractic Care",
     description:
-      "Proper wound care speeds healing, prevents infection, and reduces complications. We provide personalized treatment for acute, chronic, and post-surgical wounds with advanced techniques and compassionate care for safe, comfortable recovery.",
-    href: "/wound-care/",
-  },
-  {
-    name: "Regenerative Medicine",
-    description:
-      "Our regenerative medicine treatments harness the body's natural healing abilities to repair damaged tissues, reduce inflammation, and restore function. Using advanced, non-surgical techniques, we support long-term recovery, improve mobility, and enhance overall quality of life.",
-    href: "/regenerative-medicine/",
-  },
-  {
-    name: "Neuropathy Treatment",
-    description:
-      "Neuropathy can cause pain, numbness, tingling, or weakness—making everyday life difficult. At NexMed, we provide safe and effective neuropathy treatments designed to relieve symptoms, restore nerve function, and improve your quality of life.",
-    href: "/neuropathy-treatment/",
-  },
-  {
-    name: "Hormone Replacement Therapy",
-    description:
-      "Hormone replacement therapy helps restore balance, boost energy, and improve overall wellness. By addressing hormonal imbalances, we support better sleep, mental clarity, sexual health, and vitality. With customized treatment plans, we help you feel your best at every stage of life.",
-    href: "/hormone-replacement-therapy/",
+      "Hands-on spinal adjustments and posture correction relieve back and neck pain, restore proper alignment, and support long-term mobility with a non-surgical, drug-free approach.",
+    href: "/chiropractic-care/",
   },
 ];
 

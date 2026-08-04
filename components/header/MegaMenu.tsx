@@ -15,18 +15,13 @@ const CATEGORY_ICON_PATHS: Record<string, string> = {
   // Services categories
   "Spine & Chiropractic Care":
     "M12 3v2M12 8v2M12 13v2M12 18v2M9 5h6M9 10h6M9 15h6M9 20h6",
-  "Knee & Joint Care":
+  "Knee & Nerve Care":
     "M12 3a4 4 0 0 1 4 4v3l3 3-3 3v3a4 4 0 0 1-8 0v-3l-3-3 3-3V7a4 4 0 0 1 4-4Z",
-  "Nerve & Neuropathy Care": "M4 12h3l2-7 4 14 2-7h5",
-  "Recovery & Advanced Therapies":
-    "M3 8.5 8.5 3l3 3-1.6 1.6 4.5 4.5L16 10.5l3 3-5.5 5.5-3-3 1.6-1.6-4.5-4.5L6 11.5l-3-3Z",
   // Conditions categories
   Spine: "M12 3v2M12 8v2M12 13v2M12 18v2M9 5h6M9 10h6M9 15h6M9 20h6",
   "Knee & Joint":
     "M12 3a4 4 0 0 1 4 4v3l3 3-3 3v3a4 4 0 0 1-8 0v-3l-3-3 3-3V7a4 4 0 0 1 4-4Z",
   "Neuropathy & Nerve": "M4 12h3l2-7 4 14 2-7h5",
-  "Muscle, Soft Tissue & Headaches":
-    "M12 21s-7.5-4.6-9.6-9.1C.7 8.4 2.2 5 5.6 5c1.9 0 3.3 1 4.4 2.4C11.1 6 12.5 5 14.4 5 17.8 5 19.3 8.4 21.6 11.9 19.5 16.4 12 21 12 21Z",
 };
 
 function CategoryIcon({ label }: { label: string }) {

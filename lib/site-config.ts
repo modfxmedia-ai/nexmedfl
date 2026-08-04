@@ -5,7 +5,7 @@
 export const SITE_URL = "https://nexmedfl.com";
 export const SITE_NAME = "NexMed";
 export const SITE_DEFAULT_DESCRIPTION =
-  "NexMed is a medical clinic in Ormond Beach, FL specializing in neuropathy treatment, advanced wound care, regenerative medicine, hormone replacement therapy, and medical weight loss.";
+  "NexMed is a medical clinic in Ormond Beach, FL specializing in neuropathy treatment, spinal decompression therapy, knee pain treatment, and chiropractic care.";
 
 export const BUSINESS = {
   name: SITE_NAME,
@@ -66,10 +66,8 @@ export type ServiceCategory = {
   items: NavLink[];
 };
 
-// Services mega-menu categories — grouped by body system, aligned with
-// the Ormond Spine & Nerve Center service catalogue (the seven core
-// clinical services + supporting programs). Each item is a real
-// navigable service page in this codebase.
+// Services mega-menu categories. The clinic's active service catalogue is
+// now scoped to four core services; grouped 2x2 for a clean mega-menu grid.
 export const SERVICE_CATEGORIES: ServiceCategory[] = [
   {
     label: "Spine & Chiropractic Care",
@@ -82,30 +80,10 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     ],
   },
   {
-    label: "Knee & Joint Care",
+    label: "Knee & Nerve Care",
     items: [
-      {
-        label: "Knee Decompression Therapy",
-        href: "/knee-decompression-therapy/",
-      },
       { label: "Knee Pain Treatment", href: "/knee-pain-treatment/" },
-    ],
-  },
-  {
-    label: "Nerve & Neuropathy Care",
-    items: [
       { label: "Neuropathy Treatment", href: "/neuropathy-treatment/" },
-      { label: "Headache Treatment", href: "/headache-treatment/" },
-    ],
-  },
-  {
-    label: "Recovery & Advanced Therapies",
-    items: [
-      { label: "Shockwave Therapy", href: "/shockwave-therapy/" },
-      { label: "Laser Therapy", href: "/laser-therapy/" },
-      { label: "Compression Therapy", href: "/compression-therapy/" },
-      { label: "Wound Care", href: "/wound-care/" },
-      { label: "Treatment Programs", href: "/treatment-programs/" },
     ],
   },
 ];
@@ -137,9 +115,6 @@ export const CONDITION_CATEGORIES: ServiceCategory[] = [
         label: "Patellofemoral Pain Syndrome",
         href: "/conditions-we-treat/",
       },
-      { label: "Shoulder Pain", href: "/conditions-we-treat/" },
-      { label: "Hip Pain", href: "/conditions-we-treat/" },
-      { label: "Plantar Fasciitis", href: "/conditions-we-treat/" },
     ],
   },
   {
@@ -153,17 +128,6 @@ export const CONDITION_CATEGORIES: ServiceCategory[] = [
       },
       { label: "Burning Feet Syndrome", href: "/conditions-we-treat/" },
       { label: "Numbness & Tingling", href: "/conditions-we-treat/" },
-    ],
-  },
-  {
-    label: "Muscle, Soft Tissue & Headaches",
-    items: [
-      { label: "Muscle Strains", href: "/conditions-we-treat/" },
-      { label: "Chronic Muscle Tightness", href: "/conditions-we-treat/" },
-      { label: "Tendinitis", href: "/conditions-we-treat/" },
-      { label: "Sports Injuries", href: "/conditions-we-treat/" },
-      { label: "Cervicogenic Headaches", href: "/conditions-we-treat/" },
-      { label: "Tension Headaches", href: "/conditions-we-treat/" },
     ],
   },
 ];
@@ -199,10 +163,6 @@ export const HEADER_NAV: HeaderNavItem[] = [
         label: "Neuropathy Appointment Request",
         href: "/neuropathy-appointment-request/",
       },
-      {
-        label: "Wound Care Appointment Request",
-        href: "/wound-care-appointment-request/",
-      },
     ],
   },
   { label: "Blog", href: "/blogs/" },
@@ -217,17 +177,6 @@ export const FOOTER_SERVICES: NavLink[] = [
   { label: "Chiropractic Care", href: "/chiropractic-care/" },
   { label: "Spinal Decompression Therapy", href: "/spinal-decompression-therapy/" },
   { label: "Knee Pain Treatment", href: "/knee-pain-treatment/" },
-  { label: "Knee Decompression Therapy", href: "/knee-decompression-therapy/" },
-  { label: "Wound Care", href: "/wound-care/" },
-  { label: "Shockwave Therapy", href: "/shockwave-therapy/" },
-  { label: "Laser Therapy", href: "/laser-therapy/" },
-  { label: "Compression Therapy", href: "/compression-therapy/" },
-  { label: "Headache Treatment", href: "/headache-treatment/" },
-  { label: "Treatment Programs", href: "/treatment-programs/" },
-  { label: "Medical Weight Loss", href: "/medical-weight-loss/" },
-  { label: "Peptide Therapy", href: "/peptide-therapy/" },
-  { label: "PRP & Trigger Point Injections", href: "/prp-trigger-point-injections/" },
-  { label: "Erectile Dysfunction Treatment", href: "/erectile-dysfunction-treatment/" },
 ];
 
 // Legal links shown in the footer bar, matching the live site.
