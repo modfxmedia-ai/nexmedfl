@@ -1,4 +1,5 @@
 import { TRUST_ITEMS } from "@/lib/home-content";
+import { SITE_NAME } from "@/lib/site-config";
 
 const PILLAR_ICON_PATHS = [
   // Comprehensive Medical Care — heart with pulse
@@ -124,7 +125,7 @@ export function TrustBar() {
           <h2 className="mt-5 text-3xl font-bold tracking-tight text-ink sm:text-4xl lg:text-5xl">
             Why patients choose{" "}
             <span className="bg-gradient-to-br from-brand-cyan to-brand-deep bg-clip-text text-transparent">
-              NexMed
+              {SITE_NAME}
             </span>
           </h2>
           <p className="mt-5 text-base leading-relaxed text-ink-soft">

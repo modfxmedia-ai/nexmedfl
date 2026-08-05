@@ -4,7 +4,7 @@
   --background: #ffffff;
   --foreground: #171717;
 
-  /* NexMed brand tokens (see DESIGN.md) — do not introduce other hues. */
+  /* Brand tokens — do not introduce other hues. */
   --color-brand: #1a86f7; /* primary blue — accent moments only */
   --color-brand-cyan: #22c7f0; /* logo gradient start */
   --color-brand-deep: #1479e8; /* logo gradient end / CTA pill background */
@@ -147,6 +147,53 @@ body {
   animation: nexmed-live-pulse 1.6s ease-out infinite;
 }
 
+@keyframes nexmed-reveal {
+  from { opacity: 0; transform: translate(var(--reveal-x, 0), var(--reveal-y, 24px)); }
+  to   { opacity: 1; transform: translate(0, 0); }
+}
+
+.nexmed-reveal {
+  opacity: 0;
+  animation: nexmed-reveal 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: var(--reveal-delay, 0s);
+}
+
+@keyframes nexmed-reveal-pill {
+  from { opacity: 0; transform: translateY(var(--reveal-y, 12px)) scale(var(--reveal-scale, 0.85)); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.nexmed-reveal-pill {
+  opacity: 0;
+  animation: nexmed-reveal-pill 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: var(--reveal-delay, 0s);
+}
+
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  animation: marquee-scroll 42s linear infinite;
+}
+
+.marquee-track:hover,
+.marquee-track:focus-within {
+  animation-play-state: paused;
+}
+
+/* Hides the scrollbar on the /conditions/[category]/ mobile jump-nav pill
+ * row while keeping it scrollable via touch/drag. */
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .nexmed-hero-enter,
   .nexmed-hero-fade,
@@ -167,6 +214,15 @@ body {
     transform: none;
   }
   .nexmed-live-pulse::before {
+    animation: none;
+  }
+  .nexmed-reveal,
+  .nexmed-reveal-pill {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  .marquee-track {
     animation: none;
   }
 }

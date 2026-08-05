@@ -3,10 +3,10 @@
 // to import from client components.
 
 export const HERO = {
-  eyebrow: "Happy Patients",
-  heading: "Wellness Starts Here!",
+  eyebrow: "Trusted by Local Families",
+  heading: "Your Path To Recovery",
   subheading:
-    "From advanced neuropathy care to spinal decompression, knee pain relief, and chiropractic care, we combine medical expertise with technology to restore health, confidence, and quality of life.",
+    "Ormond Spine & Nerve Center helps Ormond Beach, FL patients find lasting relief through advanced neuropathy care, spinal and knee decompression, and chiropractic treatment \u2014 combining medical expertise with modern technology to restore health, confidence, and quality of life.",
   ctaLabel: "Book An Appointment",
   ctaHref: "/contact-us/",
   backgroundImage:
@@ -25,57 +25,88 @@ export const TRUST_ITEMS: TrustItem[] = [
   {
     title: "Comprehensive Medical Care",
     description:
-      "From personalized evaluations to advanced treatments, we provide tailored healthcare solutions designed around your needs.",
+      "From personalized evaluations to advanced spine, knee, and nerve treatments, our Ormond Beach clinic provides tailored care plans designed around your specific condition and goals.",
   },
   {
     title: "Healing Stories of Success",
     description:
-      "Many patients have started a new journey of health and life with our holistic treatments — and achieved success.",
+      "Countless Ormond Beach, FL patients have started a new chapter of health with our holistic, non-surgical treatments \u2014 and achieved lasting results.",
   },
   {
-    title: "Trusted Expertise",
+    title: "Trusted Local Expertise",
     description:
-      "Experience compassionate care backed by modern technology, proven results, and a commitment to your well-being.",
+      "Experience compassionate care backed by modern technology, proven outcomes, and a team that genuinely knows the Ormond Beach community.",
   },
 ];
 
 export const WELCOME = {
-  eyebrow: "Welcome to NexMed",
-  heading: "Your Partner in Health, Healing & Wellness",
+  eyebrow: "Welcome to Ormond Spine & Nerve Center",
+  heading: "Ormond Beach's Partner in Health, Healing & Wellness",
   intro:
-    "At NexMed, your well-being comes first. We provide advanced, comprehensive care with a focus on innovative treatments designed to restore health, relieve pain, and improve quality of life.",
+    "At Ormond Spine & Nerve Center in Ormond Beach, FL, your well-being comes first. We provide advanced, comprehensive care with a focus on innovative, non-surgical treatments designed to restore health, relieve pain, and improve quality of life for patients throughout Volusia County.",
   programsLeadIn: "Our specialty programs include:",
   closing: [
-    "At NexMed, you'll find more than treatments, you'll find a team committed to your success. With expertise, state-of-the-art technology, and personalized care, we help patients achieve lasting results in health, wellness, and aesthetics.",
-    "Discover the NexMed difference where advanced medicine meets genuine care.",
+    "At Ormond Spine & Nerve Center, you'll find more than treatments \u2014 you'll find a local team committed to your success. With expertise, state-of-the-art technology, and personalized care, we help Ormond Beach patients achieve lasting results in health, wellness, and mobility.",
+    "Discover the Ormond Spine & Nerve Center difference, where advanced medicine meets genuine, hometown care.",
   ],
 };
 
 export interface WelcomeProgram {
   name: string;
   description: string;
+  href: string;
+  image: string;
 }
 
 export const WELCOME_PROGRAMS: WelcomeProgram[] = [
   {
-    name: "Neuropathy Treatment",
+    name: "Chiropractic Care",
     description:
-      "Tailored therapies that target nerve-related conditions to reduce pain, improve function, and help you regain independence.",
+      "Hands-on spinal adjustments and posture correction to relieve back and neck pain and restore long-term mobility.",
+    href: "/chiropractic-care/",
+    image: "/images/chiropractic-care.jpg",
   },
   {
     name: "Spinal Decompression Therapy",
     description:
       "Non-surgical, computer-controlled traction that relieves pressure on spinal discs and nerves to ease chronic back and neck pain.",
+    href: "/spinal-decompression-therapy/",
+    image: "/images/spinal-decompression-therapy.webp",
   },
   {
-    name: "Knee Pain Treatment",
+    name: "Knee Decompression Therapy",
     description:
-      "Targeted therapies that relieve knee pain, improve mobility, and help you return to an active, pain-free lifestyle.",
+      "Gentle traction that unloads the knee joint, creating space to decrease pain and improve movement.",
+    href: "/knee-decompression-therapy/",
+    image: "/images/knee-decompression-therapy.webp",
   },
   {
-    name: "Chiropractic Care",
+    name: "Neuropathy Treatment Program",
     description:
-      "Hands-on spinal adjustments and posture correction to relieve back and neck pain and restore long-term mobility.",
+      "A comprehensive program combining multiple therapies to improve nerve health, circulation, balance, and sensation.",
+    href: "/neuropathy-treatment/",
+    image: "/images/neuropathy-treatment.jpg",
+  },
+  {
+    name: "Shockwave Therapy",
+    description:
+      "High-energy acoustic waves that stimulate tissue healing, improve circulation, and break the chronic pain cycle.",
+    href: "/shockwave-therapy/",
+    image: "/images/shockwave-therapy.jpeg",
+  },
+  {
+    name: "Laser Therapy",
+    description:
+      "Class IV therapeutic laser that stimulates cellular repair while reducing inflammation and pain.",
+    href: "/laser-therapy/",
+    image: "/images/laser-therapy.jpg",
+  },
+  {
+    name: "Compression Therapy",
+    description:
+      "Normatec dynamic compression that improves circulation, lymphatic drainage, and recovery.",
+    href: "/compression-therapy/",
+    image: "/images/compression-therapy.jpeg",
   },
 ];
 
@@ -135,7 +166,7 @@ export const SERVICES_INTRO = {
   eyebrow: "Our Services",
   heading: "Our Specialized Services",
   intro:
-    "These are a list of some of our more popular services that are offered at NexMed. If you have any questions please click on each to find more information.",
+    "Ormond Spine & Nerve Center offers a full range of non-surgical treatments for patients across Ormond Beach, FL \u2014 from chiropractic care and spinal decompression to neuropathy, shockwave, laser, and compression therapy. Click any service below to learn more.",
 };
 
 export interface ServiceGridItem {
@@ -144,13 +175,14 @@ export interface ServiceGridItem {
   href: string;
 }
 
-// The homepage services list — scoped to NexMed's four core services.
+// The homepage services list — the full Ormond Spine & Nerve Center
+// service catalogue.
 export const SERVICES_GRID: ServiceGridItem[] = [
   {
-    name: "Neuropathy Treatment",
+    name: "Chiropractic Care",
     description:
-      "Neuropathy can cause pain, numbness, tingling, or weakness—making everyday life difficult. At NexMed, we provide safe and effective neuropathy treatments designed to relieve symptoms, restore nerve function, and improve your quality of life.",
-    href: "/neuropathy-treatment/",
+      "Hands-on spinal adjustments and posture correction relieve back and neck pain, restore proper alignment, and support long-term mobility with a non-surgical, drug-free approach.",
+    href: "/chiropractic-care/",
   },
   {
     name: "Spinal Decompression Therapy",
@@ -159,16 +191,40 @@ export const SERVICES_GRID: ServiceGridItem[] = [
     href: "/spinal-decompression-therapy/",
   },
   {
+    name: "Knee Decompression Therapy",
+    description:
+      "A non-surgical traction treatment that gently unloads the knee joint, creating space to decrease pain and improve movement for arthritis and chronic joint compression.",
+    href: "/knee-decompression-therapy/",
+  },
+  {
     name: "Knee Pain Treatment",
     description:
       "Our knee pain treatments target the root cause to relieve discomfort, improve mobility, and restore strength. Using advanced therapies and personalized care, we help you return to an active, pain-free lifestyle safely and effectively.",
     href: "/knee-pain-treatment/",
   },
   {
-    name: "Chiropractic Care",
+    name: "Neuropathy Treatment",
     description:
-      "Hands-on spinal adjustments and posture correction relieve back and neck pain, restore proper alignment, and support long-term mobility with a non-surgical, drug-free approach.",
-    href: "/chiropractic-care/",
+      "Neuropathy can cause pain, numbness, tingling, or weakness—making everyday life difficult. At Ormond Spine & Nerve Center, we provide safe and effective neuropathy treatments designed to relieve symptoms, restore nerve function, and improve your quality of life.",
+    href: "/neuropathy-treatment/",
+  },
+  {
+    name: "Shockwave Therapy",
+    description:
+      "High-energy acoustic waves stimulate tissue healing, improve circulation, reduce chronic inflammation, and break the pain cycle throughout the body.",
+    href: "/shockwave-therapy/",
+  },
+  {
+    name: "Laser Therapy",
+    description:
+      "Class IV therapeutic laser stimulates cellular repair while reducing inflammation and pain in nerves, muscles, tendons, ligaments, and joints.",
+    href: "/laser-therapy/",
+  },
+  {
+    name: "Compression Therapy",
+    description:
+      "Normatec dynamic compression therapy improves circulation, lymphatic drainage, and recovery for tired, achy, or compromised limbs.",
+    href: "/compression-therapy/",
   },
 ];
 
@@ -200,7 +256,6 @@ export const TESTIMONIALS: Testimonial[] = [
 // live homepage.
 export const TESTIMONIAL_GALLERY: string[] = [
   "https://nexmedfl.com/wp-content/uploads/2025/09/IMG_1547-1.jpg",
-  "https://nexmedfl.com/wp-content/uploads/2025/09/IMG_1550-1.jpg",
   "https://nexmedfl.com/wp-content/uploads/2025/09/IMG_1544-1.jpg",
   "https://nexmedfl.com/wp-content/uploads/2025/09/IMG_1549-1.jpg",
   "https://nexmedfl.com/wp-content/uploads/2025/09/IMG_1548-1.jpg",

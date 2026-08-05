@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
-import { buildGraph } from "@/lib/schema";
+import { buildGraph, buildMedicalProcedureSchema, buildFAQSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/JsonLd";
-import { PagePlaceholder } from "@/components/PagePlaceholder";
 import { getStaticPage } from "@/lib/pages";
+import { getServiceContent } from "@/lib/service-content";
+import { ServicePageBody } from "@/components/ServicePageBody";
 
 const PAGE = getStaticPage("/neuropathy-treatment/");
+const CONTENT = getServiceContent("/neuropathy-treatment/");
 
 export const metadata: Metadata = buildMetadata(PAGE);
 
@@ -13,7 +15,15 @@ export default function Page() {
   return (
     <>
       <JsonLd data={buildGraph(PAGE)} />
-      <PagePlaceholder title={PAGE.title} path={PAGE.path} />
+      <JsonLd
+        data={buildMedicalProcedureSchema({
+          path: PAGE.path,
+          name: CONTENT.heading,
+          description: PAGE.description,
+        })}
+      />
+      {CONTENT.faqs && <JsonLd data={buildFAQSchema(CONTENT.faqs)} />}
+      <ServicePageBody {...CONTENT} />
     </>
   );
 }

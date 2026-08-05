@@ -24,7 +24,7 @@ export function DropdownPanel({
       exit={{ opacity: 0, y: -10, scale: 0.985 }}
       transition={{ duration: 0.22, ease: EASE_OUT_EXPO }}
       style={{ transformOrigin: "top left" }}
-      className="absolute left-0 top-full z-20 w-72 pt-4"
+      className="w-72 pt-4"
     >
       <div className="overflow-hidden rounded-2xl border border-white/70 bg-white/95 p-2 shadow-[0_24px_60px_-20px_rgba(20,121,232,0.35),0_2px_8px_rgba(20,121,232,0.08)] backdrop-blur-xl">
         {viewAllHref ? (
@@ -52,7 +52,7 @@ export function DropdownPanel({
         ) : null}
         <ul className="flex flex-col gap-0.5">
           {links.map((link) => (
-            <li key={link.href}>
+            <li key={`${link.href}-${link.label}`}>
               <Link
                 href={link.href}
                 onClick={onNavigate}

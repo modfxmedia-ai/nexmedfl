@@ -159,7 +159,7 @@ export interface MedicalProcedureInput {
   /** Body part(s) this procedure/therapy targets, e.g. "Spine" or "Knee". */
   bodyLocation?: string;
   /** schema.org MedicalProcedureType enumeration value (bare label is fine
-   *  — most of NexMed's new offerings are non-invasive). */
+   *  — most of the clinic's equipment-driven offerings are non-invasive). */
   procedureType?: "NoninvasiveProcedure" | "PercutaneousProcedure";
 }
 
@@ -192,6 +192,165 @@ export function buildMedicalProcedureSchema({
   };
 }
 
+export interface FAQInput {
+  question: string;
+  answer: string;
+}
+
+/**
+ * `FAQPage` JSON-LD for service pages that include an on-page FAQ
+ * section — emitted as an ADDITIONAL <script> tag alongside `buildGraph()`
+ * and `buildMedicalProcedureSchema()`, same pattern as those.
+ */
+export function buildFAQSchema(faqs: FAQInput[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map(({ question, answer }) => ({
+      "@type": "Question",
+      name: question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: answer,
+      },
+    })),
+  };
+}
+
+export interface MedicalWebPageInput {
+  /** Path including leading and trailing slash, e.g. "/services/" */
+  path: string;
+  name: string;
+  description: string;
+  /** schema.org `MedicalSpecialty` enumeration value, e.g. "Physiotherapy". */
+  medicalAudience?: string;
+}
+
+/**
+ * `MedicalWebPage` JSON-LD for hub/overview pages (services & conditions
+ * listings) that aren't a single procedure — emitted as an ADDITIONAL
+ * <script> tag alongside `buildGraph()`, same pattern as
+ * `buildMedicalProcedureSchema()` and `buildFAQSchema()`.
+ */
+export function buildMedicalWebPageSchema({
+  path,
+  name,
+  description,
+  medicalAudience = "Patient",
+}: MedicalWebPageInput) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    name,
+    description,
+    url: `${SITE_URL}${path}`,
+    lastReviewed: "2026-08-05",
+    audience: {
+      "@type": "MedicalAudience",
+      audienceType: medicalAudience,
+    },
+    publisher: {
+      "@type": "MedicalBusiness",
+      "@id": ORGANIZATION_ID,
+      name: BUSINESS.name,
+    },
+  };
+}
+
+export interface AggregateRatingInput {
+  ratingValue: number;
+  reviewCount: number;
+  bestRating?: number;
+  worstRating?: number;
+}
+
+/**
+ * `AggregateRating` JSON-LD, attached to the same `@id` as the main
+ * Organization node emitted by `buildGraph()` — Google merges JSON-LD
+ * nodes that share an `@id` across multiple <script> tags on a page, so
+ * this doesn't need to duplicate the rest of the Organization fields.
+ *
+ * NOTE: `ratingValue`/`reviewCount` are PLACEHOLDER figures. Replace with
+ * the real, current values from Google Business Profile (or your review
+ * platform of record) before launch — do not leave estimated numbers in
+ * production schema.
+ */
+export function buildAggregateRatingSchema({
+  ratingValue,
+  reviewCount,
+  bestRating = 5,
+  worstRating = 1,
+}: AggregateRatingInput) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "@id": ORGANIZATION_ID,
+    name: BUSINESS.name,
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue,
+      reviewCount,
+      bestRating,
+      worstRating,
+    },
+  };
+}
+
+export interface TeamMemberInput {
+  name: string;
+  jobTitle: string;
+  description?: string;
+}
+
+/**
+ * `Physician` JSON-LD nodes for the team page. Emitted as an ADDITIONAL
+ * <script> tag alongside `buildGraph()`.
+ *
+ * NOTE: `name`/`jobTitle`/`description` below are PLACEHOLDER values —
+ * replace with each real provider's name and credentials before launch.
+ */
+export function buildTeamSchema(members: TeamMemberInput[]) {
+  return {
+    "@context": "https://schema.org",
+    "@graph": members.map((member, i) => ({
+      "@type": "Physician",
+      "@id": `${SITE_URL}/meet-our-team/#member-${i + 1}`,
+      name: member.name,
+      jobTitle: member.jobTitle,
+      ...(member.description ? { description: member.description } : {}),
+      worksFor: { "@id": ORGANIZATION_ID },
+    })),
+  };
+}
+
+/**
+ * `LocalBusiness` JSON-LD carrying full NAP (Name/Address/Phone) data,
+ * merged into the same Organization `@id` emitted by `buildGraph()`.
+ * Intended for the /contact-us/ page — every value is sourced from the
+ * single `BUSINESS` config object (lib/site-config.ts) so the NAP here
+ * always matches what's displayed on the page and site-wide.
+ */
+export function buildLocalBusinessSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": ORGANIZATION_ID,
+    name: BUSINESS.name,
+    telephone: BUSINESS.telephone,
+    email: BUSINESS.email,
+    url: SITE_URL,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: BUSINESS.address.streetAddress,
+      addressLocality: BUSINESS.address.addressLocality,
+      addressRegion: BUSINESS.address.addressRegion,
+      postalCode: BUSINESS.address.postalCode,
+      addressCountry: BUSINESS.address.addressCountry,
+    },
+    openingHours: BUSINESS.openingHours,
+  };
+}
+
 /**
  * Standalone MedicalBusiness JSON-LD block — a SECOND, separate
  * <script type="application/ld+json"> tag emitted only on the live
@@ -203,11 +362,12 @@ export const MEDICAL_BUSINESS_SCHEMA = {
   "@type": "MedicalBusiness",
   name: BUSINESS.name,
   url: `${SITE_URL}/`,
-  logo: "https://nexmedfl.com/wp-content/uploads/2025/08/Nexmed-Transparent-Background-1.avif",
-  image: "https://nexmedfl.com/wp-content/uploads/2025/08/Nexmed-Transparent-Background-1.avif",
+  logo: `${SITE_URL}${BUSINESS.logo}`,
+  image: `${SITE_URL}${BUSINESS.logo}`,
   description:
-    "NexMed in Ormond Beach, FL specializes in neuropathy treatment, medical weight loss, hormone therapy, and regenerative medicine.",
+    "Ormond Spine & Nerve Center in Ormond Beach, FL specializes in chiropractic care, spinal and knee decompression therapy, neuropathy treatment, shockwave, laser, and compression therapy.",
   telephone: BUSINESS.telephone,
+  email: BUSINESS.email,
   address: {
     "@type": "PostalAddress",
     streetAddress: BUSINESS.address.streetAddress,
@@ -259,3 +419,55 @@ export const MEDICAL_BUSINESS_SCHEMA = {
     SOCIAL_LINKS.youtube,
   ],
 };
+
+export interface BreadcrumbItemInput {
+  name: string;
+  /** Path including leading and trailing slash, e.g. "/conditions/spine/" */
+  path: string;
+}
+
+/**
+ * `BreadcrumbList` JSON-LD — emitted as an ADDITIONAL <script> tag
+ * alongside `buildGraph()`, same pattern as `buildMedicalWebPageSchema()`
+ * and `buildFAQSchema()`. Pass items in order, e.g.
+ * [{ name: "Home", path: "/" }, { name: "Conditions", path: "/conditions-we-treat/" }, { name: "Spine", path: "/conditions/spine/" }].
+ */
+export function buildBreadcrumbSchema(items: BreadcrumbItemInput[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.name,
+      item: `${SITE_URL}${item.path}`,
+    })),
+  };
+}
+
+export interface MedicalConditionInput {
+  name: string;
+  description: string;
+  /** Path (with #anchor) this condition's write-up lives at. */
+  path: string;
+}
+
+/**
+ * `MedicalCondition` JSON-LD nodes for each sub-condition section on a
+ * /conditions/[category]/ page — emitted as ONE ADDITIONAL <script> tag
+ * (a `@graph` array of MedicalCondition nodes) alongside `buildGraph()`
+ * and `buildBreadcrumbSchema()`, same stacking pattern used elsewhere in
+ * this file.
+ */
+export function buildMedicalConditionsSchema(conditions: MedicalConditionInput[]) {
+  return {
+    "@context": "https://schema.org",
+    "@graph": conditions.map((condition) => ({
+      "@type": "MedicalCondition",
+      "@id": `${SITE_URL}${condition.path}`,
+      name: condition.name,
+      description: condition.description,
+      url: `${SITE_URL}${condition.path}`,
+    })),
+  };
+}

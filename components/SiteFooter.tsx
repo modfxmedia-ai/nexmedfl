@@ -1,11 +1,14 @@
+import Image from "next/image";
 import Link from "next/link";
 import {
   BUSINESS,
+  FOOTER_CONDITIONS,
   FOOTER_CTA,
   FOOTER_LEGAL,
   FOOTER_SERVICES,
   FOOTER_TAGLINE,
   MAIN_NAV,
+  SITE_NAME,
   SOCIAL_LINKS,
 } from "@/lib/site-config";
 
@@ -34,7 +37,7 @@ function SocialIcon({ label, href }: { label: string; href: string }) {
 
 export function SiteFooter() {
   return (
-    <footer className="bg-ink text-white/80">
+    <footer id="site-footer" className="bg-ink text-white/80">
       {/* CTA band */}
       <div className="border-b border-white/10">
         <div className="mx-auto flex max-w-[1280px] flex-col items-start gap-6 px-4 py-14 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
@@ -58,11 +61,15 @@ export function SiteFooter() {
 
       {/* Column grid */}
       <div className="mx-auto max-w-[1280px] px-4 py-14 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5">
           <div>
-            <span className="bg-gradient-to-r from-brand-cyan to-brand-deep bg-clip-text text-xl font-bold text-transparent">
-              {BUSINESS.name}
-            </span>
+            <Image
+              src={BUSINESS.logo}
+              alt={SITE_NAME}
+              width={BUSINESS.logoWidth}
+              height={BUSINESS.logoHeight}
+              className="h-16 w-auto"
+            />
             <p className="mt-4 text-sm leading-relaxed text-white/60">
               {FOOTER_TAGLINE}
             </p>
@@ -85,6 +92,24 @@ export function SiteFooter() {
             </h2>
             <ul className="mt-4 flex flex-col gap-2.5">
               {FOOTER_SERVICES.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-white/60 transition-colors hover:text-brand-cyan"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          <nav aria-label="Conditions We Treat">
+            <h2 className="text-sm font-semibold uppercase tracking-wide text-white">
+              Conditions We Treat
+            </h2>
+            <ul className="mt-4 flex flex-col gap-2.5">
+              {FOOTER_CONDITIONS.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
@@ -124,6 +149,12 @@ export function SiteFooter() {
               className="mt-4 block text-sm font-semibold text-white transition-colors hover:text-brand-cyan"
             >
               {BUSINESS.telephone}
+            </a>
+            <a
+              href={BUSINESS.emailHref}
+              className="mt-2 block text-sm font-semibold text-white transition-colors hover:text-brand-cyan"
+            >
+              {BUSINESS.email}
             </a>
             <p className="mt-2 text-sm text-white/60">
               {BUSINESS.addressDisplay}

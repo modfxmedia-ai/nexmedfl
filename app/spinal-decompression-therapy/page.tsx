@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
-import { buildGraph, buildMedicalProcedureSchema } from "@/lib/schema";
+import { buildGraph, buildMedicalProcedureSchema, buildFAQSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/JsonLd";
 import { getStaticPage } from "@/lib/pages";
 import { getServiceContent } from "@/lib/service-content";
@@ -23,6 +23,7 @@ export default function Page() {
           bodyLocation: "Spine",
         })}
       />
+      {CONTENT.faqs && <JsonLd data={buildFAQSchema(CONTENT.faqs)} />}
       <ServicePageBody {...CONTENT} />
     </>
   );

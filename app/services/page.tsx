@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
-import { buildGraph } from "@/lib/schema";
+import { buildGraph, buildMedicalWebPageSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/JsonLd";
-import { PagePlaceholder } from "@/components/PagePlaceholder";
 import { getStaticPage } from "@/lib/pages";
+import { ServicesHub } from "@/components/ServicesHub";
 
 const PAGE = getStaticPage("/services/");
 
@@ -13,7 +13,14 @@ export default function Page() {
   return (
     <>
       <JsonLd data={buildGraph(PAGE)} />
-      <PagePlaceholder title={PAGE.title} path={PAGE.path} />
+      <JsonLd
+        data={buildMedicalWebPageSchema({
+          path: PAGE.path,
+          name: PAGE.title,
+          description: PAGE.description,
+        })}
+      />
+      <ServicesHub />
     </>
   );
 }

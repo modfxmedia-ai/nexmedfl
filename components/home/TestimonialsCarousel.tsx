@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "motion/react";
 import { TESTIMONIAL_GALLERY, TESTIMONIALS } from "@/lib/home-content";
+import { SITE_NAME } from "@/lib/site-config";
 
 function StarIcon() {
   return (
@@ -29,7 +30,7 @@ export function TestimonialsCarousel() {
   return (
     <section className="mx-auto max-w-[1280px] px-4 py-20 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
-        <div className="grid grid-cols-3 gap-3">
+        <div className="grid grid-cols-2 gap-3">
           {TESTIMONIAL_GALLERY.map((src) => (
             <div
               key={src}
@@ -37,10 +38,10 @@ export function TestimonialsCarousel() {
             >
               <Image
                 src={src}
-                alt="NexMed patient care"
+                alt={`${SITE_NAME} patient care`}
                 fill
                 className="object-cover"
-                sizes="(min-width: 1024px) 16vw, 30vw"
+                sizes="(min-width: 1024px) 22vw, 45vw"
               />
             </div>
           ))}

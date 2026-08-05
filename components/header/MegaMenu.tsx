@@ -15,13 +15,24 @@ const CATEGORY_ICON_PATHS: Record<string, string> = {
   // Services categories
   "Spine & Chiropractic Care":
     "M12 3v2M12 8v2M12 13v2M12 18v2M9 5h6M9 10h6M9 15h6M9 20h6",
-  "Knee & Nerve Care":
+  "Knee & Joint Care":
     "M12 3a4 4 0 0 1 4 4v3l3 3-3 3v3a4 4 0 0 1-8 0v-3l-3-3 3-3V7a4 4 0 0 1 4-4Z",
+  "Nerve & Neuropathy Care": "M4 12h3l2-7 4 14 2-7h5",
+  "Recovery & Advanced Therapies":
+    "M3 8.5 8.5 3l3 3-1.6 1.6 4.5 4.5L16 10.5l3 3-5.5 5.5-3-3 1.6-1.6-4.5-4.5L6 11.5l-3-3Z",
   // Conditions categories
   Spine: "M12 3v2M12 8v2M12 13v2M12 18v2M9 5h6M9 10h6M9 15h6M9 20h6",
   "Knee & Joint":
     "M12 3a4 4 0 0 1 4 4v3l3 3-3 3v3a4 4 0 0 1-8 0v-3l-3-3 3-3V7a4 4 0 0 1 4-4Z",
   "Neuropathy & Nerve": "M4 12h3l2-7 4 14 2-7h5",
+  "Joint & Extremity":
+    "M7 4v4M17 4v4M7 20v-4M17 20v-4M7 8a5 5 0 0 0 5 5 5 5 0 0 0 5-5",
+  "Muscle & Soft Tissue":
+    "M4 12c2-4 4-6 8-6s6 2 8 6c-2 4-4 6-8 6s-6-2-8-6Z",
+  "Circulatory & Recovery": "M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11Z",
+  Headaches:
+    "M12 21s-7.5-4.6-9.6-9.1C.7 8.4 2.2 5 5.6 5c1.9 0 3.3 1 4.4 2.4C11.1 6 12.5 5 14.4 5 17.8 5 19.3 8.4 21.6 11.9 19.5 16.4 12 21 12 21Z",
+  Wellness: "M12 3c1.5 3 6 3.5 6 8a6 6 0 0 1-12 0c0-4.5 4.5-5 6-8Z",
 };
 
 function CategoryIcon({ label }: { label: string }) {
@@ -46,35 +57,43 @@ const columnVariants = {
   show: { opacity: 1, y: 0 },
 };
 
-// Real clinic photo used as the featured "promo" panel background.
-const PROMO_IMAGE =
-  "https://nexmedfl.com/wp-content/uploads/2025/09/IMG_1547-1.jpg";
+// Featured "promo" panel background — a distinct photo per mega-menu so
+// the visual matches the menu's content (real patient photo for the
+// Services catalogue, anatomical illustration for the Conditions one).
+const PROMO_IMAGE_BY_LABEL: Record<string, string> = {
+  Services: "/images/back-pain-featured.jpg",
+  Conditions: "/images/images.jpeg",
+};
+const DEFAULT_PROMO_IMAGE = "/images/back-pain-featured.jpg";
 
 export function MegaMenu({
+  label,
   categories,
   onNavigate,
 }: {
+  label: string;
   categories: ServiceCategory[];
   onNavigate: () => void;
 }) {
+  const promoImage = PROMO_IMAGE_BY_LABEL[label] ?? DEFAULT_PROMO_IMAGE;
   return (
     <motion.div
       initial={{ opacity: 0, y: -10, scale: 0.985 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       exit={{ opacity: 0, y: -10, scale: 0.985 }}
       transition={{ duration: 0.28, ease: EASE_OUT_EXPO }}
-      style={{ transformOrigin: "top left" }}
-      className="absolute left-0 top-full z-20 w-[min(1080px,calc(100vw-2rem))] pt-4"
+      style={{ transformOrigin: "top center" }}
+      className="w-[min(1080px,calc(100vw-2rem))] pt-4"
     >
       <div className="overflow-hidden rounded-[28px] border border-white/70 bg-white/95 shadow-[0_30px_80px_-20px_rgba(20,121,232,0.35),0_2px_10px_rgba(20,121,232,0.08)] backdrop-blur-xl">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px]">
-          {/* Category grid — 2×2 on desktop (fits the current 4-category
-              Services and Conditions menus). */}
+          {/* Category grid — 2 columns on desktop; scrolls internally when a
+              menu (e.g. the 8-category Conditions catalogue) is tall. */}
           <motion.div
             initial="hidden"
             animate="show"
             transition={{ staggerChildren: 0.04, delayChildren: 0.05 }}
-            className="grid grid-cols-1 gap-x-4 gap-y-4 p-6 sm:grid-cols-2 lg:gap-y-6 lg:p-7"
+            className="grid max-h-[75vh] grid-cols-1 gap-x-4 gap-y-4 overflow-y-auto p-6 sm:grid-cols-2 lg:gap-y-6 lg:p-7"
           >
             {categories.map((category) => (
               <motion.div
@@ -87,13 +106,23 @@ export function MegaMenu({
                   <span className="relative flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-brand-cyan/15 to-brand-deep/15 text-brand-deep transition-all group-hover:from-brand-cyan/30 group-hover:to-brand-deep/30 group-hover:text-brand">
                     <CategoryIcon label={category.label} />
                   </span>
-                  <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-ink">
-                    {category.label}
-                  </p>
+                  {category.href ? (
+                    <Link
+                      href={category.href}
+                      onClick={onNavigate}
+                      className="text-[11px] font-bold uppercase tracking-[0.14em] text-ink transition-colors hover:text-brand"
+                    >
+                      {category.label}
+                    </Link>
+                  ) : (
+                    <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-ink">
+                      {category.label}
+                    </p>
+                  )}
                 </div>
                 <ul className="mt-3 flex flex-col gap-0.5">
                   {category.items.map((child) => (
-                    <li key={child.href}>
+                    <li key={`${child.href}-${child.label}`}>
                       <Link
                         href={child.href}
                         onClick={onNavigate}
@@ -119,7 +148,7 @@ export function MegaMenu({
             className="relative hidden overflow-hidden bg-ink lg:block"
           >
             <Image
-              src={PROMO_IMAGE}
+              src={promoImage}
               alt=""
               fill
               sizes="320px"
@@ -168,11 +197,15 @@ export function MegaMenu({
                 >
                   <svg
                     className="h-4 w-4"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     aria-hidden="true"
                   >
-                    <path d="M3.654 1.328a.678.678 0 0 1 1.015-.063l2.803 2.803a.678.678 0 0 1 .063 1.015l-1.83 1.83a.678.678 0 0 0-.128.752 11.386 11.386 0 0 0 5.712 5.712.678.678 0 0 0 .752-.128l1.83-1.83a.678.678 0 0 1 1.015.063l2.803 2.803a.678.678 0 0 1-.063 1.015l-1.34 1.14c-.977.977-2.463 1.4-3.837.98-3.32-1.014-6.28-3.973-7.294-7.293-.42-1.374.003-2.86.98-3.837l1.14-1.34Z" />
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z" />
                   </svg>
                   {BUSINESS.telephone}
                 </a>

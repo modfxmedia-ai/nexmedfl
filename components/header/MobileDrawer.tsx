@@ -1,9 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
-import { BUSINESS, type HeaderNavItem } from "@/lib/site-config";
+import { BUSINESS, SITE_NAME, type HeaderNavItem } from "@/lib/site-config";
 
 const EASE_OUT_EXPO = [0.16, 1, 0.3, 1] as const;
 
@@ -64,7 +65,7 @@ function MobileGroup({
               ) : null}
               {links.map((link) => (
                 <Link
-                  key={link.href}
+                  key={`${link.href}-${link.label}`}
                   href={link.href}
                   onClick={onNavigate}
                   className="rounded-lg px-3 py-2 text-sm text-ink-soft"
@@ -113,9 +114,13 @@ export function MobileDrawer({
             className="fixed inset-y-0 right-0 z-50 flex w-[85vw] max-w-sm flex-col bg-white shadow-2xl lg:hidden"
           >
             <div className="flex items-center justify-between border-b border-surface-border px-5 py-4">
-              <span className="bg-gradient-to-r from-brand-cyan to-brand-deep bg-clip-text text-lg font-bold text-transparent">
-                {BUSINESS.name}
-              </span>
+              <Image
+                src={BUSINESS.logo}
+                alt={SITE_NAME}
+                width={BUSINESS.logoWidth}
+                height={BUSINESS.logoHeight}
+                className="h-11 w-auto"
+              />
               <button
                 type="button"
                 onClick={onClose}
@@ -150,8 +155,17 @@ export function MobileDrawer({
                 href={BUSINESS.telephoneHref}
                 className="flex items-center gap-2 text-base font-semibold text-ink"
               >
-                <svg className="h-4 w-4 text-brand" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                  <path d="M3.654 1.328a.678.678 0 0 1 1.015-.063l2.803 2.803a.678.678 0 0 1 .063 1.015l-1.83 1.83a.678.678 0 0 0-.128.752 11.386 11.386 0 0 0 5.712 5.712.678.678 0 0 0 .752-.128l1.83-1.83a.678.678 0 0 1 1.015.063l2.803 2.803a.678.678 0 0 1-.063 1.015l-1.34 1.14c-.977.977-2.463 1.4-3.837.98-3.32-1.014-6.28-3.973-7.294-7.293-.42-1.374.003-2.86.98-3.837l1.14-1.34Z" />
+                <svg
+                  className="h-4 w-4 text-brand"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z" />
                 </svg>
                 {BUSINESS.telephone}
               </a>

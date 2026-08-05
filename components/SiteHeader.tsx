@@ -108,6 +108,10 @@ export function SiteHeader() {
     return href === "/" ? pathname === "/" : pathname?.startsWith(href);
   }
 
+  const openHeaderNavItem = HEADER_NAV.find(
+    (item) => item.label === openMenu && item.categories,
+  );
+
   return (
     <>
       {/* Utility bar — slim dark strip; collapses on scroll */}
@@ -127,11 +131,15 @@ export function SiteHeader() {
           >
             <svg
               className="h-3.5 w-3.5 text-brand-cyan"
-              viewBox="0 0 20 20"
-              fill="currentColor"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               aria-hidden="true"
             >
-              <path d="M3.654 1.328a.678.678 0 0 1 1.015-.063l2.803 2.803a.678.678 0 0 1 .063 1.015l-1.83 1.83a.678.678 0 0 0-.128.752 11.386 11.386 0 0 0 5.712 5.712.678.678 0 0 0 .752-.128l1.83-1.83a.678.678 0 0 1 1.015.063l2.803 2.803a.678.678 0 0 1-.063 1.015l-1.34 1.14c-.977.977-2.463 1.4-3.837.98-3.32-1.014-6.28-3.973-7.294-7.293-.42-1.374.003-2.86.98-3.837l1.14-1.34Z" />
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z" />
             </svg>
             <span className="text-brand-cyan">{BUSINESS.telephone}</span>
             <span className="hidden text-white/50 sm:inline">
@@ -174,28 +182,28 @@ export function SiteHeader() {
       >
         <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
           <div
-            className={`relative flex items-center justify-between gap-6 transition-[padding] duration-300 ${
+            className={`relative flex items-center justify-between gap-3 transition-[padding] duration-300 ${
               isScrolled ? "py-2.5" : "py-4"
             }`}
           >
             {/* Logo */}
             <Link
               href="/"
-              className="flex shrink-0 items-center gap-2"
+              className="flex shrink-0 items-center"
               aria-label={`${SITE_NAME} — Home`}
             >
               <motion.span
                 animate={{ scale: isScrolled ? 0.92 : 1 }}
                 transition={{ duration: 0.28, ease: EASE_OUT_EXPO }}
-                className="block"
+                className="flex items-center"
               >
                 <Image
-                  src={BUSINESS.headerLogo}
+                  src={BUSINESS.logo}
                   alt={SITE_NAME}
-                  width={160}
-                  height={50}
-                  className="h-11 w-auto"
+                  width={BUSINESS.logoWidth}
+                  height={BUSINESS.logoHeight}
                   priority
+                  className="h-14 w-auto sm:h-16"
                 />
               </motion.span>
             </Link>
@@ -234,11 +242,11 @@ export function SiteHeader() {
                       }}
                       onMouseLeave={hasPanel ? closeWithIntent : undefined}
                     >
-                      <div className="flex items-center gap-1 px-3.5 py-2.5">
+                      <div className="flex items-center gap-1 px-2.5 py-2.5">
                         {item.href ? (
                           <Link
                             href={item.href}
-                            className={`text-[14px] font-medium tracking-tight transition-colors ${
+                            className={`whitespace-nowrap text-[14px] font-medium tracking-tight transition-colors ${
                               active || menuOpen
                                 ? "text-brand-deep"
                                 : "text-ink hover:text-brand-deep"
@@ -248,7 +256,7 @@ export function SiteHeader() {
                           </Link>
                         ) : (
                           <span
-                            className={`text-[14px] font-medium tracking-tight ${
+                            className={`whitespace-nowrap text-[14px] font-medium tracking-tight ${
                               menuOpen ? "text-brand-deep" : "text-ink"
                             }`}
                           >
@@ -274,25 +282,21 @@ export function SiteHeader() {
                         ) : null}
                       </div>
 
+                      {/* Small dropdowns (e.g. "About Us") stay anchored
+                          directly under their own trigger. */}
                       <AnimatePresence>
-                        {hasPanel && menuOpen ? (
+                        {item.children && menuOpen ? (
                           <div
                             onMouseEnter={cancelClose}
                             onMouseLeave={closeWithIntent}
+                            className="absolute left-0 top-full z-20"
                           >
-                            {item.categories ? (
-                              <MegaMenu
-                                categories={item.categories}
-                                onNavigate={() => setOpenMenu(null)}
-                              />
-                            ) : (
-                              <DropdownPanel
-                                links={item.children!}
-                                viewAllHref={item.href}
-                                viewAllLabel={`View all ${item.label}`}
-                                onNavigate={() => setOpenMenu(null)}
-                              />
-                            )}
+                            <DropdownPanel
+                              links={item.children}
+                              viewAllHref={item.href}
+                              viewAllLabel={`View all ${item.label}`}
+                              onNavigate={() => setOpenMenu(null)}
+                            />
                           </div>
                         ) : null}
                       </AnimatePresence>
@@ -301,6 +305,26 @@ export function SiteHeader() {
                 })}
               </ul>
             </nav>
+
+            {/* Mega-menu panel — rendered once, centered under the full
+                header row rather than anchored to the trigger's own
+                position, so wide panels (Services/Conditions) stay fully
+                on-screen regardless of which nav item opened them. */}
+            <AnimatePresence>
+              {openHeaderNavItem ? (
+                <div
+                  onMouseEnter={cancelClose}
+                  onMouseLeave={closeWithIntent}
+                  className="absolute left-1/2 top-full z-20 -translate-x-1/2"
+                >
+                  <MegaMenu
+                    label={openHeaderNavItem.label}
+                    categories={openHeaderNavItem.categories!}
+                    onNavigate={() => setOpenMenu(null)}
+                  />
+                </div>
+              ) : null}
+            </AnimatePresence>
 
             {/* CTA (desktop) — gradient pill with shimmer */}
             <div className="hidden shrink-0 items-center gap-3 lg:flex">

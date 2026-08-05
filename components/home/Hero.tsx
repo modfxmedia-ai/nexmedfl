@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion } from "motion/react";
 import { HERO, STATS } from "@/lib/home-content";
+import { SITE_NAME } from "@/lib/site-config";
 
 const HEADLINE_WORDS = HERO.heading.split(" ");
 
@@ -34,7 +35,7 @@ function StarRow() {
 export function Hero() {
   return (
     <section
-      aria-label="NexMed"
+      aria-label={SITE_NAME}
       className="relative overflow-hidden bg-white"
     >
       {/* Background — soft brand radial gradient */}

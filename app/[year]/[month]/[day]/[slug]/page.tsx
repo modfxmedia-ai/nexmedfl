@@ -4,7 +4,17 @@ import { buildMetadata } from "@/lib/seo";
 import { buildGraph } from "@/lib/schema";
 import { JsonLd } from "@/components/JsonLd";
 import { PagePlaceholder } from "@/components/PagePlaceholder";
+import { BlogPostBody } from "@/components/BlogPostBody";
 import { BLOG_POSTS, findBlogPost, getBlogPostPath } from "@/lib/posts";
+import { SITE_URL } from "@/lib/site-config";
+
+// JSON-LD requires a fully-qualified image URL; post.image may be a
+// relative local path (e.g. "/images/blog/...") for posts using locally
+// hosted images, or already-absolute for legacy externally hosted images.
+function absoluteImage(image?: string): string | undefined {
+  if (!image) return undefined;
+  return image.startsWith("http") ? image : `${SITE_URL}${image}`;
+}
 
 export function generateStaticParams() {
   return BLOG_POSTS.map((post) => ({
@@ -51,7 +61,7 @@ export default async function BlogPostPage(
           path,
           title: post.title,
           description: post.description,
-          image: post.image,
+          image: absoluteImage(post.image),
           imageWidth: post.imageWidth,
           imageHeight: post.imageHeight,
           imageCaption: post.imageCaption,
@@ -61,7 +71,11 @@ export default async function BlogPostPage(
           section: post.section,
         })}
       />
-      <PagePlaceholder title={post.title} path={path} />
+      {post.body ? (
+        <BlogPostBody post={post} />
+      ) : (
+        <PagePlaceholder title={post.title} path={path} />
+      )}
     </>
   );
 }

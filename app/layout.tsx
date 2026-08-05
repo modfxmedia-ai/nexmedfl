@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { BookNowBanner } from "@/components/BookNowBanner";
 import { SITE_NAME, SITE_URL, SITE_DEFAULT_DESCRIPTION } from "@/lib/site-config";
 import "./globals.css";
 
@@ -34,6 +35,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <SiteHeader />
         {children}
         <SiteFooter />
+        <BookNowBanner />
       </body>
     </html>
   );

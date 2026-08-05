@@ -6,10 +6,14 @@ import { getStaticPage } from "@/lib/pages";
 import { Hero } from "@/components/home/Hero";
 import { TrustBar } from "@/components/home/TrustBar";
 import { WelcomeSection } from "@/components/home/WelcomeSection";
+import { MeetTheDoctor } from "@/components/home/MeetTheDoctor";
 import { StatsSection } from "@/components/home/StatsSection";
 import { HowItWorks } from "@/components/home/HowItWorks";
 import { ServicesGrid } from "@/components/home/ServicesGrid";
+import { ConditionsTeaser } from "@/components/home/ConditionsTeaser";
 import { TestimonialsCarousel } from "@/components/home/TestimonialsCarousel";
+import { BlogTeaser } from "@/components/home/BlogTeaser";
+import { LocationSection } from "@/components/home/LocationSection";
 
 const PAGE = getStaticPage("/");
 
@@ -25,10 +29,14 @@ export default function Home() {
         <Hero />
         <TrustBar />
         <ServicesGrid />
+        <ConditionsTeaser />
         <WelcomeSection />
+        <MeetTheDoctor />
         <HowItWorks />
         <StatsSection />
         <TestimonialsCarousel />
+        <BlogTeaser />
+        <LocationSection />
         {/* "Get in Touch" CTA band is intentionally not repeated here — it's
             already rendered site-wide by SiteFooter (via app/layout.tsx),
             using the same FOOTER_CTA copy the live homepage's footer uses. */}
