@@ -70,13 +70,13 @@ export function LocationSection() {
                         <path d={item.icon} />
                       </svg>
                     </span>
-                    <div>
+                    <div className="min-w-0">
                       <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-deep">
                         {item.label}
                       </p>
                       <a
                         href={item.href}
-                        className="mt-1 block text-base font-semibold leading-snug text-ink transition-colors hover:text-brand-deep"
+                        className="mt-1 block break-words text-base font-semibold leading-snug text-ink transition-colors hover:text-brand-deep"
                       >
                         {item.value}
                       </a>
