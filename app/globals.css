@@ -4,18 +4,18 @@
   --background: #ffffff;
   --foreground: #171717;
 
-  /* Brand tokens — do not introduce other hues. */
-  --color-brand: #1a86f7; /* primary blue — accent moments only */
-  --color-brand-cyan: #22c7f0; /* logo gradient start */
-  --color-brand-deep: #1479e8; /* logo gradient end / CTA pill background */
-  --color-brand-cta-hover: #1062c4;
-  --color-brand-cta-active: #0d54a8;
+  /* Brand tokens, do not introduce other hues. */
+  --color-brand: #178498; /* primary teal, accent moments only */
+  --color-brand-cyan: #77bdc5; /* logo gradient start / light teal */
+  --color-brand-deep: #012453; /* logo gradient end / CTA pill background, deep navy */
+  --color-brand-cta-hover: #345075;
+  --color-brand-cta-active: #1a3a64;
   --color-ink: #1b1e24; /* headlines, primary text */
   --color-ink-soft: #4a5568; /* body copy */
   --color-ink-muted: #8a97a8; /* captions, meta */
-  --color-surface: #eaf2fd; /* cards, dropdown panel interior */
-  --color-surface-border: #d0e4f7;
-  --color-bg-tinted: #f4f8fc; /* section alternation, footer background */
+  --color-surface: #eff7f8; /* cards, dropdown panel interior */
+  --color-surface-border: #e1f0f2;
+  --color-bg-tinted: #f4fafa; /* section alternation, footer background */
 }
 
 @theme inline {

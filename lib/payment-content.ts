@@ -1,4 +1,4 @@
-// Client-safe pure data for the /payment-plans/ page — plain-language
+// Client-safe pure data for the /payment-plans/ page, plain-language
 // FAQ content about IN-OFFICE payment plans (structured directly with
 // the practice), distinct from the third-party financing content on
 // /financing-options/.
@@ -7,7 +7,7 @@ export const PAYMENT_PLANS_INTRO = {
   eyebrow: "Payment Plans",
   heading: "Flexible Payment Plans for Your Care",
   intro:
-    "Cost shouldn't stand between you and relief. Ormond Spine & Nerve Center offers structured, in-office payment plans so you can start treatment now and pay over time — in plain language, with no surprises.",
+    "Cost shouldn't stand between you and relief. Ormond Spine & Nerve Center offers structured, in-office payment plans so you can start treatment now and pay over time, in plain language, with no surprises.",
 };
 
 export interface PaymentPlanFaq {
@@ -34,7 +34,7 @@ export const PAYMENT_PLANS_FAQS: PaymentPlanFaq[] = [
   {
     question: "Can I use a payment plan alongside insurance?",
     answer:
-      "Yes. If you have insurance or PIP coverage, a payment plan can cover your portion of the cost — copays, deductibles, or services not covered by your plan.",
+      "Yes. If you have insurance or PIP coverage, a payment plan can cover your portion of the cost, copays, deductibles, or services not covered by your plan.",
   },
   {
     question: "What happens if my treatment plan changes?",

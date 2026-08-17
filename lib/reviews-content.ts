@@ -1,7 +1,7 @@
 // Client-safe pure data for the /reviews/ page. Combines the 3 real,
 // verbatim patient testimonials already shown on the homepage carousel
 // (lib/home-content.ts) with additional real Google reviews supplied
-// directly by the clinic (ADDITIONAL_REVIEWS below) — do not add
+// directly by the clinic (ADDITIONAL_REVIEWS below), do not add
 // fabricated quotes here; extend ADDITIONAL_REVIEWS only with real
 // reviews as they come in.
 
@@ -19,14 +19,14 @@ export interface ReviewEntry {
   name: string;
   rating: number;
   /** Optional cross-link to the condition/service page the review is
-   *  actually about (based on what the patient's own words describe —
+   *  actually about (based on what the patient's own words describe, 
    *  never inferred beyond that). */
   relatedTo?: { label: string; href: string };
 }
 
-// Real, verbatim testimonials — do NOT add fabricated quotes here. Only
+// Real, verbatim testimonials, do NOT add fabricated quotes here. Only
 // 3 real Google reviews exist for this business today (confirmed via
-// live Google Business Profile lookup on 2026-08-06) — extend this list
+// live Google Business Profile lookup on 2026-08-06), extend this list
 // with additional real reviews as they come in, don't invent new ones.
 // `relatedTo` cross-links a review to the condition/service page it
 // actually discusses, so a reader can jump straight from social proof to
@@ -81,7 +81,7 @@ const ADDITIONAL_REVIEWS: ReviewEntry[] = [
     name: "Priya Nair",
     rating: 5,
     quote:
-      "As a diabetic I figured the tingling in my feet was just something I'd have to live with. The neuropathy program here has genuinely changed that — more feeling has come back and I sleep better at night.",
+      "As a diabetic I figured the tingling in my feet was just something I'd have to live with. The neuropathy program here has genuinely changed that, more feeling has come back and I sleep better at night.",
     relatedTo: {
       label: "Diabetic Neuropathy",
       href: "/conditions/neuropathy-nerve/#diabetic-neuropathy",
@@ -121,7 +121,7 @@ const ADDITIONAL_REVIEWS: ReviewEntry[] = [
     name: "Linda Osei",
     rating: 5,
     quote:
-      "My legs would swell up so badly by the end of my shifts as a nurse. The compression therapy sessions here have honestly been a lifesaver — my legs feel lighter and less achy by the end of the day now.",
+      "My legs would swell up so badly by the end of my shifts as a nurse. The compression therapy sessions here have honestly been a lifesaver, my legs feel lighter and less achy by the end of the day now.",
     relatedTo: {
       label: "Compression Therapy",
       href: "/compression-therapy/",

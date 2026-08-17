@@ -3,13 +3,13 @@ import Link from "next/link";
 import { HERO, HOW_IT_WORKS, HOW_IT_WORKS_STEPS } from "@/lib/home-content";
 
 const STEP_ICON_PATHS = [
-  // Step 1: calendar with a checkmark — booking
+  // Step 1: calendar with a checkmark, booking
   "M8 2v3M16 2v3M4 8h16M5 5h14a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1ZM9 14l2 2 4-4",
-  // Step 2: stethoscope-ish — consultation
+  // Step 2: stethoscope-ish, consultation
   "M6 3v4a4 4 0 0 0 8 0V3M10 15a4 4 0 0 0 8 0v-3M18 12a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z",
-  // Step 3: document with lines — plan
+  // Step 3: document with lines, plan
   "M6 3h9l3 3v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1ZM14 3v4h4M9 12h6M9 16h6M9 8h3",
-  // Step 4: rising path — transformation
+  // Step 4: rising path, transformation
   "M5 15l4-4 3 3 6-6M13 8h6v6",
 ];
 
@@ -56,7 +56,7 @@ export function HowItWorks() {
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 80% 55% at 50% 0%, rgba(34,199,240,0.22) 0%, rgba(34,199,240,0) 60%)",
+            "radial-gradient(ellipse 80% 55% at 50% 0%, rgba(119,189,197,0.22) 0%, rgba(119,189,197,0) 60%)",
         }}
       />
       {/* Faint grid texture */}
@@ -65,7 +65,7 @@ export function HowItWorks() {
         className="absolute inset-0 opacity-[0.06] mix-blend-overlay"
         style={{
           backgroundImage:
-            "linear-gradient(#22c7f0 1px, transparent 1px), linear-gradient(90deg, #22c7f0 1px, transparent 1px)",
+            "linear-gradient(#77BDC5 1px, transparent 1px), linear-gradient(90deg, #77BDC5 1px, transparent 1px)",
           backgroundSize: "80px 80px",
         }}
       />
@@ -98,13 +98,13 @@ export function HowItWorks() {
 
         {/* Horizontal 4-step flow */}
         <div className="relative mt-14 lg:mt-20">
-          {/* Connecting dashed line — behind cards, desktop only */}
+          {/* Connecting dashed line, behind cards, desktop only */}
           <div
             aria-hidden
             className="pointer-events-none absolute left-8 right-8 top-[62px] hidden lg:block"
             style={{
               backgroundImage:
-                "linear-gradient(to right, rgba(34,199,240,0.5) 50%, transparent 50%)",
+                "linear-gradient(to right, rgba(119,189,197,0.5) 50%, transparent 50%)",
               backgroundSize: "12px 1px",
               backgroundRepeat: "repeat-x",
               height: "1px",
@@ -158,7 +158,7 @@ export function HowItWorks() {
                 <span
                   aria-hidden
                   className="absolute left-1/2 top-[62px] hidden h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-cyan ring-4 ring-ink lg:block"
-                  style={{ boxShadow: "0 0 20px rgba(34,199,240,0.6)" }}
+                  style={{ boxShadow: "0 0 20px rgba(119,189,197,0.6)" }}
                 />
               </li>
             ))}
@@ -170,7 +170,7 @@ export function HowItWorks() {
           <p className="text-sm text-white/60">Ready to take the first step?</p>
           <Link
             href={HOW_IT_WORKS.ctaHref}
-            className="group/cta relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-br from-brand-cyan to-brand-deep px-8 py-3.5 text-sm font-semibold text-white shadow-[0_16px_44px_-10px_rgba(34,199,240,0.55)] transition-all hover:scale-[1.03]"
+            className="group/cta relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-br from-brand-cyan to-brand-deep px-8 py-3.5 text-sm font-semibold text-white shadow-[0_16px_44px_-10px_rgba(119,189,197,0.55)] transition-all hover:scale-[1.03]"
           >
             <span
               aria-hidden

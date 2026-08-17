@@ -6,7 +6,7 @@ import { TEAM_INTRO, TEAM_MEMBERS, DOCTOR_TIMELINE, CARE_APPROACH } from "@/lib/
 const doctor = TEAM_MEMBERS[0];
 
 /**
- * /meet-our-team/ page body — hero intro, Dr. Herbert's full profile,
+ * /meet-our-team/ page body, hero intro, Dr. Herbert's full profile,
  * an "Our Approach to Care" pillars section, an education/training
  * timeline, and a closing appointment CTA.
  */
@@ -20,7 +20,7 @@ export function TeamPageBody() {
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "radial-gradient(ellipse 70% 60% at 15% 0%, rgba(34,199,240,0.1) 0%, transparent 55%)",
+              "radial-gradient(ellipse 70% 60% at 15% 0%, rgba(119,189,197,0.1) 0%, transparent 55%)",
           }}
         />
         <div
@@ -34,7 +34,7 @@ export function TeamPageBody() {
 
         <div className="relative mx-auto max-w-3xl px-4 py-20 text-center sm:px-6 lg:px-8 lg:py-24">
           <Reveal>
-            <div className="mx-auto inline-flex w-fit items-center gap-2 rounded-full border border-brand-cyan/30 bg-white/70 px-3 py-1.5 shadow-[0_8px_28px_-14px_rgba(20,121,232,0.35)] backdrop-blur">
+            <div className="mx-auto inline-flex w-fit items-center gap-2 rounded-full border border-brand-cyan/30 bg-white/70 px-3 py-1.5 shadow-[0_8px_28px_-14px_rgba(1,36,83,0.35)] backdrop-blur">
               <span className="h-1.5 w-1.5 rounded-full bg-brand-cyan" />
               <span className="text-[11px] font-bold uppercase tracking-[0.22em] text-brand-deep">
                 {TEAM_INTRO.eyebrow}
@@ -59,7 +59,7 @@ export function TeamPageBody() {
       {/* Doctor profile */}
       <section className="mx-auto max-w-5xl px-4 pb-20 sm:px-6 lg:px-8">
         <Reveal>
-          <div className="grid grid-cols-1 gap-8 rounded-[28px] border border-surface-border bg-white p-6 shadow-[0_28px_64px_-38px_rgba(20,121,232,0.3)] sm:p-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:gap-12">
+          <div className="grid grid-cols-1 gap-8 rounded-[28px] border border-surface-border bg-white p-6 shadow-[0_28px_64px_-38px_rgba(1,36,83,0.3)] sm:p-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:gap-12">
             {doctor.image ? (
               <span className="relative mx-auto aspect-[4/5] w-full max-w-[280px] overflow-hidden rounded-3xl ring-2 ring-brand-cyan/30 lg:max-w-none">
                 <Image
@@ -84,7 +84,7 @@ export function TeamPageBody() {
               <div className="mt-7 flex flex-wrap gap-3">
                 <Link
                   href="/appointment-request/"
-                  className="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-br from-brand-cyan to-brand-deep px-6 py-3 text-[14px] font-semibold text-white shadow-[0_14px_36px_-10px_rgba(20,121,232,0.55)] transition-all hover:scale-[1.03]"
+                  className="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-br from-brand-cyan to-brand-deep px-6 py-3 text-[14px] font-semibold text-white shadow-[0_14px_36px_-10px_rgba(1,36,83,0.55)] transition-all hover:scale-[1.03]"
                 >
                   Book with {doctor.name.split(",")[0]}
                 </Link>
@@ -179,7 +179,7 @@ export function TeamPageBody() {
           <div className="mt-8 flex justify-center">
             <Link
               href="/appointment-request/"
-              className="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-br from-brand-cyan to-brand-deep px-7 py-3.5 text-[15px] font-semibold text-white shadow-[0_18px_44px_-10px_rgba(20,121,232,0.55)] transition-all hover:scale-[1.03]"
+              className="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-br from-brand-cyan to-brand-deep px-7 py-3.5 text-[15px] font-semibold text-white shadow-[0_18px_44px_-10px_rgba(1,36,83,0.55)] transition-all hover:scale-[1.03]"
             >
               Book Appointment
             </Link>

@@ -18,10 +18,10 @@ const BARS: Bar[] = [
 
 /**
  * Small decorative animated bar chart for the hero's "real outcomes" stat
- * card — purely a visual flourish (upward trend), not a literal data
+ * card, purely a visual flourish (upward trend), not a literal data
  * chart. Uses `motion/react`'s plain mount `initial`/`animate` (NOT
  * `whileInView`), which is reliable in this Motion v12 + React 19 +
- * Turbopack stack per this site's established convention — safe here
+ * Turbopack stack per this site's established convention, safe here
  * since the hero is always in view on page load anyway.
  */
 export function HeroBarChart() {

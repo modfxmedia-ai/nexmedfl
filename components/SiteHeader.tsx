@@ -47,7 +47,7 @@ export function SiteHeader() {
   const navRef = useRef<HTMLUListElement>(null);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  // Close any open dropdown/drawer on route change — adjust state during
+  // Close any open dropdown/drawer on route change, adjust state during
   // render rather than in an effect, to avoid setState-in-effect.
   if (pathname !== previousPathname) {
     setPreviousPathname(pathname);
@@ -114,7 +114,7 @@ export function SiteHeader() {
 
   return (
     <>
-      {/* Utility bar — slim dark strip; collapses on scroll */}
+      {/* Utility bar, slim dark strip; collapses on scroll */}
       <motion.div
         aria-hidden={isScrolled}
         animate={{
@@ -159,7 +159,7 @@ export function SiteHeader() {
                 <circle cx="10" cy="10" r="7.25" />
                 <path d="M10 6v4l2.5 2" strokeLinecap="round" />
               </svg>
-              Mon–Sun · 9:00 AM – 5:00 PM
+              {BUSINESS.hoursDisplay}
             </span>
             <span className="h-3 w-px bg-white/20" />
             <Link
@@ -172,11 +172,11 @@ export function SiteHeader() {
         </div>
       </motion.div>
 
-      {/* Main nav — full-width glass bar, flush against the utility bar */}
+      {/* Main nav, full-width glass bar, flush against the utility bar */}
       <header
         className={`sticky top-0 z-50 w-full border-b bg-white/90 backdrop-blur-xl transition-all duration-300 ${
           isScrolled
-            ? "border-surface-border shadow-[0_8px_30px_-10px_rgba(20,121,232,0.18)]"
+            ? "border-surface-border shadow-[0_8px_30px_-10px_rgba(1,36,83,0.18)]"
             : "border-surface-border/60"
         }`}
       >
@@ -190,7 +190,7 @@ export function SiteHeader() {
             <Link
               href="/"
               className="flex shrink-0 items-center"
-              aria-label={`${SITE_NAME} — Home`}
+              aria-label={`${SITE_NAME}, Home`}
             >
               <motion.span
                 animate={{ scale: isScrolled ? 0.92 : 1 }}
@@ -306,7 +306,7 @@ export function SiteHeader() {
               </ul>
             </nav>
 
-            {/* Mega-menu panel — rendered once, centered under the full
+            {/* Mega-menu panel, rendered once, centered under the full
                 header row rather than anchored to the trigger's own
                 position, so wide panels (Services/Conditions) stay fully
                 on-screen regardless of which nav item opened them. */}
@@ -326,7 +326,7 @@ export function SiteHeader() {
               ) : null}
             </AnimatePresence>
 
-            {/* CTA (desktop) — gradient pill with shimmer */}
+            {/* CTA (desktop), gradient pill with shimmer */}
             <div className="hidden shrink-0 items-center gap-3 lg:flex">
               <motion.div
                 whileHover={{ scale: 1.03 }}
@@ -334,7 +334,7 @@ export function SiteHeader() {
               >
                 <Link
                   href="/appointment-request/"
-                  className="group/cta relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-br from-brand-cyan to-brand-deep px-5 py-2.5 text-sm font-semibold text-white shadow-[0_10px_30px_-8px_rgba(20,121,232,0.55)] transition-shadow hover:shadow-[0_14px_36px_-8px_rgba(20,121,232,0.7)]"
+                  className="group/cta relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-br from-brand-cyan to-brand-deep px-5 py-2.5 text-sm font-semibold text-white shadow-[0_10px_30px_-8px_rgba(1,36,83,0.55)] transition-shadow hover:shadow-[0_14px_36px_-8px_rgba(1,36,83,0.7)]"
                 >
                   <span
                     aria-hidden

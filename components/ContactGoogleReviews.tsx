@@ -58,7 +58,7 @@ function initials(name: string): string {
 const FEATURED_REVIEWS = REVIEWS.slice(0, 3);
 
 /**
- * Compact "Google reviews" preview section for the /contact-us/ page —
+ * Compact "Google reviews" preview section for the /contact-us/ page, 
  * mirrors the Google-review card styling used on the full /reviews/
  * page (matching Google icon, star color, and avatar treatment) but
  * shows just a few reviews plus a link to the full reviews page.
@@ -69,7 +69,7 @@ export function ContactGoogleReviews() {
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
         <Reveal>
           <div className="mx-auto max-w-2xl text-center">
-            <div className="mx-auto inline-flex w-fit items-center gap-2 rounded-full border border-brand-cyan/30 bg-white px-3 py-1.5 shadow-[0_8px_28px_-14px_rgba(20,121,232,0.35)]">
+            <div className="mx-auto inline-flex w-fit items-center gap-2 rounded-full border border-brand-cyan/30 bg-white px-3 py-1.5 shadow-[0_8px_28px_-14px_rgba(1,36,83,0.35)]">
               <span className="h-1.5 w-1.5 rounded-full bg-brand-cyan" />
               <span className="text-[11px] font-bold uppercase tracking-[0.22em] text-brand-deep">
                 Patient Reviews

@@ -23,7 +23,7 @@ function ArrowIcon() {
 }
 
 /**
- * Condition card for the /conditions-we-treat/ hub — motion/react is used
+ * Condition card for the /conditions-we-treat/ hub, motion/react is used
  * only for hover/tap micro-interactions (event-driven, not mount/scroll
  * -triggered), per the site's documented Motion v12 + React 19 +
  * Turbopack `whileInView` bug workaround. Scroll-entrance is still
@@ -50,7 +50,7 @@ export function ConditionCard({
       <Link
         href={href}
         id={id}
-        className="flex h-full scroll-mt-40 flex-col gap-2.5 rounded-2xl border border-surface-border bg-white p-6 shadow-[0_16px_40px_-32px_rgba(20,121,232,0.35)] transition-all group-hover/cond:border-brand-cyan/40 group-hover/cond:shadow-[0_22px_50px_-28px_rgba(20,121,232,0.4)]"
+        className="flex h-full scroll-mt-40 flex-col gap-2.5 rounded-2xl border border-surface-border bg-white p-6 shadow-[0_16px_40px_-32px_rgba(1,36,83,0.35)] transition-all group-hover/cond:border-brand-cyan/40 group-hover/cond:shadow-[0_22px_50px_-28px_rgba(1,36,83,0.4)]"
       >
         <h3 className="text-[15.5px] font-semibold leading-snug text-ink">
           {label}

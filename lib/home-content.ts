@@ -1,4 +1,4 @@
-// Homepage-only content data — copied verbatim from the live nexmedfl.com
+// Homepage-only content data, copied verbatim from the live nexmedfl.com
 // homepage (scraped 2026-08-04). Pure data (no Node builtins) so it's safe
 // to import from client components.
 
@@ -6,7 +6,7 @@ export const HERO = {
   eyebrow: "Trusted by Local Families",
   heading: "Your Path To Recovery",
   subheading:
-    "Ormond Spine & Nerve Center helps Ormond Beach, FL patients find lasting relief through advanced neuropathy care, spinal and knee decompression, and chiropractic treatment \u2014 combining medical expertise with modern technology to restore health, confidence, and quality of life.",
+    "Ormond Spine & Nerve Center helps Ormond Beach, FL patients find lasting relief through advanced neuropathy care, spinal and knee decompression, and chiropractic treatment, combining medical expertise with modern technology to restore health, confidence, and quality of life.",
   ctaLabel: "Book An Appointment",
   ctaHref: "/contact-us/",
   backgroundImage:
@@ -18,19 +18,19 @@ export interface TrustItem {
   description: string;
 }
 
-// The 3-item icon strip directly under the hero on the live site — this is
+// The 3-item icon strip directly under the hero on the live site, this is
 // the closest real equivalent to a "trust bar" (the live site has no
 // separate logo/certification strip).
 export const TRUST_ITEMS: TrustItem[] = [
   {
-    title: "Comprehensive Medical Care",
+    title: "Comprehensive Health Care",
     description:
       "From personalized evaluations to advanced spine, knee, and nerve treatments, our Ormond Beach clinic provides tailored care plans designed around your specific condition and goals.",
   },
   {
     title: "Healing Stories of Success",
     description:
-      "Countless Ormond Beach, FL patients have started a new chapter of health with our holistic, non-surgical treatments \u2014 and achieved lasting results.",
+      "Countless Ormond Beach, FL patients have started a new chapter of health with our holistic, non-surgical treatments, and achieved lasting results.",
   },
   {
     title: "Trusted Local Expertise",
@@ -46,7 +46,7 @@ export const WELCOME = {
     "At Ormond Spine & Nerve Center in Ormond Beach, FL, your well-being comes first. We provide advanced, comprehensive care with a focus on innovative, non-surgical treatments designed to restore health, relieve pain, and improve quality of life for patients throughout Volusia County.",
   programsLeadIn: "Our specialty programs include:",
   closing: [
-    "At Ormond Spine & Nerve Center, you'll find more than treatments \u2014 you'll find a local team committed to your success. With expertise, state-of-the-art technology, and personalized care, we help Ormond Beach patients achieve lasting results in health, wellness, and mobility.",
+    "At Ormond Spine & Nerve Center, you'll find more than treatments, you'll find a local team committed to your success. With expertise, state-of-the-art technology, and personalized care, we help Ormond Beach patients achieve lasting results in health, wellness, and mobility.",
     "Discover the Ormond Spine & Nerve Center difference, where advanced medicine meets genuine, hometown care.",
   ],
 };
@@ -71,14 +71,14 @@ export const WELCOME_PROGRAMS: WelcomeProgram[] = [
     description:
       "Non-surgical, computer-controlled traction that relieves pressure on spinal discs and nerves to ease chronic back and neck pain.",
     href: "/spinal-decompression-therapy/",
-    image: "/images/spinal-decompression-therapy.webp",
+    image: "/images/spinal-decompression-therapy.jpg",
   },
   {
     name: "Knee Decompression Therapy",
     description:
       "Gentle traction that unloads the knee joint, creating space to decrease pain and improve movement.",
     href: "/knee-decompression-therapy/",
-    image: "/images/knee-decompression-therapy.webp",
+    image: "/images/knee-decompression-therapy.png",
   },
   {
     name: "Neuropathy Treatment Program",
@@ -106,7 +106,7 @@ export const WELCOME_PROGRAMS: WelcomeProgram[] = [
     description:
       "Normatec dynamic compression that improves circulation, lymphatic drainage, and recovery.",
     href: "/compression-therapy/",
-    image: "/images/compression-therapy.jpeg",
+    image: "/images/compression-therapy.jpg",
   },
 ];
 
@@ -120,7 +120,7 @@ export interface StatItem {
 // (data-toValue / data-duration), since the rendered DOM text is animated
 // client-side and not present as static markup.
 export const STATS: StatItem[] = [
-  { value: 30, suffix: "+", label: "Years of Experience" },
+  { value: 18, suffix: "+", label: "Years of Experience" },
   { value: 1, suffix: "k+", label: "Successful Treatments" },
   { value: 5, suffix: "k+", label: "Patients Helped" },
   { value: 98, suffix: "%", label: "Patient Satisfaction" },
@@ -130,7 +130,7 @@ export const HOW_IT_WORKS = {
   eyebrow: "How It Works",
   heading: "Helping You Live Your Best Life",
   intro:
-    "We make getting the right treatment simple, personalized, and stress-free—so you can focus on feeling your best, regain your confidence, and enjoy a healthier, more vibrant life with the care and expertise you deserve.",
+    "We make getting the right treatment simple, personalized, and stress-free, so you can focus on feeling your best, regain your confidence, and enjoy a healthier, more vibrant life with the care and expertise you deserve.",
   ctaLabel: "Contact Now",
   ctaHref: "/contact-us/",
 };
@@ -166,7 +166,7 @@ export const SERVICES_INTRO = {
   eyebrow: "Our Services",
   heading: "Our Specialized Services",
   intro:
-    "Ormond Spine & Nerve Center offers a full range of non-surgical treatments for patients across Ormond Beach, FL \u2014 from chiropractic care and spinal decompression to neuropathy, shockwave, laser, and compression therapy. Click any service below to learn more.",
+    "Ormond Spine & Nerve Center offers a full range of non-surgical treatments for patients across Ormond Beach, FL, from chiropractic care and spinal decompression to neuropathy, shockwave, laser, and compression therapy. Click any service below to learn more.",
 };
 
 export interface ServiceGridItem {
@@ -175,14 +175,14 @@ export interface ServiceGridItem {
   href: string;
 }
 
-// The homepage services list — the full Ormond Spine & Nerve Center
+// The homepage services list, the full Ormond Spine & Nerve Center
 // service catalogue.
 export const SERVICES_GRID: ServiceGridItem[] = [
   {
-    name: "Chiropractic Care",
+    name: "Neuropathy Treatment",
     description:
-      "Hands-on spinal adjustments and posture correction relieve back and neck pain, restore proper alignment, and support long-term mobility with a non-surgical, drug-free approach.",
-    href: "/chiropractic-care/",
+      "Neuropathy can cause pain, numbness, tingling, or weakness, making everyday life difficult. At Ormond Spine & Nerve Center, we provide safe and effective neuropathy treatments designed to relieve symptoms, restore nerve function, and improve your quality of life.",
+    href: "/neuropathy-treatment/",
   },
   {
     name: "Spinal Decompression Therapy",
@@ -197,16 +197,16 @@ export const SERVICES_GRID: ServiceGridItem[] = [
     href: "/knee-decompression-therapy/",
   },
   {
+    name: "Chiropractic Care",
+    description:
+      "Hands-on spinal adjustments and posture correction relieve back and neck pain, restore proper alignment, and support long-term mobility with a non-surgical, drug-free approach.",
+    href: "/chiropractic-care/",
+  },
+  {
     name: "Knee Pain Treatment",
     description:
       "Our knee pain treatments target the root cause to relieve discomfort, improve mobility, and restore strength. Using advanced therapies and personalized care, we help you return to an active, pain-free lifestyle safely and effectively.",
     href: "/knee-pain-treatment/",
-  },
-  {
-    name: "Neuropathy Treatment",
-    description:
-      "Neuropathy can cause pain, numbness, tingling, or weakness—making everyday life difficult. At Ormond Spine & Nerve Center, we provide safe and effective neuropathy treatments designed to relieve symptoms, restore nerve function, and improve your quality of life.",
-    href: "/neuropathy-treatment/",
   },
   {
     name: "Shockwave Therapy",

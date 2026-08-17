@@ -2,7 +2,7 @@
 // Pure data only (no Node builtins) so this can be imported from both
 // Server and Client Components without breaking the Turbopack build.
 
-// NOTE: still pointing at the nexmedfl.com domain/CDN — update SITE_URL
+// NOTE: still pointing at the nexmedfl.com domain/CDN, update SITE_URL
 // (and the image hostname allow-list in next.config.ts) once the site's
 // real production domain is known.
 export const SITE_URL = "https://nexmedfl.com";
@@ -19,9 +19,9 @@ export const BUSINESS = {
   emailHref: "mailto:info@ormondspinenervecenter.com",
   // Real logo artwork (cropped to content bounds, transparent background);
   // used for the header, footer, mobile drawer, and schema/Open Graph images.
-  logo: "/images/logo-v2.png",
-  logoWidth: 604,
-  logoHeight: 328,
+  logo: "/images/logo-v3.png",
+  logoWidth: 1235,
+  logoHeight: 509,
   address: {
     streetAddress: "141 Sagebrush Trail, Suite C",
     addressLocality: "Ormond Beach",
@@ -30,11 +30,9 @@ export const BUSINESS = {
     addressCountry: "US",
   },
   addressDisplay: "141 Sagebrush Trail, Suite C Ormond Beach, FL 32174",
-  openingHours: [
-    "Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday 09:00-17:00",
-  ],
+  openingHours: ["Tuesday,Wednesday,Thursday,Friday 08:30-17:00"],
   // Human-readable hours string reused across contact-focused pages.
-  hoursDisplay: "Mon–Sun · 9:00 AM – 5:00 PM",
+  hoursDisplay: "Tue–Fri · 8:30 AM – 5:00 PM",
 };
 
 export const SOCIAL_LINKS = {
@@ -68,7 +66,7 @@ export type HeaderNavItem = {
   /** Omitted for items that are dropdown-toggle-only on the live site (e.g. "About Us"). */
   href?: string;
   children?: NavLink[];
-  /** Grouped mega-menu columns — Services and Conditions. */
+  /** Grouped mega-menu columns, Services and Conditions. */
   categories?: ServiceCategory[];
 };
 
@@ -124,13 +122,39 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
   },
 ];
 
-// Conditions mega-menu categories — the full catalogue from the Ormond
+// Conditions mega-menu categories, the full catalogue from the Ormond
 // Spine & Nerve Center conditions list, grouped by body region. Each
 // category label deep-links to its dedicated /conditions/[category]/
 // page (lib/condition-pages-content.ts is the content source of truth),
 // and each item deep-links straight to that condition's section anchor
 // on the same page.
 export const CONDITION_CATEGORIES: ServiceCategory[] = [
+  {
+    label: "Neuropathy & Nerve",
+    href: "/conditions/neuropathy-nerve/",
+    items: [
+      {
+        label: "Peripheral Neuropathy",
+        href: "/conditions/neuropathy-nerve/#peripheral-neuropathy",
+      },
+      {
+        label: "Diabetic Neuropathy",
+        href: "/conditions/neuropathy-nerve/#diabetic-neuropathy",
+      },
+      {
+        label: "Chemotherapy-Induced Neuropathy",
+        href: "/conditions/neuropathy-nerve/#chemotherapy-induced-neuropathy",
+      },
+      {
+        label: "Burning Feet Syndrome",
+        href: "/conditions/neuropathy-nerve/#burning-feet-syndrome",
+      },
+      {
+        label: "Numbness & Tingling",
+        href: "/conditions/neuropathy-nerve/#numbness-and-tingling",
+      },
+    ],
+  },
   {
     label: "Spine",
     href: "/conditions/spine/",
@@ -173,32 +197,6 @@ export const CONDITION_CATEGORIES: ServiceCategory[] = [
       {
         label: "Joint Stiffness",
         href: "/conditions/knee-joint/#joint-stiffness",
-      },
-    ],
-  },
-  {
-    label: "Neuropathy & Nerve",
-    href: "/conditions/neuropathy-nerve/",
-    items: [
-      {
-        label: "Peripheral Neuropathy",
-        href: "/conditions/neuropathy-nerve/#peripheral-neuropathy",
-      },
-      {
-        label: "Diabetic Neuropathy",
-        href: "/conditions/neuropathy-nerve/#diabetic-neuropathy",
-      },
-      {
-        label: "Chemotherapy-Induced Neuropathy",
-        href: "/conditions/neuropathy-nerve/#chemotherapy-induced-neuropathy",
-      },
-      {
-        label: "Burning Feet Syndrome",
-        href: "/conditions/neuropathy-nerve/#burning-feet-syndrome",
-      },
-      {
-        label: "Numbness & Tingling",
-        href: "/conditions/neuropathy-nerve/#numbness-and-tingling",
       },
     ],
   },
@@ -338,10 +336,10 @@ export const HEADER_NAV: HeaderNavItem[] = [
   { label: "Contact Us", href: "/contact-us/" },
 ];
 
-// "Our Services" footer column — every individual service leaf page
+// "Our Services" footer column, every individual service leaf page
 // (existing + newly added), grouped in the same order as the header
 // mega-menu categories.
-// "Our Services" footer column — every individual service leaf page,
+// "Our Services" footer column, every individual service leaf page,
 // grouped in the same order as the header mega-menu categories.
 export const FOOTER_SERVICES: NavLink[] = [
   { label: "Chiropractic Care", href: "/chiropractic-care/" },
@@ -354,7 +352,7 @@ export const FOOTER_SERVICES: NavLink[] = [
   { label: "Compression Therapy", href: "/compression-therapy/" },
 ];
 
-// "Conditions We Treat" footer column — the 8 dedicated condition
+// "Conditions We Treat" footer column, the 8 dedicated condition
 // category pages, same order/labels as the header mega-menu categories.
 export const FOOTER_CONDITIONS: NavLink[] = [
   { label: "Spine", href: "/conditions/spine/" },
@@ -369,11 +367,13 @@ export const FOOTER_CONDITIONS: NavLink[] = [
 
 // Legal links shown in the footer bar, matching the live site.
 export const FOOTER_LEGAL: NavLink[] = [
+  { label: "Privacy Policy", href: "/privacy-policy/" },
+  { label: "Terms & Conditions", href: "/terms-and-conditions/" },
   { label: "HIPPA Privacy Policy", href: "/hippa-privacy-policy/" },
   { label: "No Surprises Act", href: "/no-suprises-act/" },
 ];
 
-// Footer "Get in Touch" CTA band — copy taken verbatim from the live footer.
+// Footer "Get in Touch" CTA band, copy taken verbatim from the live footer.
 export const FOOTER_CTA = {
   eyebrow: "Get in Touch",
   heading: "Take the First Step to Better Health",
@@ -384,4 +384,4 @@ export const FOOTER_CTA = {
 
 // Footer brand tagline, taken verbatim from the live footer.
 export const FOOTER_TAGLINE =
-  "Ormond Spine & Nerve Center delivers advanced medical care with compassion, expertise, and innovation—helping you live healthier and better.";
+  "Ormond Spine & Nerve Center delivers advanced medical care with compassion, expertise, and innovation, helping you live healthier and better.";

@@ -8,7 +8,7 @@ import { BUSINESS } from "@/lib/site-config";
 
 const EASE_OUT_EXPO = [0.16, 1, 0.3, 1] as const;
 
-// One simple, distinct line-icon per mega-menu category — purely
+// One simple, distinct line-icon per mega-menu category, purely
 // decorative accents, not literal anatomy. Keys cover both the Services
 // mega-menu labels and the Conditions mega-menu labels.
 const CATEGORY_ICON_PATHS: Record<string, string> = {
@@ -57,7 +57,7 @@ const columnVariants = {
   show: { opacity: 1, y: 0 },
 };
 
-// Featured "promo" panel background — a distinct photo per mega-menu so
+// Featured "promo" panel background, a distinct photo per mega-menu so
 // the visual matches the menu's content (real patient photo for the
 // Services catalogue, anatomical illustration for the Conditions one).
 const PROMO_IMAGE_BY_LABEL: Record<string, string> = {
@@ -85,9 +85,9 @@ export function MegaMenu({
       style={{ transformOrigin: "top center" }}
       className="w-[min(1080px,calc(100vw-2rem))] pt-4"
     >
-      <div className="overflow-hidden rounded-[28px] border border-white/70 bg-white/95 shadow-[0_30px_80px_-20px_rgba(20,121,232,0.35),0_2px_10px_rgba(20,121,232,0.08)] backdrop-blur-xl">
+      <div className="overflow-hidden rounded-[28px] border border-white/70 bg-white/95 shadow-[0_30px_80px_-20px_rgba(1,36,83,0.35),0_2px_10px_rgba(1,36,83,0.08)] backdrop-blur-xl">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px]">
-          {/* Category grid — 2 columns on desktop; scrolls internally when a
+          {/* Category grid, 2 columns on desktop; scrolls internally when a
               menu (e.g. the 8-category Conditions catalogue) is tall. */}
           <motion.div
             initial="hidden"
@@ -140,7 +140,7 @@ export function MegaMenu({
             ))}
           </motion.div>
 
-          {/* Featured promo panel — real clinic photo + dark gradient overlay */}
+          {/* Featured promo panel, real clinic photo + dark gradient overlay */}
           <motion.aside
             initial={{ opacity: 0, x: 16 }}
             animate={{ opacity: 1, x: 0 }}

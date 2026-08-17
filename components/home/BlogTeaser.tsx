@@ -7,7 +7,7 @@ import { BLOG_POSTS } from "@/lib/posts";
 import { PostCard } from "@/components/blog/BlogFilterGrid";
 
 // Latest 3 posts for the homepage teaser. Entrance animation uses the
-// site's CSS-keyframe Reveal (motion/react whileInView is avoided here —
+// site's CSS-keyframe Reveal (motion/react whileInView is avoided here, 
 // see /memories/nextjs-patterns.md: it gets permanently stuck at
 // opacity:0 with this Motion v12 + React 19 + Next 16 Turbopack stack).
 // The "View all articles" link below uses motion/react purely for a
@@ -50,7 +50,7 @@ export function BlogTeaser() {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 60% 60% at 85% 0%, rgba(34,199,240,0.1) 0%, transparent 55%)",
+            "radial-gradient(ellipse 60% 60% at 85% 0%, rgba(119,189,197,0.1) 0%, transparent 55%)",
         }}
       />
 

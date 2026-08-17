@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <>
       <JsonLd data={buildGraph(PAGE)} />
-      {/* Standalone MedicalBusiness schema — only present on the live homepage. */}
+      {/* Standalone MedicalBusiness schema, only present on the live homepage. */}
       <JsonLd data={MEDICAL_BUSINESS_SCHEMA} />
       <main>
         <Hero />
@@ -37,7 +37,7 @@ export default function Home() {
         <TestimonialsCarousel />
         <BlogTeaser />
         <LocationSection />
-        {/* "Get in Touch" CTA band is intentionally not repeated here — it's
+        {/* "Get in Touch" CTA band is intentionally not repeated here, it's
             already rendered site-wide by SiteFooter (via app/layout.tsx),
             using the same FOOTER_CTA copy the live homepage's footer uses. */}
       </main>

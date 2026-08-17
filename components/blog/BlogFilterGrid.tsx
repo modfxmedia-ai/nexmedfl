@@ -43,7 +43,7 @@ export function PostCard({ post, delay, large = false }: { post: BlogPostEntry; 
     <Reveal delay={delay} className="h-full">
       <Link
         href={getBlogPostPath(post)}
-        className={`group flex h-full flex-col overflow-hidden rounded-2xl border border-surface-border bg-white transition-all hover:-translate-y-1.5 hover:border-brand-cyan/40 hover:shadow-[0_28px_64px_-32px_rgba(20,121,232,0.35)] ${
+        className={`group flex h-full flex-col overflow-hidden rounded-2xl border border-surface-border bg-white transition-all hover:-translate-y-1.5 hover:border-brand-cyan/40 hover:shadow-[0_28px_64px_-32px_rgba(1,36,83,0.35)] ${
           large ? "lg:flex-row" : ""
         }`}
       >
@@ -121,7 +121,7 @@ export function BlogFilterGrid({ posts }: { posts: BlogPostEntry[] }) {
           onClick={() => setActive("All")}
           className={`rounded-full border px-4 py-2 text-[13px] font-semibold transition-all ${
             active === "All"
-              ? "border-transparent bg-gradient-to-br from-brand-cyan to-brand-deep text-white shadow-[0_10px_28px_-14px_rgba(20,121,232,0.55)]"
+              ? "border-transparent bg-gradient-to-br from-brand-cyan to-brand-deep text-white shadow-[0_10px_28px_-14px_rgba(1,36,83,0.55)]"
               : "border-surface-border bg-white text-ink hover:border-brand-cyan/40 hover:text-brand-deep"
           }`}
         >
@@ -135,7 +135,7 @@ export function BlogFilterGrid({ posts }: { posts: BlogPostEntry[] }) {
             title={topic.description}
             className={`rounded-full border px-4 py-2 text-[13px] font-semibold transition-all ${
               active === topic.label
-                ? "border-transparent bg-gradient-to-br from-brand-cyan to-brand-deep text-white shadow-[0_10px_28px_-14px_rgba(20,121,232,0.55)]"
+                ? "border-transparent bg-gradient-to-br from-brand-cyan to-brand-deep text-white shadow-[0_10px_28px_-14px_rgba(1,36,83,0.55)]"
                 : "border-surface-border bg-white text-ink hover:border-brand-cyan/40 hover:text-brand-deep"
             }`}
           >
@@ -160,7 +160,7 @@ export function BlogFilterGrid({ posts }: { posts: BlogPostEntry[] }) {
         </div>
       ) : (
         <p className="mt-14 text-center text-[14px] text-ink-soft">
-          No articles in this topic yet — check back soon.
+          No articles in this topic yet, check back soon.
         </p>
       )}
     </div>

@@ -116,7 +116,7 @@ export function Hero() {
       />
 
       <div className="relative mx-auto grid max-w-[1280px] grid-cols-1 items-center gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:gap-10 lg:px-8 lg:py-28">
-        {/* LEFT — copy */}
+        {/* LEFT, copy */}
         <div className="flex flex-col">
           {/* Eyebrow chip */}
           <div
@@ -132,7 +132,7 @@ export function Hero() {
             </span>
           </div>
 
-          {/* Headline — serif display face, two-line accent break */}
+          {/* Headline, serif display face, two-line accent break */}
           <h1 className="mt-6 font-[family-name:var(--font-playfair)] text-4xl font-bold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-[64px]">
             <span
               className="nexmed-hero-enter block"
@@ -164,7 +164,7 @@ export function Hero() {
             <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
               <Link
                 href={HERO.ctaHref}
-                className="group/cta relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-br from-brand-cyan to-brand-deep px-8 py-4 text-[15px] font-semibold text-white shadow-[0_18px_44px_-10px_rgba(20,121,232,0.65)] transition-shadow hover:shadow-[0_22px_52px_-8px_rgba(34,199,240,0.7)]"
+                className="group/cta relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-br from-brand-cyan to-brand-deep px-8 py-4 text-[15px] font-semibold text-white shadow-[0_18px_44px_-10px_rgba(1,36,83,0.65)] transition-shadow hover:shadow-[0_22px_52px_-8px_rgba(119,189,197,0.7)]"
               >
                 <span
                   aria-hidden
@@ -247,7 +247,7 @@ export function Hero() {
           </div>
         </div>
 
-        {/* RIGHT — floating stat card + consult bubble, resting directly
+        {/* RIGHT, floating stat card + consult bubble, resting directly
             on the full-bleed photo (no boxed video/image underneath). */}
         <div className="relative mx-auto flex w-full max-w-[380px] flex-col items-center gap-6 lg:mx-0 lg:ml-auto lg:items-end">
           {/* "Real outcomes" stat card */}
@@ -294,7 +294,7 @@ export function Hero() {
             </div>
           </div>
 
-          {/* "Book a free consult" bubble — offset to overlap the card
+          {/* "Book a free consult" bubble, offset to overlap the card
               above, mirroring the reference layout's floating chat-style
               CTA (worded honestly: no live-chat claim, just a direct
               link to booking). */}

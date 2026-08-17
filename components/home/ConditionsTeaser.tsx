@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 import { CONDITION_CATEGORIES } from "@/lib/site-config";
 
-// Solid (filled) icon per condition category — bolder and more legible
+// Solid (filled) icon per condition category, bolder and more legible
 // against the dark background than the outline icons used in the header
 // mega-menu.
 const CONDITION_ICONS: Record<string, string> = {
@@ -92,13 +92,13 @@ export function ConditionsTeaser() {
             <Reveal key={category.label} delay={0.06 + (i % 4) * 0.06} y={20}>
               <Link
                 href={category.href ?? "/conditions-we-treat/"}
-                className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/15 bg-white/[0.06] p-6 shadow-[0_20px_50px_-30px_rgba(0,0,0,0.6)] backdrop-blur-md transition-all hover:-translate-y-1.5 hover:border-brand-cyan/50 hover:bg-white/[0.1] hover:shadow-[0_28px_64px_-24px_rgba(34,199,240,0.35)]"
+                className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/15 bg-white/[0.06] p-6 shadow-[0_20px_50px_-30px_rgba(0,0,0,0.6)] backdrop-blur-md transition-all hover:-translate-y-1.5 hover:border-brand-cyan/50 hover:bg-white/[0.1] hover:shadow-[0_28px_64px_-24px_rgba(119,189,197,0.35)]"
               >
                 <span
                   aria-hidden
                   className="pointer-events-none absolute inset-0 bg-gradient-to-br from-brand-cyan/0 to-brand-deep/0 opacity-0 transition-opacity duration-500 group-hover:from-brand-cyan/10 group-hover:to-brand-deep/10 group-hover:opacity-100"
                 />
-                <span className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-brand-cyan to-brand-deep text-white shadow-[0_12px_30px_-10px_rgba(20,121,232,0.6)] transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3">
+                <span className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-brand-cyan to-brand-deep text-white shadow-[0_12px_30px_-10px_rgba(1,36,83,0.6)] transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3">
                   <ConditionIcon label={category.label} />
                 </span>
                 <h3 className="relative mt-4 text-lg font-semibold leading-snug text-white">
@@ -135,7 +135,7 @@ export function ConditionsTeaser() {
         <Reveal delay={0.2} className="mt-12 flex justify-center lg:mt-14">
           <Link
             href="/conditions-we-treat/"
-            className="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-br from-brand-cyan to-brand-deep px-6 py-3 text-sm font-semibold text-white shadow-[0_14px_40px_-14px_rgba(20,121,232,0.55)] transition-all hover:scale-[1.03]"
+            className="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-br from-brand-cyan to-brand-deep px-6 py-3 text-sm font-semibold text-white shadow-[0_14px_40px_-14px_rgba(1,36,83,0.55)] transition-all hover:scale-[1.03]"
           >
             See all conditions we treat
           </Link>

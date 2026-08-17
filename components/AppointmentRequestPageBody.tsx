@@ -38,7 +38,7 @@ function PhoneIcon() {
 const ALL_SERVICES = SERVICE_CATEGORIES.flatMap((category) => category.items);
 
 /**
- * /appointment-request/ page body — conversion-focused: what to expect at
+ * /appointment-request/ page body, conversion-focused: what to expect at
  * a first visit, how to prepare, conditions/services covered, and the
  * LeadConnector booking form.
  */
@@ -54,7 +54,7 @@ export function AppointmentRequestPageBody() {
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "radial-gradient(ellipse 70% 60% at 15% 0%, rgba(34,199,240,0.1) 0%, transparent 55%)",
+              "radial-gradient(ellipse 70% 60% at 15% 0%, rgba(119,189,197,0.1) 0%, transparent 55%)",
           }}
         />
         <div
@@ -67,7 +67,7 @@ export function AppointmentRequestPageBody() {
         />
 
         <div className="relative mx-auto max-w-3xl px-4 py-20 text-center sm:px-6 lg:px-8 lg:py-24">
-          <div className="mx-auto inline-flex w-fit items-center gap-2 rounded-full border border-brand-cyan/30 bg-white/70 px-3 py-1.5 shadow-[0_8px_28px_-14px_rgba(20,121,232,0.35)] backdrop-blur">
+          <div className="mx-auto inline-flex w-fit items-center gap-2 rounded-full border border-brand-cyan/30 bg-white/70 px-3 py-1.5 shadow-[0_8px_28px_-14px_rgba(1,36,83,0.35)] backdrop-blur">
             <span className="h-1.5 w-1.5 rounded-full bg-brand-cyan" />
             <span className="text-[11px] font-bold uppercase tracking-[0.22em] text-brand-deep">
               {content.eyebrow}
@@ -85,7 +85,7 @@ export function AppointmentRequestPageBody() {
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <a
               href="#book"
-              className="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-br from-brand-cyan to-brand-deep px-7 py-3.5 text-[15px] font-semibold text-white shadow-[0_18px_44px_-10px_rgba(20,121,232,0.55)] transition-all hover:scale-[1.03]"
+              className="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-br from-brand-cyan to-brand-deep px-7 py-3.5 text-[15px] font-semibold text-white shadow-[0_18px_44px_-10px_rgba(1,36,83,0.55)] transition-all hover:scale-[1.03]"
             >
               Request Your Appointment
             </a>
@@ -114,7 +114,7 @@ export function AppointmentRequestPageBody() {
         <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
           {APPOINTMENT_EXPECT_STEPS.map((step, i) => (
             <Reveal key={step.title} delay={i * 0.08}>
-              <div className="flex h-full gap-4 rounded-2xl border border-surface-border bg-white p-6 transition-all hover:-translate-y-1 hover:border-brand-cyan/40 hover:shadow-[0_24px_60px_-38px_rgba(20,121,232,0.3)]">
+              <div className="flex h-full gap-4 rounded-2xl border border-surface-border bg-white p-6 transition-all hover:-translate-y-1 hover:border-brand-cyan/40 hover:shadow-[0_24px_60px_-38px_rgba(1,36,83,0.3)]">
                 <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-brand-cyan to-brand-deep text-sm font-bold text-white">
                   {i + 1}
                 </span>
@@ -207,7 +207,7 @@ export function AppointmentRequestPageBody() {
           </div>
 
           <Reveal delay={0.1}>
-            <div className="rounded-2xl border border-surface-border bg-white p-4 shadow-[0_24px_60px_-38px_rgba(20,121,232,0.3)] sm:p-6">
+            <div className="rounded-2xl border border-surface-border bg-white p-4 shadow-[0_24px_60px_-38px_rgba(1,36,83,0.3)] sm:p-6">
               <h2 className="text-xl font-bold tracking-tight text-ink sm:text-2xl">
                 {content.formHeading}
               </h2>

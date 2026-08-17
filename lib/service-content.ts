@@ -29,20 +29,20 @@ export interface ServiceContent {
    *  right for you", etc.) rendered between the benefits and technology
    *  sections. Optional so pages can adopt it incrementally. */
   richContent?: ServiceRichContentBlock[];
-  /** FAQ items — rendered as an accordion and emitted as FAQPage JSON-LD. */
+  /** FAQ items, rendered as an accordion and emitted as FAQPage JSON-LD. */
   faqs?: ServiceFAQ[];
   /** Cross-links to complementary services, shown in a "Related Care" strip. */
   relatedServices?: ServiceRelatedLink[];
 }
 
 // Detailed content for the equipment/program-driven service pages, keyed
-// by path — aligned with the Ormond Spine & Nerve Center service catalogue.
+// by path, aligned with the Ormond Spine & Nerve Center service catalogue.
 export const SERVICE_CONTENT: Record<string, ServiceContent> = {
   "/chiropractic-care/": {
     eyebrow: "Spine & Chiropractic Care",
     heading: "Chiropractic Care in Ormond Beach, FL",
     intro:
-      "Hands-on spinal adjustments and posture correction for patients throughout Ormond Beach, FL — relieving back and neck pain, restoring alignment, and supporting long-term mobility.",
+      "Hands-on spinal adjustments and posture correction for patients throughout Ormond Beach, FL, relieving back and neck pain, restoring alignment, and supporting long-term mobility.",
     heroImage: "/images/chiropractic-care.jpg",
     benefits: [
       {
@@ -83,7 +83,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     richContent: [
       {
         heading: "What to Expect",
-        body: "Your first visit starts with a thorough evaluation of your spine, posture, and range of motion so we can identify the root cause of your discomfort — not just the symptoms. From there, your provider builds a personalized adjustment plan built around your specific condition and goals.",
+        body: "Your first visit starts with a thorough evaluation of your spine, posture, and range of motion so we can identify the root cause of your discomfort, not just the symptoms. From there, your provider builds a personalized adjustment plan built around your specific condition and goals.",
       },
       {
         heading: "Is Chiropractic Care Right for You?",
@@ -123,8 +123,8 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     eyebrow: "Spine & Chiropractic Care",
     heading: "Spinal Decompression Therapy in Ormond Beach, FL",
     intro:
-      "Non-surgical spinal decompression for patients in Ormond Beach, FL — gently stretching the spine to relieve pressure on discs and nerves and ease chronic back and neck pain.",
-    heroImage: "/images/spinal-decompression-therapy.webp",
+      "Non-surgical spinal decompression for patients in Ormond Beach, FL, gently stretching the spine to relieve pressure on discs and nerves and ease chronic back and neck pain.",
+    heroImage: "/images/spinal-decompression-therapy.jpg",
     benefits: [
       {
         title: "Reduces Disc Pressure",
@@ -203,7 +203,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     heading: "Knee Decompression Therapy in Ormond Beach, FL",
     intro:
       "For patients in Ormond Beach, FL, targeted unloading technology reduces pressure inside the knee joint, easing pain from osteoarthritis and chronic joint compression.",
-    heroImage: "/images/knee-decompression-therapy.webp",
+    heroImage: "/images/knee-decompression-therapy-v2.png",
     benefits: [
       {
         title: "Unloads the Joint Surface",
@@ -251,7 +251,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       {
         question: "What is knee decompression therapy?",
         answer:
-          "Knee decompression therapy gently offloads pressure from the joint surfaces to ease pain and support the knee's natural healing environment — often used as a non-surgical option for osteoarthritis and chronic joint compression.",
+          "Knee decompression therapy gently offloads pressure from the joint surfaces to ease pain and support the knee's natural healing environment, often used as a non-surgical option for osteoarthritis and chronic joint compression.",
       },
       {
         question: "Is knee decompression therapy safe?",
@@ -266,7 +266,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       {
         question: "Can knee decompression be combined with other treatments?",
         answer:
-          "Yes — it's often paired with shockwave, laser, or chiropractic care as part of a comprehensive knee treatment plan.",
+          "Yes, it's often paired with shockwave, laser, or chiropractic care as part of a comprehensive knee treatment plan.",
       },
     ],
     relatedServices: [
@@ -291,7 +291,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       {
         title: "Non-Invasive",
         description:
-          "No incisions, needles, or anesthesia — most sessions take just minutes.",
+          "No incisions, needles, or anesthesia, most sessions take just minutes.",
       },
       {
         title: "Effective for Stubborn Injuries",
@@ -318,11 +318,11 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     richContent: [
       {
         heading: "What to Expect",
-        body: "Our ESWT system delivers focused acoustic pressure pulses directly to the affected tissue in short, in-office sessions with adjustable energy levels — no incisions, needles, or downtime required.",
+        body: "Our ESWT system delivers focused acoustic pressure pulses directly to the affected tissue in short, in-office sessions with adjustable energy levels, no incisions, needles, or downtime required.",
       },
       {
         heading: "Is Shockwave Therapy Right for You?",
-        body: "Shockwave therapy is worth considering if you're dealing with chronic tendon pain — like plantar fasciitis or tennis elbow — that hasn't responded to rest or conservative care. Common treatment areas include the spine, neck, knee, shoulder, elbow, foot, and hip.",
+        body: "Shockwave therapy is worth considering if you're dealing with chronic tendon pain, like plantar fasciitis or tennis elbow, that hasn't responded to rest or conservative care. Common treatment areas include the spine, neck, knee, shoulder, elbow, foot, and hip.",
       },
     ],
     faqs: [
@@ -339,7 +339,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       {
         question: "What conditions is shockwave therapy used for?",
         answer:
-          "It's commonly used for plantar fasciitis, tennis elbow, golfer's elbow, Achilles tendinitis, and rotator cuff tendinopathy — especially when conservative care hasn't fully resolved symptoms.",
+          "It's commonly used for plantar fasciitis, tennis elbow, golfer's elbow, Achilles tendinitis, and rotator cuff tendinopathy, especially when conservative care hasn't fully resolved symptoms.",
       },
       {
         question: "When will I notice results?",
@@ -399,23 +399,23 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     richContent: [
       {
         heading: "What to Expect",
-        body: "Our Class IV laser system delivers precise wavelengths of light energy that penetrate deep into tissue in quick, comfortable sessions — typically just a few minutes per treatment area, with no needles and no downtime.",
+        body: "Our Class IV laser system delivers precise wavelengths of light energy that penetrate deep into tissue in quick, comfortable sessions, typically just a few minutes per treatment area, with no needles and no downtime.",
       },
       {
         heading: "Is Laser Therapy Right for You?",
-        body: "Laser therapy is a good fit if you're managing muscle strains, tendinitis, chronic inflammation, or a sports or overuse injury and want a drug-free option that supports circulation and cellular repair — often used alongside other recovery therapies.",
+        body: "Laser therapy is a good fit if you're managing muscle strains, tendinitis, chronic inflammation, or a sports or overuse injury and want a drug-free option that supports circulation and cellular repair, often used alongside other recovery therapies.",
       },
     ],
     faqs: [
       {
         question: "What is Class IV laser therapy?",
         answer:
-          "Class IV laser therapy uses targeted light energy to penetrate deep into tissue, supporting circulation and cellular repair while calming inflammation — without heat damage to the skin.",
+          "Class IV laser therapy uses targeted light energy to penetrate deep into tissue, supporting circulation and cellular repair while calming inflammation, without heat damage to the skin.",
       },
       {
         question: "Is laser therapy safe?",
         answer:
-          "It's a well-tolerated, non-invasive treatment. Protective eyewear is worn during sessions, and it isn't used over certain areas or conditions — your provider will confirm it's appropriate for you.",
+          "It's a well-tolerated, non-invasive treatment. Protective eyewear is worn during sessions, and it isn't used over certain areas or conditions, your provider will confirm it's appropriate for you.",
       },
       {
         question: "What can laser therapy help with?",
@@ -440,7 +440,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     heading: "Compression Therapy in Ormond Beach, FL",
     intro:
       "For patients in Ormond Beach, FL, Normatec dynamic compression therapy improves circulation, lymphatic drainage, and recovery for tired, achy, or compromised limbs.",
-    heroImage: "/images/compression-therapy.jpeg",
+    heroImage: "/images/compression-therapy.jpg",
     benefits: [
       {
         title: "Improves Circulation",
@@ -482,14 +482,14 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       },
       {
         heading: "Is Compression Therapy Right for You?",
-        body: "If you're managing leg swelling, muscle fatigue, or general poor circulation — or simply want a relaxing recovery add-on after activity — compression therapy is a low-effort way to support your body between visits, and it pairs well with laser or shockwave therapy.",
+        body: "If you're managing leg swelling, muscle fatigue, or general poor circulation, or simply want a relaxing recovery add-on after activity, compression therapy is a low-effort way to support your body between visits, and it pairs well with laser or shockwave therapy.",
       },
     ],
     faqs: [
       {
         question: "How does Normatec compression therapy work?",
         answer:
-          "Inflatable sleeves apply sequential, rhythmic pressure to the limbs — mimicking the body's natural muscle-pump action to support circulation and help move fluid out of the tissue.",
+          "Inflatable sleeves apply sequential, rhythmic pressure to the limbs, mimicking the body's natural muscle-pump action to support circulation and help move fluid out of the tissue.",
       },
       {
         question: "Who can benefit from compression therapy?",
@@ -559,7 +559,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     richContent: [
       {
         heading: "What to Expect",
-        body: "We start with a full spinal and postural injury assessment, then combine chiropractic adjustments with our decompression, shockwave, laser, and compression technology as needed — with documentation that supports coordination with attorneys and insurers for PIP claims.",
+        body: "We start with a full spinal and postural injury assessment, then combine chiropractic adjustments with our decompression, shockwave, laser, and compression technology as needed, with documentation that supports coordination with attorneys and insurers for PIP claims.",
       },
       {
         heading: "Why Getting Checked Out Matters",
@@ -570,12 +570,12 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       {
         question: "Should I get checked out even if I feel fine after an accident?",
         answer:
-          "Yes — injuries like whiplash and soft tissue damage can take days to become noticeable. An early evaluation helps catch hidden injuries and creates a clear medical record tied to your accident.",
+          "Yes, injuries like whiplash and soft tissue damage can take days to become noticeable. An early evaluation helps catch hidden injuries and creates a clear medical record tied to your accident.",
       },
       {
         question: "How does this care support my personal injury claim?",
         answer:
-          "Our documentation of your diagnosis, treatment plan, and progress helps establish a clear link between your injuries and the accident — supporting your case with your attorney or insurer.",
+          "Our documentation of your diagnosis, treatment plan, and progress helps establish a clear link between your injuries and the accident, supporting your case with your attorney or insurer.",
       },
       {
         question: "What injuries do you treat after an accident?",
@@ -599,7 +599,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     eyebrow: "Joint & Knee Care",
     heading: "Knee Pain Treatment in Ormond Beach, FL",
     intro:
-      "Non-surgical knee pain evaluation and treatment plans for patients in Ormond Beach, FL — combining chiropractic care, decompression, shockwave, and laser therapy to reduce pain and restore movement.",
+      "Non-surgical knee pain evaluation and treatment plans for patients in Ormond Beach, FL, combining chiropractic care, decompression, shockwave, and laser therapy to reduce pain and restore movement.",
     heroImage: "/images/knee-pain-treatment.jpg",
     benefits: [
       {
@@ -655,7 +655,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       {
         question: "Do I need surgery for knee pain?",
         answer:
-          "Not necessarily. Many patients find meaningful relief through a non-surgical plan combining decompression, shockwave, laser, or compression therapy with chiropractic care — surgery is typically considered only when conservative care hasn't helped.",
+          "Not necessarily. Many patients find meaningful relief through a non-surgical plan combining decompression, shockwave, laser, or compression therapy with chiropractic care, surgery is typically considered only when conservative care hasn't helped.",
       },
       {
         question: "What treatments are combined for knee pain?",
@@ -719,7 +719,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     richContent: [
       {
         heading: "What to Expect",
-        body: "We begin with a nerve and circulation-focused evaluation to understand where and how your symptoms show up, then build a plan that may include Class IV laser therapy for nerve-related pain and compression therapy to support circulation — coordinated alongside your existing medical management.",
+        body: "We begin with a nerve and circulation-focused evaluation to understand where and how your symptoms show up, then build a plan that may include Class IV laser therapy for nerve-related pain and compression therapy to support circulation, coordinated alongside your existing medical management.",
       },
       {
         heading: "Is Neuropathy Treatment Right for You?",
@@ -735,7 +735,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       {
         question: "How is neuropathy treatment different from medication?",
         answer:
-          "Rather than only masking symptoms, our approach focuses on supporting circulation and the nerve's healing environment with therapies like Class IV laser, often used alongside — not instead of — your existing medical management.",
+          "Rather than only masking symptoms, our approach focuses on supporting circulation and the nerve's healing environment with therapies like Class IV laser, often used alongside, not instead of, your existing medical management.",
       },
       {
         question: "Will laser therapy help my nerve pain?",

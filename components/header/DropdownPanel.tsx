@@ -26,7 +26,7 @@ export function DropdownPanel({
       style={{ transformOrigin: "top left" }}
       className="w-72 pt-4"
     >
-      <div className="overflow-hidden rounded-2xl border border-white/70 bg-white/95 p-2 shadow-[0_24px_60px_-20px_rgba(20,121,232,0.35),0_2px_8px_rgba(20,121,232,0.08)] backdrop-blur-xl">
+      <div className="overflow-hidden rounded-2xl border border-white/70 bg-white/95 p-2 shadow-[0_24px_60px_-20px_rgba(1,36,83,0.35),0_2px_8px_rgba(1,36,83,0.08)] backdrop-blur-xl">
         {viewAllHref ? (
           <Link
             href={viewAllHref}

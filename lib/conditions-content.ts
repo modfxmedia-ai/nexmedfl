@@ -1,6 +1,6 @@
 // Content for the /conditions-we-treat/ hub page. Categories and item
 // labels intentionally match CONDITION_CATEGORIES in site-config.ts
-// (the nav mega-menu source of truth) exactly — do not add, remove, or
+// (the nav mega-menu source of truth) exactly, do not add, remove, or
 // rename any category or item here without also confirming the nav
 // still matches. Each item includes a short SEO description here on the
 // hub card itself; the card's actual link target is the matching
@@ -12,7 +12,7 @@
 export interface ConditionItem {
   label: string;
   description: string;
-  /** Most relevant service page — informational reference, not the card's link target. */
+  /** Most relevant service page, informational reference, not the card's link target. */
   href: string;
 }
 
@@ -41,6 +41,42 @@ export const CONDITIONS_INTRO = {
 };
 
 export const CONDITION_CATEGORIES: ConditionCategory[] = [
+  {
+    label: "Neuropathy & Nerve",
+    path: "/conditions/neuropathy-nerve/",
+    items: [
+      {
+        label: "Peripheral Neuropathy",
+        description:
+          "Peripheral neuropathy is nerve damage that typically causes numbness, tingling, or burning pain, most often in the hands and feet. It can stem from a variety of causes and tends to progress if left unaddressed. Our neuropathy treatment program combines targeted therapies to support nerve health and ease symptoms.",
+        href: "/neuropathy-treatment/",
+      },
+      {
+        label: "Diabetic Neuropathy",
+        description:
+          "Diabetic neuropathy is nerve damage related to prolonged high blood sugar, commonly affecting sensation in the feet and legs. Reduced sensation can also increase the risk of unnoticed injury. Our neuropathy treatment program is designed to support circulation and nerve function alongside your diabetes management.",
+        href: "/neuropathy-treatment/",
+      },
+      {
+        label: "Chemotherapy-Induced Neuropathy",
+        description:
+          "Chemotherapy-induced neuropathy is nerve damage that can develop as a side effect of certain cancer treatments, often causing numbness, tingling, or pain in the hands and feet. It can linger well after treatment ends. Our neuropathy treatment program offers supportive, non-surgical care to help manage these lingering symptoms.",
+        href: "/neuropathy-treatment/",
+      },
+      {
+        label: "Burning Feet Syndrome",
+        description:
+          "Burning feet syndrome describes a persistent burning or hot sensation in the feet, often related to underlying nerve irritation or peripheral neuropathy. It can worsen at night and disrupt sleep. Our neuropathy treatment program targets the nerve-related source of the discomfort rather than just masking the sensation.",
+        href: "/neuropathy-treatment/",
+      },
+      {
+        label: "Numbness & Tingling",
+        description:
+          "Numbness and tingling in the hands or feet are often early signs of nerve irritation or compression, and can point to underlying neuropathy if they persist. Left unaddressed, symptoms can gradually worsen over time. Our neuropathy treatment program evaluates the nerve pathways involved to build a targeted care plan.",
+        href: "/neuropathy-treatment/",
+      },
+    ],
+  },
   {
     label: "Spine",
     path: "/conditions/spine/",
@@ -126,42 +162,6 @@ export const CONDITION_CATEGORIES: ConditionCategory[] = [
     ],
   },
   {
-    label: "Neuropathy & Nerve",
-    path: "/conditions/neuropathy-nerve/",
-    items: [
-      {
-        label: "Peripheral Neuropathy",
-        description:
-          "Peripheral neuropathy is nerve damage that typically causes numbness, tingling, or burning pain, most often in the hands and feet. It can stem from a variety of causes and tends to progress if left unaddressed. Our neuropathy treatment program combines targeted therapies to support nerve health and ease symptoms.",
-        href: "/neuropathy-treatment/",
-      },
-      {
-        label: "Diabetic Neuropathy",
-        description:
-          "Diabetic neuropathy is nerve damage related to prolonged high blood sugar, commonly affecting sensation in the feet and legs. Reduced sensation can also increase the risk of unnoticed injury. Our neuropathy treatment program is designed to support circulation and nerve function alongside your diabetes management.",
-        href: "/neuropathy-treatment/",
-      },
-      {
-        label: "Chemotherapy-Induced Neuropathy",
-        description:
-          "Chemotherapy-induced neuropathy is nerve damage that can develop as a side effect of certain cancer treatments, often causing numbness, tingling, or pain in the hands and feet. It can linger well after treatment ends. Our neuropathy treatment program offers supportive, non-surgical care to help manage these lingering symptoms.",
-        href: "/neuropathy-treatment/",
-      },
-      {
-        label: "Burning Feet Syndrome",
-        description:
-          "Burning feet syndrome describes a persistent burning or hot sensation in the feet, often related to underlying nerve irritation or peripheral neuropathy. It can worsen at night and disrupt sleep. Our neuropathy treatment program targets the nerve-related source of the discomfort rather than just masking the sensation.",
-        href: "/neuropathy-treatment/",
-      },
-      {
-        label: "Numbness & Tingling",
-        description:
-          "Numbness and tingling in the hands or feet are often early signs of nerve irritation or compression, and can point to underlying neuropathy if they persist. Left unaddressed, symptoms can gradually worsen over time. Our neuropathy treatment program evaluates the nerve pathways involved to build a targeted care plan.",
-        href: "/neuropathy-treatment/",
-      },
-    ],
-  },
-  {
     label: "Joint & Extremity",
     path: "/conditions/joint-extremity/",
     items: [
@@ -228,7 +228,7 @@ export const CONDITION_CATEGORIES: ConditionCategory[] = [
       {
         label: "Tendinitis & Tendinosis",
         description:
-          "Tendinitis is acute inflammation of a tendon, while tendinosis refers to more chronic, degenerative tendon changes — both cause pain and stiffness with movement. They're common in overused joints like the shoulder, elbow, or knee. Laser therapy supports the tendon's natural repair process without needles or downtime.",
+          "Tendinitis is acute inflammation of a tendon, while tendinosis refers to more chronic, degenerative tendon changes, both cause pain and stiffness with movement. They're common in overused joints like the shoulder, elbow, or knee. Laser therapy supports the tendon's natural repair process without needles or downtime.",
         href: "/laser-therapy/",
       },
       {
@@ -276,7 +276,7 @@ export const CONDITION_CATEGORIES: ConditionCategory[] = [
       {
         label: "Cervicogenic Headaches",
         description:
-          "Cervicogenic headaches originate from dysfunction in the neck — often joint irritation or muscle tension — rather than the head itself, though the pain is felt there. They frequently worsen with certain neck positions or movements. Chiropractic care targets the underlying neck dysfunction rather than just the resulting headache.",
+          "Cervicogenic headaches originate from dysfunction in the neck, often joint irritation or muscle tension, rather than the head itself, though the pain is felt there. They frequently worsen with certain neck positions or movements. Chiropractic care targets the underlying neck dysfunction rather than just the resulting headache.",
         href: "/chiropractic-care/",
       },
       {
@@ -306,7 +306,7 @@ export const CONDITION_CATEGORIES: ConditionCategory[] = [
       {
         label: "Mobility & Flexibility",
         description:
-          "Limited mobility and flexibility can make everyday movement — bending, reaching, twisting — feel stiff or restricted, often worsening with age or inactivity. Chiropractic care and targeted therapies help improve joint range of motion and reduce the stiffness holding you back.",
+          "Limited mobility and flexibility can make everyday movement, bending, reaching, twisting, feel stiff or restricted, often worsening with age or inactivity. Chiropractic care and targeted therapies help improve joint range of motion and reduce the stiffness holding you back.",
         href: "/chiropractic-care/",
       },
       {

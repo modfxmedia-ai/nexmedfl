@@ -43,7 +43,7 @@ export function ServicesGrid() {
       <div className="relative mx-auto max-w-[1280px] px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
         {/* Section heading */}
         <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-brand-cyan/30 bg-white/70 px-3 py-1.5 shadow-[0_8px_28px_-14px_rgba(20,121,232,0.35)] backdrop-blur">
+          <div className="inline-flex items-center gap-2 rounded-full border border-brand-cyan/30 bg-white/70 px-3 py-1.5 shadow-[0_8px_28px_-14px_rgba(1,36,83,0.35)] backdrop-blur">
             <span className="h-1.5 w-1.5 rounded-full bg-brand-cyan" />
             <span className="text-[11px] font-bold uppercase tracking-[0.22em] text-brand-deep">
               {SERVICES_INTRO.eyebrow}
@@ -59,7 +59,7 @@ export function ServicesGrid() {
 
         {/* Interactive showcase */}
         <div className="mt-14 grid grid-cols-1 gap-10 lg:mt-16 lg:grid-cols-[5fr_7fr] lg:gap-16">
-          {/* LEFT — sticky preview panel. Uses key-based re-render + CSS
+          {/* LEFT, sticky preview panel. Uses key-based re-render + CSS
               keyframe fade rather than AnimatePresence because motion's
               mount-time animations don't fire reliably in this env; a CSS
               `animation` on key change always plays cleanly. */}
@@ -93,7 +93,7 @@ export function ServicesGrid() {
               {/* CTA */}
               <Link
                 href={active.href}
-                className="group/cta inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-br from-brand-cyan to-brand-deep px-6 py-3 text-sm font-semibold text-white shadow-[0_14px_40px_-14px_rgba(20,121,232,0.55)] transition-all hover:scale-[1.03]"
+                className="group/cta inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-br from-brand-cyan to-brand-deep px-6 py-3 text-sm font-semibold text-white shadow-[0_14px_40px_-14px_rgba(1,36,83,0.55)] transition-all hover:scale-[1.03]"
               >
                 Learn more about {active.name}
                 <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover/cta:translate-x-0.5" />
@@ -111,7 +111,7 @@ export function ServicesGrid() {
             </div>
           </div>
 
-          {/* RIGHT — service list */}
+          {/* RIGHT, service list */}
           <ul
             role="tablist"
             aria-label="Services"
@@ -134,7 +134,7 @@ export function ServicesGrid() {
                       i === 0 ? "border-t border-surface-border/60" : ""
                     }`}
                   >
-                    {/* Sliding active bar — motion layoutId works reliably in this env */}
+                    {/* Sliding active bar, motion layoutId works reliably in this env */}
                     {isActive ? (
                       <motion.span
                         layoutId="service-active-bar"

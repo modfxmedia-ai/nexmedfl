@@ -9,13 +9,13 @@ export interface JumpNavItem {
 }
 
 /**
- * Jump-nav for /conditions/[category]/ pages — a sticky sidebar on
+ * Jump-nav for /conditions/[category]/ pages, a sticky sidebar on
  * desktop (lg+) and a horizontally-scrollable pill row on mobile, both
  * linking to on-page #anchors with the active section highlighted via
  * IntersectionObserver as the user scrolls.
  *
- * Uses `motion/react` only for hover/tap micro-interactions (safe —
- * event-driven, not mount/scroll-triggered — per the site's documented
+ * Uses `motion/react` only for hover/tap micro-interactions (safe, 
+ * event-driven, not mount/scroll-triggered, per the site's documented
  * Motion v12 + React 19 + Turbopack `whileInView` bug workaround).
  */
 export function ConditionJumpNav({ items }: { items: JumpNavItem[] }) {

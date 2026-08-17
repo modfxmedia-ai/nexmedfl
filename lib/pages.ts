@@ -17,7 +17,7 @@ export const STATIC_PAGES: StaticPageEntry[] = [
     title: "Chiropractor Ormond Beach FL | Ormond Spine & Nerve",
     description:
       "Trusted chiropractor in Ormond Beach, FL offering spinal decompression, neuropathy treatment & more. Call Ormond Spine & Nerve Center today!",
-    image: "/images/logo-v2.png",
+    image: "/images/logo-v3.png",
     datePublished: "2025-09-05T16:16:55+00:00",
     dateModified: "2026-08-05T00:00:00+00:00",
   },
@@ -52,6 +52,22 @@ export const STATIC_PAGES: StaticPageEntry[] = [
       "Read Ormond Spine & Nerve Center's HIPAA privacy policy to learn how we use and protect your medical information. Review your privacy rights and contact us with questions.",
     datePublished: "2025-08-19T22:25:14+00:00",
     dateModified: "2026-04-09T04:56:29+00:00",
+  },
+  {
+    path: "/privacy-policy/",
+    title: "Privacy Policy | Ormond Spine & Nerve Center",
+    description:
+      "Read Ormond Spine & Nerve Center's website privacy policy to learn what information we collect, how we use it, and your choices.",
+    datePublished: "2026-08-17T00:00:00+00:00",
+    dateModified: "2026-08-17T00:00:00+00:00",
+  },
+  {
+    path: "/terms-and-conditions/",
+    title: "Terms & Conditions | Ormond Spine & Nerve Center",
+    description:
+      "Review the Terms & Conditions governing your use of the Ormond Spine & Nerve Center website.",
+    datePublished: "2026-08-17T00:00:00+00:00",
+    dateModified: "2026-08-17T00:00:00+00:00",
   },
   {
     path: "/career-opportunities/",
@@ -134,7 +150,7 @@ export const STATIC_PAGES: StaticPageEntry[] = [
     path: "/services/",
     title: "Chiropractic & Spine Services | Ormond Beach, FL",
     description:
-      "Explore chiropractic and spine services in Ormond Beach at Ormond Spine & Nerve Center. From decompression to neuropathy care\u2014book your appointment today!",
+      "Explore chiropractic and spine services in Ormond Beach at Ormond Spine & Nerve Center. From decompression to neuropathy care, book your appointment today!",
     datePublished: "2025-08-17T16:02:26+00:00",
     dateModified: "2026-08-05T00:00:00+00:00",
   },
@@ -219,7 +235,7 @@ export const STATIC_PAGES: StaticPageEntry[] = [
   },
 
   // --- Dedicated /conditions/[category]/ pages (deeper, per-sub-condition
-  // write-ups) — titles/descriptions kept in sync with CONDITION_PAGES in
+  // write-ups), titles/descriptions kept in sync with CONDITION_PAGES in
   // lib/condition-pages-content.ts, which is the source of truth. ---
   {
     path: "/conditions/spine/",

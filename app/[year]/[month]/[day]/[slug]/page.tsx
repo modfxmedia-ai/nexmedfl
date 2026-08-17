@@ -25,7 +25,7 @@ export function generateStaticParams() {
   }));
 }
 
-// Only the known posts above are valid — any other /YYYY/MM/DD/slug/
+// Only the known posts above are valid, any other /YYYY/MM/DD/slug/
 // combination should 404 instead of being treated as a dynamic route.
 export const dynamicParams = false;
 

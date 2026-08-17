@@ -2,11 +2,11 @@ import { TRUST_ITEMS } from "@/lib/home-content";
 import { SITE_NAME } from "@/lib/site-config";
 
 const PILLAR_ICON_PATHS = [
-  // Comprehensive Medical Care — heart with pulse
+  // Comprehensive Health Care, heart with pulse
   "M12 21s-7.5-4.6-9.6-9.1C.7 8.4 2.2 5 5.6 5c1.9 0 3.3 1 4.4 2.4C11.1 6 12.5 5 14.4 5 17.8 5 19.3 8.4 21.6 11.9 19.5 16.4 12 21 12 21Z",
-  // Healing Stories — trending up
+  // Healing Stories, trending up
   "m3 17 6-6 4 4 8-8M21 7v6M15 7h6",
-  // Trusted Expertise — shield check
+  // Trusted Expertise, shield check
   "M12 2 4 5v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V5l-8-3Zm-3 10 2 2 4-4",
 ];
 
@@ -80,7 +80,7 @@ function PillarAccent({ index }: { index: number }) {
       className="h-8 w-full"
       style={{
         backgroundImage:
-          "radial-gradient(circle, rgba(20,121,232,0.35) 1px, transparent 1px)",
+          "radial-gradient(circle, rgba(1,36,83,0.35) 1px, transparent 1px)",
         backgroundSize: "10px 10px",
       }}
       aria-hidden
@@ -97,7 +97,7 @@ export function TrustBar() {
         className="pointer-events-none absolute inset-0 opacity-40"
         style={{
           backgroundImage:
-            "radial-gradient(circle, rgba(20,121,232,0.08) 1px, transparent 1px)",
+            "radial-gradient(circle, rgba(1,36,83,0.08) 1px, transparent 1px)",
           backgroundSize: "24px 24px",
           maskImage:
             "radial-gradient(ellipse 70% 60% at 50% 40%, black 30%, transparent 100%)",
@@ -116,7 +116,7 @@ export function TrustBar() {
       <div className="relative mx-auto max-w-[1280px] px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
         {/* Section heading */}
         <div className="mx-auto max-w-2xl text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-brand-cyan/30 bg-white/70 px-3 py-1.5 shadow-[0_8px_28px_-14px_rgba(20,121,232,0.35)] backdrop-blur">
+          <div className="inline-flex items-center gap-2 rounded-full border border-brand-cyan/30 bg-white/70 px-3 py-1.5 shadow-[0_8px_28px_-14px_rgba(1,36,83,0.35)] backdrop-blur">
             <span className="h-1.5 w-1.5 rounded-full bg-brand-cyan" />
             <span className="text-[11px] font-bold uppercase tracking-[0.22em] text-brand-deep">
               Three Pillars · One Commitment
@@ -140,7 +140,7 @@ export function TrustBar() {
           {TRUST_ITEMS.map((item, i) => (
             <article
               key={item.title}
-              className="group relative flex flex-col overflow-hidden rounded-[28px] border border-surface-border bg-white/80 backdrop-blur-sm transition-all hover:-translate-y-1.5 hover:border-brand-cyan/40 hover:shadow-[0_40px_80px_-30px_rgba(20,121,232,0.35)]"
+              className="group relative flex flex-col overflow-hidden rounded-[28px] border border-surface-border bg-white/80 backdrop-blur-sm transition-all hover:-translate-y-1.5 hover:border-brand-cyan/40 hover:shadow-[0_40px_80px_-30px_rgba(1,36,83,0.35)]"
             >
               {/* Top gradient bar */}
               <span

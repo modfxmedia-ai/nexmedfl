@@ -19,7 +19,7 @@ export function WelcomeSection() {
           </p>
         </div>
 
-        {/* Specialty programs — auto-scrolling image carousel */}
+        {/* Specialty programs, auto-scrolling image carousel */}
         <div className="mt-16 lg:mt-20">
           <p className="text-center text-[11px] font-bold uppercase tracking-[0.22em] text-ink-muted">
             {WELCOME.programsLeadIn}
@@ -42,7 +42,7 @@ export function WelcomeSection() {
                     href={program.href}
                     aria-hidden={i >= WELCOME_PROGRAMS.length}
                     tabIndex={i >= WELCOME_PROGRAMS.length ? -1 : 0}
-                    className="group relative flex h-80 w-64 shrink-0 flex-col overflow-hidden rounded-2xl bg-ink shadow-[0_24px_60px_-30px_rgba(20,121,232,0.35)] transition-transform hover:-translate-y-1 sm:w-72"
+                    className="group relative flex h-80 w-64 shrink-0 flex-col overflow-hidden rounded-2xl bg-ink shadow-[0_24px_60px_-30px_rgba(1,36,83,0.35)] transition-transform hover:-translate-y-1 sm:w-72"
                   >
                     <Image
                       src={program.image}

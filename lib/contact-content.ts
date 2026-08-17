@@ -30,7 +30,7 @@ export const CONTACT_PAGE_CONTENT: FormPageContent = {
     {
       title: "Fast, Friendly Responses",
       description:
-        "Our local team responds quickly to every message — no call centers, no automated runaround.",
+        "Our local team responds quickly to every message, no call centers, no automated runaround.",
     },
     {
       title: "Real Answers to Insurance Questions",
@@ -52,7 +52,7 @@ export const APPOINTMENT_PAGE_CONTENT: FormPageContent = {
     "Ready to start feeling better? Request your appointment at Ormond Spine & Nerve Center and our team will reach out to confirm a time that works for you.",
   formHeading: "Request Your Appointment",
   formIntro:
-    "Tell us a bit about what's going on and the best way to reach you — we'll follow up to schedule your visit.",
+    "Tell us a bit about what's going on and the best way to reach you, we'll follow up to schedule your visit.",
   benefits: [
     {
       title: "Personalized Care Plans",
@@ -62,7 +62,7 @@ export const APPOINTMENT_PAGE_CONTENT: FormPageContent = {
     {
       title: "Multiple Treatment Options",
       description:
-        "From chiropractic care to spinal and knee decompression, neuropathy treatment, and more — all under one roof.",
+        "From chiropractic care to spinal and knee decompression, neuropathy treatment, and more, all under one roof.",
     },
     {
       title: "Same-Week Availability",
@@ -79,7 +79,7 @@ export const NEUROPATHY_APPOINTMENT_PAGE_CONTENT: FormPageContent = {
     "Living with nerve pain, numbness, or tingling? Request your specialized neuropathy consultation at Ormond Spine & Nerve Center and take the first step toward lasting relief.",
   formHeading: "Request Your Neuropathy Consultation",
   formIntro:
-    "Share a bit about your symptoms and the best way to reach you — our team will follow up to schedule your consultation.",
+    "Share a bit about your symptoms and the best way to reach you, our team will follow up to schedule your consultation.",
   benefits: [
     {
       title: "Advanced Nerve Diagnostics",
@@ -104,7 +104,7 @@ export interface StepItem {
   description: string;
 }
 
-// "What to Expect at Your First Visit" — /appointment-request/
+// "What to Expect at Your First Visit", /appointment-request/
 export const APPOINTMENT_EXPECT_STEPS: StepItem[] = [
   {
     title: "Check-In & Health History",
@@ -128,7 +128,7 @@ export const APPOINTMENT_EXPECT_STEPS: StepItem[] = [
   },
 ];
 
-// "How to Prepare for Your Appointment" — /appointment-request/
+// "How to Prepare for Your Appointment", /appointment-request/
 export const APPOINTMENT_PREP_CHECKLIST: string[] = [
   "A photo ID and your insurance card (if applicable)",
   "A list of current medications and supplements",
@@ -137,12 +137,12 @@ export const APPOINTMENT_PREP_CHECKLIST: string[] = [
   "Comfortable clothing that allows easy movement for your evaluation",
 ];
 
-// "What a Neuropathy Consultation Involves" — /neuropathy-appointment-request/
+// "What a Neuropathy Consultation Involves", /neuropathy-appointment-request/
 export const NEUROPATHY_CONSULT_STEPS: StepItem[] = [
   {
     title: "Symptom & Health History Review",
     description:
-      "We'll ask about your numbness, tingling, burning, or weakness — including when it started and any related conditions like diabetes.",
+      "We'll ask about your numbness, tingling, burning, or weakness, including when it started and any related conditions like diabetes.",
   },
   {
     title: "Nerve Function Evaluation",
@@ -161,7 +161,7 @@ export const NEUROPATHY_CONSULT_STEPS: StepItem[] = [
   },
 ];
 
-// "What to Bring" — /neuropathy-appointment-request/
+// "What to Bring", /neuropathy-appointment-request/
 export const NEUROPATHY_WHAT_TO_BRING: string[] = [
   "A list of current medications, including any for diabetes or blood pressure",
   "Notes on when your nerve symptoms started and where you feel them",
@@ -179,7 +179,7 @@ export const BLOG_INTRO = {
   eyebrow: "Health & Wellness Blog",
   heading: "Your Guide to Spine, Nerve & Joint Health",
   intro:
-    "Our blog is where our Ormond Beach, FL care team shares practical, easy-to-understand guidance on spine health, knee and joint pain, neuropathy, and recovery — so you can make informed decisions about your care between visits.",
+    "Our blog is where our Ormond Beach, FL care team shares practical, easy-to-understand guidance on spine health, knee and joint pain, neuropathy, and recovery, so you can make informed decisions about your care between visits.",
 };
 
 export const BLOG_TOPICS: BlogTopic[] = [

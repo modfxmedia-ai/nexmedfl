@@ -32,7 +32,7 @@ export interface ConditionPageContent {
   slug: string;
   path: string;
   navLabel: string;
-  /** Icon lookup key — matches CONDITION_CATEGORIES labels in site-config.ts. */
+  /** Icon lookup key, matches CONDITION_CATEGORIES labels in site-config.ts. */
   iconKey: string;
   metaTitle: string;
   metaDescription: string;
@@ -74,7 +74,7 @@ export const CONDITION_PAGES: ConditionPageContent[] = [
         slug: "sciatica",
         label: "Sciatica",
         description:
-          "Sciatica describes pain that radiates along the sciatic nerve, traveling from the lower back through the hip and buttock and down the leg — sometimes all the way to the foot. It's usually a symptom of an underlying issue like a herniated disc, bulging disc, or spinal stenosis compressing the nerve root, and it can come with numbness, tingling, or weakness similar to other nerve-related conditions. Sciatica pain can range from a mild ache to a sharp, burning sensation that makes sitting or standing genuinely uncomfortable. Spinal decompression therapy targets the source of the nerve compression directly, gently relieving the pressure that's driving your sciatic pain, while chiropractic care restores proper spinal alignment to reduce the chance of it returning.",
+          "Sciatica describes pain that radiates along the sciatic nerve, traveling from the lower back through the hip and buttock and down the leg, sometimes all the way to the foot. It's usually a symptom of an underlying issue like a herniated disc, bulging disc, or spinal stenosis compressing the nerve root, and it can come with numbness, tingling, or weakness similar to other nerve-related conditions. Sciatica pain can range from a mild ache to a sharp, burning sensation that makes sitting or standing genuinely uncomfortable. Spinal decompression therapy targets the source of the nerve compression directly, gently relieving the pressure that's driving your sciatic pain, while chiropractic care restores proper spinal alignment to reduce the chance of it returning.",
         serviceHref: "/spinal-decompression-therapy/",
         serviceLabel: "Spinal Decompression Therapy",
         crossLink: {
@@ -144,7 +144,7 @@ export const CONDITION_PAGES: ConditionPageContent[] = [
         slug: "chronic-knee-pain",
         label: "Chronic Knee Pain",
         description:
-          "Chronic knee pain is ongoing discomfort that persists for weeks or months, often from a combination of joint wear, soft tissue irritation, tendon strain, or alignment issues higher up the leg. It can make everyday movement like walking, climbing stairs, or standing from a seated position noticeably more difficult. Because chronic knee pain has so many possible causes, an accurate evaluation is the key first step to real relief. Our knee pain treatment program starts by pinpointing the true source of your pain — whether it's the joint itself, surrounding tendons, or referred pain from the hip — and builds a targeted, non-surgical plan around it, often combining decompression, laser, or shockwave therapy depending on what your knee actually needs.",
+          "Chronic knee pain is ongoing discomfort that persists for weeks or months, often from a combination of joint wear, soft tissue irritation, tendon strain, or alignment issues higher up the leg. It can make everyday movement like walking, climbing stairs, or standing from a seated position noticeably more difficult. Because chronic knee pain has so many possible causes, an accurate evaluation is the key first step to real relief. Our knee pain treatment program starts by pinpointing the true source of your pain, whether it's the joint itself, surrounding tendons, or referred pain from the hip, and builds a targeted, non-surgical plan around it, often combining decompression, laser, or shockwave therapy depending on what your knee actually needs.",
         serviceHref: "/knee-pain-treatment/",
         serviceLabel: "Knee Pain Treatment",
       },
@@ -190,7 +190,7 @@ export const CONDITION_PAGES: ConditionPageContent[] = [
         slug: "peripheral-neuropathy",
         label: "Peripheral Neuropathy",
         description:
-          "Peripheral neuropathy is damage to the nerves outside the brain and spinal cord, typically causing numbness, tingling, weakness, or a burning pain that most often starts in the hands and feet. It can stem from a variety of causes, including diabetes, chemotherapy, poor circulation, or nerve compression, and symptoms tend to progress gradually if the underlying issue is left unaddressed. Many patients describe it as feeling like they're wearing an invisible glove or sock that dulls sensation. Our neuropathy treatment program combines targeted therapies designed to support nerve health, improve circulation to the affected areas, and calm the nerve irritation driving your symptoms — all without relying on medication alone to mask the discomfort.",
+          "Peripheral neuropathy is damage to the nerves outside the brain and spinal cord, typically causing numbness, tingling, weakness, or a burning pain that most often starts in the hands and feet. It can stem from a variety of causes, including diabetes, chemotherapy, poor circulation, or nerve compression, and symptoms tend to progress gradually if the underlying issue is left unaddressed. Many patients describe it as feeling like they're wearing an invisible glove or sock that dulls sensation. Our neuropathy treatment program combines targeted therapies designed to support nerve health, improve circulation to the affected areas, and calm the nerve irritation driving your symptoms, all without relying on medication alone to mask the discomfort.",
         serviceHref: "/neuropathy-treatment/",
         serviceLabel: "Neuropathy Treatment",
       },
@@ -214,7 +214,7 @@ export const CONDITION_PAGES: ConditionPageContent[] = [
         slug: "burning-feet-syndrome",
         label: "Burning Feet Syndrome",
         description:
-          "Burning feet syndrome describes a persistent burning, hot, or tingling sensation in the feet that's often related to underlying nerve irritation or peripheral neuropathy, though it can also stem from circulation issues or prolonged nerve compression. Symptoms frequently worsen at night, disrupting sleep and making it hard to find a comfortable position. Because burning feet can have several underlying causes, an accurate evaluation is essential to building the right treatment plan. Our neuropathy treatment program targets the nerve-related source of the discomfort directly rather than simply masking the sensation, combining therapies aimed at improving nerve function and circulation so you can get back to sleeping — and walking — comfortably.",
+          "Burning feet syndrome describes a persistent burning, hot, or tingling sensation in the feet that's often related to underlying nerve irritation or peripheral neuropathy, though it can also stem from circulation issues or prolonged nerve compression. Symptoms frequently worsen at night, disrupting sleep and making it hard to find a comfortable position. Because burning feet can have several underlying causes, an accurate evaluation is essential to building the right treatment plan. Our neuropathy treatment program targets the nerve-related source of the discomfort directly rather than simply masking the sensation, combining therapies aimed at improving nerve function and circulation so you can get back to sleeping, and walking, comfortably.",
         serviceHref: "/neuropathy-treatment/",
         serviceLabel: "Neuropathy Treatment",
       },
@@ -222,7 +222,7 @@ export const CONDITION_PAGES: ConditionPageContent[] = [
         slug: "numbness-and-tingling",
         label: "Numbness & Tingling",
         description:
-          "Numbness and tingling in the hands or feet are often early warning signs of nerve irritation or compression, and when they persist, they can point to an underlying condition like peripheral neuropathy or a pinched nerve further up the spine. Left unaddressed, these sensations can gradually worsen into more constant numbness or weakness. Our neuropathy treatment program starts by evaluating the nerve pathways involved — whether the irritation originates in the extremities or further up the nervous system — to build a targeted care plan. Catching numbness and tingling early gives us the best opportunity to protect long-term nerve function and prevent symptoms from progressing.",
+          "Numbness and tingling in the hands or feet are often early warning signs of nerve irritation or compression, and when they persist, they can point to an underlying condition like peripheral neuropathy or a pinched nerve further up the spine. Left unaddressed, these sensations can gradually worsen into more constant numbness or weakness. Our neuropathy treatment program starts by evaluating the nerve pathways involved, whether the irritation originates in the extremities or further up the nervous system, to build a targeted care plan. Catching numbness and tingling early gives us the best opportunity to protect long-term nerve function and prevent symptoms from progressing.",
         serviceHref: "/neuropathy-treatment/",
         serviceLabel: "Neuropathy Treatment",
         crossLink: {
@@ -322,7 +322,7 @@ export const CONDITION_PAGES: ConditionPageContent[] = [
         slug: "trigger-points",
         label: "Trigger Points",
         description:
-          "Trigger points are tight, hyper-irritable knots that form within a muscle, causing localized pain or, in many cases, pain that refers to a completely different area of the body — a tight trigger point in the shoulder, for example, can contribute to a tension headache. They often develop from repetitive strain, stress, poor posture, or an old injury the body never fully released. Because trigger points can hide behind symptoms that seem unrelated, a hands-on evaluation is important. Chiropractic care and manual soft tissue therapy work directly on these knots to release built-up tension and restore more comfortable, fluid muscle function, often bringing noticeable relief in just a few visits.",
+          "Trigger points are tight, hyper-irritable knots that form within a muscle, causing localized pain or, in many cases, pain that refers to a completely different area of the body, a tight trigger point in the shoulder, for example, can contribute to a tension headache. They often develop from repetitive strain, stress, poor posture, or an old injury the body never fully released. Because trigger points can hide behind symptoms that seem unrelated, a hands-on evaluation is important. Chiropractic care and manual soft tissue therapy work directly on these knots to release built-up tension and restore more comfortable, fluid muscle function, often bringing noticeable relief in just a few visits.",
         serviceHref: "/chiropractic-care/",
         serviceLabel: "Chiropractic Care",
         crossLink: {
@@ -342,7 +342,7 @@ export const CONDITION_PAGES: ConditionPageContent[] = [
         slug: "tendinitis-and-tendinosis",
         label: "Tendinitis & Tendinosis",
         description:
-          "Tendinitis is acute inflammation of a tendon, while tendinosis refers to more chronic, degenerative changes within the tendon over time — both cause pain, stiffness, and reduced strength with movement, especially in commonly overused joints like the shoulder, elbow, and knee. Tendon issues are notoriously slow to heal on their own because tendons have limited blood flow compared to muscle. Laser therapy supports the tendon's natural repair process at a cellular level without needles, injections, or downtime, making it a popular option for patients who want to keep moving through recovery. For more stubborn, long-standing cases, we may also recommend shockwave therapy to further stimulate the healing response.",
+          "Tendinitis is acute inflammation of a tendon, while tendinosis refers to more chronic, degenerative changes within the tendon over time, both cause pain, stiffness, and reduced strength with movement, especially in commonly overused joints like the shoulder, elbow, and knee. Tendon issues are notoriously slow to heal on their own because tendons have limited blood flow compared to muscle. Laser therapy supports the tendon's natural repair process at a cellular level without needles, injections, or downtime, making it a popular option for patients who want to keep moving through recovery. For more stubborn, long-standing cases, we may also recommend shockwave therapy to further stimulate the healing response.",
         serviceHref: "/laser-therapy/",
         serviceLabel: "Laser Therapy",
       },
@@ -350,7 +350,7 @@ export const CONDITION_PAGES: ConditionPageContent[] = [
         slug: "sports-and-overuse-injuries",
         label: "Sports & Overuse Injuries",
         description:
-          "Sports and overuse injuries develop when repetitive stress on muscles, tendons, or joints outpaces the body's natural ability to recover, leading to pain, reduced performance, and — if ignored — a higher risk of more serious injury. They're common among both competitive athletes and everyday active adults who ramp up activity faster than their body can adapt. The good news is most overuse injuries respond well to early, targeted care. Laser therapy is often used to calm inflammation and speed tissue recovery so you can safely return to the activities you enjoy, and we'll help build a plan that addresses any underlying form or training factors contributing to the injury in the first place.",
+          "Sports and overuse injuries develop when repetitive stress on muscles, tendons, or joints outpaces the body's natural ability to recover, leading to pain, reduced performance, and, if ignored, a higher risk of more serious injury. They're common among both competitive athletes and everyday active adults who ramp up activity faster than their body can adapt. The good news is most overuse injuries respond well to early, targeted care. Laser therapy is often used to calm inflammation and speed tissue recovery so you can safely return to the activities you enjoy, and we'll help build a plan that addresses any underlying form or training factors contributing to the injury in the first place.",
         serviceHref: "/laser-therapy/",
         serviceLabel: "Laser Therapy",
       },
@@ -418,7 +418,7 @@ export const CONDITION_PAGES: ConditionPageContent[] = [
         slug: "cervicogenic-headaches",
         label: "Cervicogenic Headaches",
         description:
-          "Cervicogenic headaches originate from dysfunction in the neck — typically joint irritation, muscle tension, or restricted mobility in the cervical spine — even though the pain itself is felt in the head. They frequently worsen with certain neck positions, prolonged sitting, or looking down at a screen, and often come with neck stiffness alongside the headache itself. Because the true source is in the neck, treatments aimed only at the head rarely bring lasting relief. Chiropractic care targets the underlying neck dysfunction directly through gentle adjustments and soft tissue work, addressing the joint and muscle issues actually driving the headache rather than just the pain that results from them.",
+          "Cervicogenic headaches originate from dysfunction in the neck, typically joint irritation, muscle tension, or restricted mobility in the cervical spine, even though the pain itself is felt in the head. They frequently worsen with certain neck positions, prolonged sitting, or looking down at a screen, and often come with neck stiffness alongside the headache itself. Because the true source is in the neck, treatments aimed only at the head rarely bring lasting relief. Chiropractic care targets the underlying neck dysfunction directly through gentle adjustments and soft tissue work, addressing the joint and muscle issues actually driving the headache rather than just the pain that results from them.",
         serviceHref: "/chiropractic-care/",
         serviceLabel: "Chiropractic Care",
       },
@@ -454,7 +454,7 @@ export const CONDITION_PAGES: ConditionPageContent[] = [
       "Preventative chiropractic care in Ormond Beach, FL supporting mobility, healthy aging, and fall prevention for long-term wellness. Book now!",
     heroHeading: "Wellness Conditions We Support",
     heroIntro:
-      "Preventative chiropractic care built around mobility, healthy aging, and fall prevention — so you stay ahead of pain, not behind it.",
+      "Preventative chiropractic care built around mobility, healthy aging, and fall prevention, so you stay ahead of pain, not behind it.",
     sections: [
       {
         slug: "preventative-chiropractic-care",
@@ -468,7 +468,7 @@ export const CONDITION_PAGES: ConditionPageContent[] = [
         slug: "mobility-and-flexibility",
         label: "Mobility & Flexibility",
         description:
-          "Limited mobility and flexibility can make everyday movement — bending down, reaching overhead, twisting to check a blind spot — feel stiff, restricted, or even a little intimidating, and it often worsens gradually with age or long stretches of inactivity. Reduced mobility can also increase strain on nearby joints as the body compensates for the restriction elsewhere. Chiropractic care and targeted mobility therapies work together to improve joint range of motion, addressing the restrictions themselves rather than just the discomfort they cause. We'll also share simple stretches and movement habits you can build into your routine, so the flexibility gains from your visits carry over into daily life.",
+          "Limited mobility and flexibility can make everyday movement, bending down, reaching overhead, twisting to check a blind spot, feel stiff, restricted, or even a little intimidating, and it often worsens gradually with age or long stretches of inactivity. Reduced mobility can also increase strain on nearby joints as the body compensates for the restriction elsewhere. Chiropractic care and targeted mobility therapies work together to improve joint range of motion, addressing the restrictions themselves rather than just the discomfort they cause. We'll also share simple stretches and movement habits you can build into your routine, so the flexibility gains from your visits carry over into daily life.",
         serviceHref: "/chiropractic-care/",
         serviceLabel: "Chiropractic Care",
       },

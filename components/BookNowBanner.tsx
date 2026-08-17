@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { BUSINESS } from "@/lib/site-config";
 
-// Pages that already put a booking form/CTA front-and-center — showing
+// Pages that already put a booking form/CTA front-and-center, showing
 // the persistent banner there too would be redundant.
 const HIDDEN_PATH_PREFIXES = [
   "/contact-us",
@@ -16,7 +16,7 @@ const HIDDEN_PATH_PREFIXES = [
 /**
  * Persistent "Book Now" bar pinned to the bottom of the viewport. Stays
  * out of the way until the user has scrolled a bit, then slides in and
- * stays visible while scrolling — except once the footer scrolls into
+ * stays visible while scrolling, except once the footer scrolls into
  * view (avoids covering the footer's own contact info/links) or on pages
  * that already lead with a booking form.
  *
@@ -71,7 +71,7 @@ export function BookNowBanner() {
           : "pointer-events-none translate-y-full opacity-0"
       }`}
     >
-      <div className="border-t border-white/10 bg-gradient-to-r from-brand-deep to-brand-cyan shadow-[0_-8px_30px_-6px_rgba(20,121,232,0.45)]">
+      <div className="border-t border-white/10 bg-gradient-to-r from-brand-deep to-brand-cyan shadow-[0_-8px_30px_-6px_rgba(1,36,83,0.45)]">
         <div className="mx-auto flex max-w-[1280px] items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
           <p className="hidden text-sm font-semibold text-white sm:block">
             Ready to get moving again? Book your appointment today.

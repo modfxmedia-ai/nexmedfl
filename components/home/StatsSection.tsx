@@ -10,7 +10,7 @@ export function StatsSection() {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 60% 80% at 50% 50%, rgba(34,199,240,0.12) 0%, rgba(20,121,232,0.05) 40%, transparent 75%)",
+            "radial-gradient(ellipse 60% 80% at 50% 50%, rgba(119,189,197,0.12) 0%, rgba(1,36,83,0.05) 40%, transparent 75%)",
         }}
       />
       <div
@@ -18,7 +18,7 @@ export function StatsSection() {
         className="pointer-events-none absolute inset-0 opacity-[0.04] mix-blend-overlay"
         style={{
           backgroundImage:
-            "linear-gradient(#22c7f0 1px, transparent 1px), linear-gradient(90deg, #22c7f0 1px, transparent 1px)",
+            "linear-gradient(#77BDC5 1px, transparent 1px), linear-gradient(90deg, #77BDC5 1px, transparent 1px)",
           backgroundSize: "80px 80px",
         }}
       />

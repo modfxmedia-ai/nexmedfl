@@ -9,13 +9,13 @@ export interface HubNavItem {
 }
 
 /**
- * Sticky horizontal category nav for the /conditions-we-treat/ hub —
+ * Sticky horizontal category nav for the /conditions-we-treat/ hub, 
  * jumps between the 8 category sections with the active one highlighted
  * via IntersectionObserver as the user scrolls.
  *
  * Uses `motion/react` only for hover/tap micro-interactions and the
  * sliding active-pill indicator (event/state-driven, not mount/scroll
- * -triggered) — per the site's documented Motion v12 + React 19 +
+ * -triggered), per the site's documented Motion v12 + React 19 +
  * Turbopack `whileInView` bug workaround (see ConditionJumpNav.tsx).
  */
 export function ConditionsHubNav({ items }: { items: HubNavItem[] }) {

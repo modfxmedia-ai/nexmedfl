@@ -5,7 +5,7 @@ import { ConditionsHubNav } from "@/components/conditions/ConditionsHubNav";
 import { slugifyCondition, type ConditionCategory } from "@/lib/conditions-content";
 import { SECTION_SLUG_BY_LABEL } from "@/lib/condition-pages-content";
 
-// Solid category icon paths — duplicated from
+// Solid category icon paths, duplicated from
 // components/home/ConditionsTeaser.tsx and
 // components/conditions/ConditionCategoryPage.tsx (small, presentational
 // SVG data; not worth a shared import for one path map).
@@ -35,14 +35,14 @@ function CategoryIcon({ label }: { label: string }) {
   );
 }
 
-/** "/conditions/spine/" -> "spine" — used as the section id the sticky
+/** "/conditions/spine/" -> "spine", used as the section id the sticky
  *  category nav scrolls/scrollspies to. */
 function categorySlug(path: string): string {
   return path.replace(/^\/conditions\//, "").replace(/\/$/, "");
 }
 
 /**
- * /conditions-we-treat/ hub page body — organizes every condition Ormond
+ * /conditions-we-treat/ hub page body, organizes every condition Ormond
  * Spine & Nerve Center treats into the same 8 categories used by the nav
  * mega-menu, each with a short SEO description and a link straight to
  * the matching /conditions/[category]/#anchor page for the full write-up
@@ -69,7 +69,7 @@ export function ConditionsHub({
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "radial-gradient(ellipse 80% 55% at 65% 0%, rgba(34,199,240,0.16) 0%, rgba(26,134,247,0.05) 40%, rgba(255,255,255,0) 80%)",
+              "radial-gradient(ellipse 80% 55% at 65% 0%, rgba(119,189,197,0.16) 0%, rgba(23,132,152,0.05) 40%, rgba(255,255,255,0) 80%)",
           }}
         />
         <div className="relative mx-auto max-w-4xl px-4 py-16 text-center sm:px-6 sm:py-20 lg:px-8">
@@ -105,7 +105,7 @@ export function ConditionsHub({
             >
               <Reveal>
                 <div className="flex items-center gap-3">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-brand-cyan to-brand-deep text-white shadow-[0_12px_30px_-10px_rgba(20,121,232,0.5)]">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-brand-cyan to-brand-deep text-white shadow-[0_12px_30px_-10px_rgba(1,36,83,0.5)]">
                     <CategoryIcon label={category.label} />
                   </span>
                   <h2 className="text-2xl font-bold tracking-tight text-ink sm:text-[28px]">
@@ -137,7 +137,7 @@ export function ConditionsHub({
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "radial-gradient(ellipse 70% 60% at 50% 100%, rgba(34,199,240,0.14) 0%, rgba(255,255,255,0) 70%)",
+              "radial-gradient(ellipse 70% 60% at 50% 100%, rgba(119,189,197,0.14) 0%, rgba(255,255,255,0) 70%)",
           }}
         />
         <div className="relative mx-auto flex max-w-5xl flex-col items-center gap-4 px-4 py-16 text-center sm:px-6 lg:px-8">
@@ -155,7 +155,7 @@ export function ConditionsHub({
           <Reveal delay={0.12}>
             <Link
               href="/appointment-request/"
-              className="mt-1 inline-flex items-center rounded-full bg-gradient-to-br from-brand-cyan to-brand-deep px-7 py-3 text-sm font-semibold text-white shadow-[0_14px_40px_-14px_rgba(20,121,232,0.55)] transition-transform hover:scale-[1.03]"
+              className="mt-1 inline-flex items-center rounded-full bg-gradient-to-br from-brand-cyan to-brand-deep px-7 py-3 text-sm font-semibold text-white shadow-[0_14px_40px_-14px_rgba(1,36,83,0.55)] transition-transform hover:scale-[1.03]"
             >
               Book Appointment
             </Link>

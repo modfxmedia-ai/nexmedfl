@@ -22,7 +22,7 @@ const RELATED_LINKS = [
 ];
 
 /**
- * /financing-options/ page body — plain-language FAQ content about
+ * /financing-options/ page body, plain-language FAQ content about
  * third-party financing, distinct from the in-office payment plan
  * content on /payment-plans/. Styled with the site's brand tokens.
  */
@@ -36,7 +36,7 @@ export function FinancingOptionsPageBody() {
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "radial-gradient(ellipse 70% 60% at 15% 0%, rgba(34,199,240,0.1) 0%, transparent 55%)",
+              "radial-gradient(ellipse 70% 60% at 15% 0%, rgba(119,189,197,0.1) 0%, transparent 55%)",
           }}
         />
         <div
@@ -49,7 +49,7 @@ export function FinancingOptionsPageBody() {
         />
 
         <div className="relative mx-auto max-w-3xl px-4 py-20 text-center sm:px-6 lg:px-8 lg:py-24">
-          <div className="mx-auto inline-flex w-fit items-center gap-2 rounded-full border border-brand-cyan/30 bg-white/70 px-3 py-1.5 shadow-[0_8px_28px_-14px_rgba(20,121,232,0.35)] backdrop-blur">
+          <div className="mx-auto inline-flex w-fit items-center gap-2 rounded-full border border-brand-cyan/30 bg-white/70 px-3 py-1.5 shadow-[0_8px_28px_-14px_rgba(1,36,83,0.35)] backdrop-blur">
             <span className="h-1.5 w-1.5 rounded-full bg-brand-cyan" />
             <span className="text-[11px] font-bold uppercase tracking-[0.22em] text-brand-deep">
               {FINANCING_INTRO.eyebrow}
@@ -67,7 +67,7 @@ export function FinancingOptionsPageBody() {
           <div className="mt-8 flex justify-center">
             <Link
               href="/appointment-request/"
-              className="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-br from-brand-cyan to-brand-deep px-7 py-3.5 text-[15px] font-semibold text-white shadow-[0_18px_44px_-10px_rgba(20,121,232,0.55)] transition-all hover:scale-[1.03]"
+              className="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-br from-brand-cyan to-brand-deep px-7 py-3.5 text-[15px] font-semibold text-white shadow-[0_18px_44px_-10px_rgba(1,36,83,0.55)] transition-all hover:scale-[1.03]"
             >
               Book Appointment
             </Link>
@@ -100,7 +100,7 @@ export function FinancingOptionsPageBody() {
               <Reveal key={link.href} delay={i * 0.08}>
                 <Link
                   href={link.href}
-                  className="group flex h-full flex-col rounded-2xl border border-surface-border bg-white p-7 transition-all hover:-translate-y-1 hover:border-brand-cyan/40 hover:shadow-[0_24px_60px_-30px_rgba(20,121,232,0.35)]"
+                  className="group flex h-full flex-col rounded-2xl border border-surface-border bg-white p-7 transition-all hover:-translate-y-1 hover:border-brand-cyan/40 hover:shadow-[0_24px_60px_-30px_rgba(1,36,83,0.35)]"
                 >
                   <span
                     aria-hidden

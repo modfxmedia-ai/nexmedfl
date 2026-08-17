@@ -38,7 +38,7 @@ export interface ServicePageBodyProps {
   heroImage?: string;
   benefits: ServiceBenefit[];
   equipment: ServiceEquipment;
-  /** Conditions Treated list — plain labels, optionally cross-linked from /conditions-we-treat/. */
+  /** Conditions Treated list, plain labels, optionally cross-linked from /conditions-we-treat/. */
   conditions: string[];
   /** Long-form on-page SEO content blocks, rendered below the hero. */
   richContent?: ServiceRichContentBlock[];
@@ -48,7 +48,7 @@ export interface ServicePageBodyProps {
   relatedServices?: ServiceRelatedLink[];
 }
 
-// Reuse the same 3 verified stats shown on the homepage (30+ years, 5k+
+// Reuse the same 3 verified stats shown on the homepage (18+ years, 5k+
 // patients, 98% satisfaction) rather than inventing per-treatment figures.
 const TRUST_STATS = [STATS[0], STATS[2], STATS[3]];
 
@@ -106,7 +106,7 @@ function SpineMark() {
 }
 
 /** Decorative concentric "technology" pulse rings for the dark equipment
- *  section — freezes in place when the user prefers reduced motion. */
+ *  section, freezes in place when the user prefers reduced motion. */
 function PulseRings() {
   const reduce = useReducedMotion();
   return (
@@ -135,7 +135,7 @@ function PulseRings() {
           }
         />
       ))}
-      <span className="relative flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-brand-cyan to-brand-deep shadow-[0_8px_28px_-8px_rgba(34,199,240,0.55)]">
+      <span className="relative flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-brand-cyan to-brand-deep shadow-[0_8px_28px_-8px_rgba(119,189,197,0.55)]">
         <svg className="h-6 w-6 text-white" viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path d="M13 2 3 14h6l-1 8 11-14h-7l1-6Z" fill="currentColor" />
         </svg>
@@ -157,7 +157,7 @@ function PlusIcon() {
   );
 }
 
-/** Single accordion row for the FAQ section — pure CSS grid-row expand/
+/** Single accordion row for the FAQ section, pure CSS grid-row expand/
  *  collapse so no height measurement is required. */
 function FAQItem({ faq }: { faq: ServiceFAQ }) {
   const [open, setOpen] = useState(false);
@@ -221,7 +221,7 @@ export function ServicePageBody({
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "radial-gradient(ellipse 70% 60% at 15% 0%, rgba(34,199,240,0.1) 0%, transparent 55%)",
+              "radial-gradient(ellipse 70% 60% at 15% 0%, rgba(119,189,197,0.1) 0%, transparent 55%)",
           }}
         />
         <div
@@ -237,7 +237,7 @@ export function ServicePageBody({
           {/* Copy */}
           <div>
             <div
-              className="nexmed-hero-enter inline-flex w-fit items-center gap-2 rounded-full border border-brand-cyan/30 bg-white/70 px-3 py-1.5 shadow-[0_8px_28px_-14px_rgba(20,121,232,0.35)] backdrop-blur"
+              className="nexmed-hero-enter inline-flex w-fit items-center gap-2 rounded-full border border-brand-cyan/30 bg-white/70 px-3 py-1.5 shadow-[0_8px_28px_-14px_rgba(1,36,83,0.35)] backdrop-blur"
               style={{ animationDelay: "0.1s" }}
             >
               <span className="relative flex h-2 w-2">
@@ -270,7 +270,7 @@ export function ServicePageBody({
               <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
                 <Link
                   href="/appointment-request/"
-                  className="group/cta relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-br from-brand-cyan to-brand-deep px-7 py-3.5 text-[15px] font-semibold text-white shadow-[0_18px_44px_-10px_rgba(20,121,232,0.55)] transition-shadow hover:shadow-[0_22px_52px_-8px_rgba(34,199,240,0.55)]"
+                  className="group/cta relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-br from-brand-cyan to-brand-deep px-7 py-3.5 text-[15px] font-semibold text-white shadow-[0_18px_44px_-10px_rgba(1,36,83,0.55)] transition-shadow hover:shadow-[0_22px_52px_-8px_rgba(119,189,197,0.55)]"
                 >
                   <span
                     aria-hidden
@@ -309,7 +309,7 @@ export function ServicePageBody({
             className="nexmed-hero-enter relative"
             style={{ animationDelay: "0.3s" }}
           >
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[28px] shadow-[0_32px_70px_-30px_rgba(20,121,232,0.4)]">
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[28px] shadow-[0_32px_70px_-30px_rgba(1,36,83,0.4)]">
               {heroImage ? (
                 <Image
                   src={heroImage}
@@ -335,7 +335,7 @@ export function ServicePageBody({
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.75, ease: EASE_OUT_EXPO }}
-              className="absolute -bottom-6 left-6 flex items-center gap-3 rounded-2xl border border-surface-border bg-white px-5 py-4 shadow-[0_20px_44px_-16px_rgba(20,121,232,0.35)] sm:left-8"
+              className="absolute -bottom-6 left-6 flex items-center gap-3 rounded-2xl border border-surface-border bg-white px-5 py-4 shadow-[0_20px_44px_-16px_rgba(1,36,83,0.35)] sm:left-8"
             >
               <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-brand-cyan to-brand-deep text-white">
                 <CheckIcon className="h-5 w-5 text-white" />
@@ -349,7 +349,7 @@ export function ServicePageBody({
         </div>
       </section>
 
-      {/* Rich SEO content — "What to Expect" / "Is this right for you" */}
+      {/* Rich SEO content, "What to Expect" / "Is this right for you" */}
       {richContent && richContent.length > 0 && (
         <section className="mx-auto max-w-7xl px-4 pt-20 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
@@ -377,7 +377,7 @@ export function ServicePageBody({
         <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {benefits.map((benefit, i) => (
             <Reveal key={benefit.title} delay={i * 0.08}>
-              <div className="group h-full rounded-2xl border border-surface-border bg-white p-7 transition-all hover:-translate-y-1 hover:border-brand-cyan/40 hover:shadow-[0_24px_60px_-30px_rgba(20,121,232,0.35)]">
+              <div className="group h-full rounded-2xl border border-surface-border bg-white p-7 transition-all hover:-translate-y-1 hover:border-brand-cyan/40 hover:shadow-[0_24px_60px_-30px_rgba(1,36,83,0.35)]">
                 <span className="text-sm font-bold text-brand-cyan">
                   {String(i + 1).padStart(2, "0")}
                 </span>
@@ -404,7 +404,7 @@ export function ServicePageBody({
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "radial-gradient(ellipse 60% 70% at 85% 20%, rgba(34,199,240,0.12) 0%, transparent 60%)",
+              "radial-gradient(ellipse 60% 70% at 85% 20%, rgba(119,189,197,0.12) 0%, transparent 60%)",
           }}
         />
         <div className="relative mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
@@ -503,7 +503,7 @@ export function ServicePageBody({
               <Reveal key={link.href} delay={i * 0.08}>
                 <Link
                   href={link.href}
-                  className="group/cta flex h-full items-center justify-between gap-3 rounded-2xl border border-surface-border bg-white p-5 transition-all hover:-translate-y-1 hover:border-brand-cyan/40 hover:shadow-[0_20px_50px_-28px_rgba(20,121,232,0.35)]"
+                  className="group/cta flex h-full items-center justify-between gap-3 rounded-2xl border border-surface-border bg-white p-5 transition-all hover:-translate-y-1 hover:border-brand-cyan/40 hover:shadow-[0_20px_50px_-28px_rgba(1,36,83,0.35)]"
                 >
                   <span className="text-sm font-semibold text-ink">{link.label}</span>
                   <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-surface text-brand-deep transition-colors group-hover:bg-gradient-to-br group-hover:from-brand-cyan group-hover:to-brand-deep group-hover:text-white">
@@ -541,7 +541,7 @@ export function ServicePageBody({
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "radial-gradient(ellipse 60% 80% at 50% 100%, rgba(34,199,240,0.12) 0%, transparent 65%)",
+              "radial-gradient(ellipse 60% 80% at 50% 100%, rgba(119,189,197,0.12) 0%, transparent 65%)",
           }}
         />
         <Reveal className="relative mx-auto flex max-w-3xl flex-col items-center gap-4 px-4 py-20 text-center sm:px-6 lg:px-8">
@@ -559,7 +559,7 @@ export function ServicePageBody({
           >
             <Link
               href="/appointment-request/"
-              className="group/cta relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-br from-brand-cyan to-brand-deep px-8 py-4 text-[15px] font-semibold text-white shadow-[0_18px_44px_-10px_rgba(20,121,232,0.55)] transition-shadow hover:shadow-[0_22px_52px_-8px_rgba(34,199,240,0.55)]"
+              className="group/cta relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-br from-brand-cyan to-brand-deep px-8 py-4 text-[15px] font-semibold text-white shadow-[0_18px_44px_-10px_rgba(1,36,83,0.55)] transition-shadow hover:shadow-[0_22px_52px_-8px_rgba(119,189,197,0.55)]"
             >
               <span
                 aria-hidden

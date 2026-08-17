@@ -5,7 +5,7 @@
  * mount-time animation via motion's `useInView`, plain
  * IntersectionObserver, and rAF all proved unreliable in this
  * codebase's React 19 + Turbopack + Motion combo (values stuck at 0).
- * Render as a static value — the visual weight of the number itself is
+ * Render as a static value, the visual weight of the number itself is
  * what matters for this section.
  */
 export function CountUp({

@@ -28,7 +28,7 @@ const CONTACT_ITEMS = [
 ];
 
 /**
- * "Visit Our Office" section — embedded Google map paired with the
+ * "Visit Our Office" section, embedded Google map paired with the
  * office address, phone, and email. Rendered on the homepage just above
  * the site footer.
  */
@@ -44,7 +44,7 @@ export function LocationSection() {
             Visit Our Ormond Beach Office
           </h2>
           <p className="mt-5 text-base leading-relaxed text-ink-soft">
-            Stop by or reach out any time — our team is ready to help you
+            Stop by or reach out any time, our team is ready to help you
             start your treatment journey.
           </p>
         </div>
@@ -52,7 +52,7 @@ export function LocationSection() {
         <div className="mt-14 grid grid-cols-1 gap-8 lg:mt-16 lg:grid-cols-5 lg:gap-10">
           {/* Contact details */}
           <Reveal className="lg:col-span-2">
-            <div className="flex h-full flex-col justify-center rounded-2xl border border-surface-border bg-white p-8 shadow-[0_24px_60px_-30px_rgba(20,121,232,0.25)] sm:p-10">
+            <div className="flex h-full flex-col justify-center rounded-2xl border border-surface-border bg-white p-8 shadow-[0_24px_60px_-30px_rgba(1,36,83,0.25)] sm:p-10">
               <ul className="flex flex-col gap-7">
                 {CONTACT_ITEMS.map((item) => (
                   <li key={item.label} className="flex items-start gap-4">
@@ -89,7 +89,7 @@ export function LocationSection() {
 
           {/* Map embed */}
           <Reveal delay={0.1} className="lg:col-span-3">
-            <div className="h-80 overflow-hidden rounded-2xl border border-surface-border shadow-[0_24px_60px_-30px_rgba(20,121,232,0.25)] lg:h-full lg:min-h-[360px]">
+            <div className="h-80 overflow-hidden rounded-2xl border border-surface-border shadow-[0_24px_60px_-30px_rgba(1,36,83,0.25)] lg:h-full lg:min-h-[360px]">
               <iframe
                 src={MAP_EMBED_SRC}
                 title={`${BUSINESS.name} location map`}

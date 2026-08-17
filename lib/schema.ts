@@ -1,10 +1,10 @@
 import { BUSINESS, SITE_NAME, SITE_URL, SOCIAL_LINKS } from "./site-config";
 
 /**
- * Pure JSON-LD graph builder — replicates the exact Rank Math `@graph`
+ * Pure JSON-LD graph builder, replicates the exact Rank Math `@graph`
  * emitted on the live nexmedfl.com site (verified field-by-field via curl
  * against the homepage, a static page, and a blog post). Do NOT add fields
- * that aren't present in the live output — the live graph intentionally
+ * that aren't present in the live output, the live graph intentionally
  * keeps the Organization node minimal (name/url/openingHours only) and
  * only includes `potentialAction`/`WebPage.about` on the homepage, and
  * only includes an `ImageObject` node when the page has a featured image.
@@ -38,7 +38,7 @@ const ORGANIZATION_ID = `${SITE_URL}/#organization`;
 const WEBSITE_ID = `${SITE_URL}/#website`;
 
 // The live site's Person node is the WordPress "developer" author account
-// on every single page/post — it is not per-author data, so it's a fixed
+// on every single page/post, it is not per-author data, so it's a fixed
 // constant rather than something derived per page.
 const PERSON_ID = `${SITE_URL}/author/developer/`;
 const PERSON_NODE = {
@@ -159,7 +159,7 @@ export interface MedicalProcedureInput {
   /** Body part(s) this procedure/therapy targets, e.g. "Spine" or "Knee". */
   bodyLocation?: string;
   /** schema.org MedicalProcedureType enumeration value (bare label is fine
-   *  — most of the clinic's equipment-driven offerings are non-invasive). */
+   *, most of the clinic's equipment-driven offerings are non-invasive). */
   procedureType?: "NoninvasiveProcedure" | "PercutaneousProcedure";
 }
 
@@ -167,7 +167,7 @@ export interface MedicalProcedureInput {
  * `MedicalProcedure` JSON-LD for the new equipment/program-driven service
  * pages. Emitted as an ADDITIONAL <script> tag alongside the standard
  * `buildGraph()` output (same pattern as the homepage's standalone
- * `MedicalBusiness` block) — not a replacement for it.
+ * `MedicalBusiness` block), not a replacement for it.
  */
 export function buildMedicalProcedureSchema({
   path,
@@ -199,7 +199,7 @@ export interface FAQInput {
 
 /**
  * `FAQPage` JSON-LD for service pages that include an on-page FAQ
- * section — emitted as an ADDITIONAL <script> tag alongside `buildGraph()`
+ * section, emitted as an ADDITIONAL <script> tag alongside `buildGraph()`
  * and `buildMedicalProcedureSchema()`, same pattern as those.
  */
 export function buildFAQSchema(faqs: FAQInput[]) {
@@ -228,7 +228,7 @@ export interface MedicalWebPageInput {
 
 /**
  * `MedicalWebPage` JSON-LD for hub/overview pages (services & conditions
- * listings) that aren't a single procedure — emitted as an ADDITIONAL
+ * listings) that aren't a single procedure, emitted as an ADDITIONAL
  * <script> tag alongside `buildGraph()`, same pattern as
  * `buildMedicalProcedureSchema()` and `buildFAQSchema()`.
  */
@@ -266,13 +266,13 @@ export interface AggregateRatingInput {
 
 /**
  * `AggregateRating` JSON-LD, attached to the same `@id` as the main
- * Organization node emitted by `buildGraph()` — Google merges JSON-LD
+ * Organization node emitted by `buildGraph()`, Google merges JSON-LD
  * nodes that share an `@id` across multiple <script> tags on a page, so
  * this doesn't need to duplicate the rest of the Organization fields.
  *
  * NOTE: `ratingValue`/`reviewCount` are PLACEHOLDER figures. Replace with
  * the real, current values from Google Business Profile (or your review
- * platform of record) before launch — do not leave estimated numbers in
+ * platform of record) before launch, do not leave estimated numbers in
  * production schema.
  */
 export function buildAggregateRatingSchema({
@@ -306,7 +306,7 @@ export interface TeamMemberInput {
  * `Physician` JSON-LD nodes for the team page. Emitted as an ADDITIONAL
  * <script> tag alongside `buildGraph()`.
  *
- * NOTE: `name`/`jobTitle`/`description` below are PLACEHOLDER values —
+ * NOTE: `name`/`jobTitle`/`description` below are PLACEHOLDER values, 
  * replace with each real provider's name and credentials before launch.
  */
 export function buildTeamSchema(members: TeamMemberInput[]) {
@@ -326,7 +326,7 @@ export function buildTeamSchema(members: TeamMemberInput[]) {
 /**
  * `LocalBusiness` JSON-LD carrying full NAP (Name/Address/Phone) data,
  * merged into the same Organization `@id` emitted by `buildGraph()`.
- * Intended for the /contact-us/ page — every value is sourced from the
+ * Intended for the /contact-us/ page, every value is sourced from the
  * single `BUSINESS` config object (lib/site-config.ts) so the NAP here
  * always matches what's displayed on the page and site-wide.
  */
@@ -352,7 +352,7 @@ export function buildLocalBusinessSchema() {
 }
 
 /**
- * Standalone MedicalBusiness JSON-LD block — a SECOND, separate
+ * Standalone MedicalBusiness JSON-LD block, a SECOND, separate
  * <script type="application/ld+json"> tag emitted only on the live
  * homepage (in addition to the main @graph above). Values copied
  * exactly from the live page's own script tag.
@@ -384,33 +384,9 @@ export const MEDICAL_BUSINESS_SCHEMA = {
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
-      dayOfWeek: "Monday",
-      opens: "08:00",
-      closes: "14:00",
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Tuesday", "Wednesday", "Thursday"],
-      opens: "08:00",
-      closes: "12:00",
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Tuesday", "Wednesday", "Thursday"],
-      opens: "14:00",
-      closes: "18:00",
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: "Friday",
-      opens: "08:00",
-      closes: "12:00",
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: "Friday",
-      opens: "14:00",
-      closes: "16:00",
+      dayOfWeek: ["Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "08:30",
+      closes: "17:00",
     },
   ],
   sameAs: [
@@ -427,7 +403,7 @@ export interface BreadcrumbItemInput {
 }
 
 /**
- * `BreadcrumbList` JSON-LD — emitted as an ADDITIONAL <script> tag
+ * `BreadcrumbList` JSON-LD, emitted as an ADDITIONAL <script> tag
  * alongside `buildGraph()`, same pattern as `buildMedicalWebPageSchema()`
  * and `buildFAQSchema()`. Pass items in order, e.g.
  * [{ name: "Home", path: "/" }, { name: "Conditions", path: "/conditions-we-treat/" }, { name: "Spine", path: "/conditions/spine/" }].
@@ -454,7 +430,7 @@ export interface MedicalConditionInput {
 
 /**
  * `MedicalCondition` JSON-LD nodes for each sub-condition section on a
- * /conditions/[category]/ page — emitted as ONE ADDITIONAL <script> tag
+ * /conditions/[category]/ page, emitted as ONE ADDITIONAL <script> tag
  * (a `@graph` array of MedicalCondition nodes) alongside `buildGraph()`
  * and `buildBreadcrumbSchema()`, same stacking pattern used elsewhere in
  * this file.

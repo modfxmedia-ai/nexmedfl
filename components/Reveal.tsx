@@ -4,7 +4,7 @@ import type { CSSProperties, ReactNode } from "react";
  * Generic scroll-reveal wrapper (fade + slide up) used throughout the site
  * for section entrances. Implemented with a CSS `@keyframes` animation
  * (see `.nexmed-reveal` in globals.css) rather than motion/react's
- * `initial + whileInView` — the current Motion v12 + React 19 + Turbopack
+ * `initial + whileInView`, the current Motion v12 + React 19 + Turbopack
  * combo intermittently leaves `whileInView` elements stuck at their
  * initial (invisible) state. CSS animations always run, so this is a
  * plain server component with no client JS cost.

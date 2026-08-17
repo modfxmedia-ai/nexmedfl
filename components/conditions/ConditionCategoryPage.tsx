@@ -3,7 +3,7 @@ import { Reveal } from "@/components/Reveal";
 import { ConditionJumpNav } from "@/components/conditions/ConditionJumpNav";
 import type { ConditionPageContent } from "@/lib/condition-pages-content";
 
-// Solid category icon paths — duplicated from components/home/ConditionsTeaser.tsx
+// Solid category icon paths, duplicated from components/home/ConditionsTeaser.tsx
 // (small, presentational SVG data; not worth a shared import for one path map).
 const CATEGORY_ICON_PATHS: Record<string, string> = {
   Spine:
@@ -71,7 +71,7 @@ export function ConditionCategoryPage({
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "radial-gradient(ellipse 80% 55% at 65% 0%, rgba(34,199,240,0.16) 0%, rgba(26,134,247,0.05) 40%, rgba(255,255,255,0) 80%)",
+              "radial-gradient(ellipse 80% 55% at 65% 0%, rgba(119,189,197,0.16) 0%, rgba(23,132,152,0.05) 40%, rgba(255,255,255,0) 80%)",
           }}
         />
         <div className="relative mx-auto max-w-4xl px-4 py-16 text-center sm:px-6 sm:py-20 lg:px-8">
@@ -89,7 +89,7 @@ export function ConditionCategoryPage({
             </nav>
           </Reveal>
           <Reveal delay={0.04}>
-            <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-cyan to-brand-deep text-white shadow-[0_14px_36px_-10px_rgba(20,121,232,0.55)]">
+            <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-cyan to-brand-deep text-white shadow-[0_14px_36px_-10px_rgba(1,36,83,0.55)]">
               <CategoryIcon iconKey={page.iconKey} />
             </span>
           </Reveal>
@@ -140,7 +140,7 @@ export function ConditionCategoryPage({
                   <div className="mt-6 flex flex-wrap items-center gap-4">
                     <Link
                       href="/appointment-request/"
-                      className="group/cta relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-br from-brand-cyan to-brand-deep px-6 py-3 text-sm font-semibold text-white shadow-[0_14px_40px_-14px_rgba(20,121,232,0.55)] transition-shadow hover:shadow-[0_18px_46px_-10px_rgba(34,199,240,0.55)]"
+                      className="group/cta relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-br from-brand-cyan to-brand-deep px-6 py-3 text-sm font-semibold text-white shadow-[0_14px_40px_-14px_rgba(1,36,83,0.55)] transition-shadow hover:shadow-[0_18px_46px_-10px_rgba(119,189,197,0.55)]"
                     >
                       Book a Consultation
                       <svg
@@ -186,7 +186,7 @@ export function ConditionCategoryPage({
               <Reveal key={other.slug} delay={Math.min(i * 0.04, 0.2)} y={16}>
                 <Link
                   href={other.path}
-                  className="group flex h-full flex-col gap-3 rounded-2xl border border-surface-border bg-white p-5 shadow-[0_16px_40px_-32px_rgba(20,121,232,0.35)] transition-all hover:-translate-y-1 hover:border-brand-cyan/40 hover:shadow-[0_22px_50px_-28px_rgba(20,121,232,0.4)]"
+                  className="group flex h-full flex-col gap-3 rounded-2xl border border-surface-border bg-white p-5 shadow-[0_16px_40px_-32px_rgba(1,36,83,0.35)] transition-all hover:-translate-y-1 hover:border-brand-cyan/40 hover:shadow-[0_22px_50px_-28px_rgba(1,36,83,0.4)]"
                 >
                   <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-brand-cyan/15 to-brand-deep/15 text-brand-deep transition-all group-hover:from-brand-cyan/30 group-hover:to-brand-deep/30">
                     <span className="h-5 w-5">
@@ -214,7 +214,7 @@ export function ConditionCategoryPage({
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "radial-gradient(ellipse 70% 60% at 50% 100%, rgba(34,199,240,0.14) 0%, rgba(255,255,255,0) 70%)",
+              "radial-gradient(ellipse 70% 60% at 50% 100%, rgba(119,189,197,0.14) 0%, rgba(255,255,255,0) 70%)",
           }}
         />
         <div className="relative mx-auto flex max-w-5xl flex-col items-center gap-4 px-4 py-16 text-center sm:px-6 lg:px-8">
@@ -232,7 +232,7 @@ export function ConditionCategoryPage({
           <Reveal delay={0.12}>
             <Link
               href="/appointment-request/"
-              className="mt-1 inline-flex items-center rounded-full bg-gradient-to-br from-brand-cyan to-brand-deep px-7 py-3 text-sm font-semibold text-white shadow-[0_14px_40px_-14px_rgba(20,121,232,0.55)] transition-transform hover:scale-[1.03]"
+              className="mt-1 inline-flex items-center rounded-full bg-gradient-to-br from-brand-cyan to-brand-deep px-7 py-3 text-sm font-semibold text-white shadow-[0_14px_40px_-14px_rgba(1,36,83,0.55)] transition-transform hover:scale-[1.03]"
             >
               Book Appointment
             </Link>

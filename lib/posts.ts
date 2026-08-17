@@ -21,7 +21,7 @@ export interface BlogPostEntry {
   datePublished: string;
   dateModified: string;
   section: string;
-  /** Full article body — only present on posts written with real content. */
+  /** Full article body, only present on posts written with real content. */
   body?: BlogBodyBlock[];
   /** Optional CTA linking the post to its related service page. */
   relatedServiceHref?: string;
@@ -49,34 +49,34 @@ export const BLOG_POSTS: BlogPostEntry[] = [
     body: [
       {
         paragraphs: [
-          "Car accidents happen fast, and the adrenaline that follows can mask pain for hours or even days. Many people walk away from a fender-bender feeling fine, only to wake up the next morning with a stiff neck, throbbing headache, or aching lower back. Knowing what to do in the first 24–72 hours after a crash — and why an early chiropractic evaluation matters — can make a real difference in how quickly and completely you recover.",
+          "Car accidents happen fast, and the adrenaline that follows can mask pain for hours or even days. Many people walk away from a fender-bender feeling fine, only to wake up the next morning with a stiff neck, throbbing headache, or aching lower back. Knowing what to do in the first 24–72 hours after a crash, and why an early chiropractic evaluation matters, can make a real difference in how quickly and completely you recover.",
         ],
       },
       {
         heading: "First Steps After a Collision",
         paragraphs: [
-          "Safety comes first: move to a secure location if possible, check for injuries, and exchange information with the other driver. Even in a low-speed collision, it's worth being examined by a medical professional soon after — not just for documentation, but because some injuries genuinely don't hurt right away.",
+          "Safety comes first: move to a secure location if possible, check for injuries, and exchange information with the other driver. Even in a low-speed collision, it's worth being examined by a medical professional soon after, not just for documentation, but because some injuries genuinely don't hurt right away.",
           "Whiplash is the classic example. The sudden forward-and-back motion of a collision can strain the neck's muscles, ligaments, and discs without producing immediate symptoms. Swelling and inflammation often build gradually, which is why pain frequently peaks a day or two after the accident rather than at the scene.",
         ],
       },
       {
         heading: "Why Timing Matters",
         paragraphs: [
-          "Waiting weeks to get evaluated can allow inflamed tissue and misaligned joints to settle into compensatory movement patterns — the body's way of avoiding pain that can quietly create new problems in the neck, shoulders, or lower back. An early evaluation lets a provider assess your spine's alignment and range of motion while the injury is still fresh, often making treatment more effective and recovery faster.",
+          "Waiting weeks to get evaluated can allow inflamed tissue and misaligned joints to settle into compensatory movement patterns, the body's way of avoiding pain that can quietly create new problems in the neck, shoulders, or lower back. An early evaluation lets a provider assess your spine's alignment and range of motion while the injury is still fresh, often making treatment more effective and recovery faster.",
           "It also creates a clear medical record connecting your symptoms to the accident, which matters if you're working with insurance or documenting a personal injury claim.",
         ],
       },
       {
         heading: "How Chiropractic Care Helps",
         paragraphs: [
-          "A chiropractic evaluation after an accident typically includes a review of how the injury occurred, a hands-on assessment of your spine and joints, and a discussion of any imaging that may be needed. From there, a treatment plan — which may include gentle spinal adjustments, soft-tissue work, and guided rehabilitation exercises — is built around restoring normal movement and reducing inflammation.",
+          "A chiropractic evaluation after an accident typically includes a review of how the injury occurred, a hands-on assessment of your spine and joints, and a discussion of any imaging that may be needed. From there, a treatment plan, which may include gentle spinal adjustments, soft-tissue work, and guided rehabilitation exercises, is built around restoring normal movement and reducing inflammation.",
           "The goal isn't just symptom relief; it's helping your body heal correctly the first time, so pain doesn't become a recurring issue months down the road.",
         ],
       },
       {
         heading: "Don't Wait to Get Checked",
         paragraphs: [
-          "If you've been in a car accident recently — even one that felt minor — it's worth getting evaluated before symptoms have a chance to set in. Our team at Ormond Spine & Nerve Center works with car accident and personal injury patients throughout Ormond Beach to assess injuries early and build a recovery plan suited to what actually happened in your crash.",
+          "If you've been in a car accident recently, even one that felt minor, it's worth getting evaluated before symptoms have a chance to set in. Our team at Ormond Spine & Nerve Center works with car accident and personal injury patients throughout Ormond Beach to assess injuries early and build a recovery plan suited to what actually happened in your crash.",
         ],
       },
     ],
@@ -101,32 +101,32 @@ export const BLOG_POSTS: BlogPostEntry[] = [
     body: [
       {
         paragraphs: [
-          "When an injury just won't quiet down — whether it's a nagging joint ache, a stubborn strain, or lingering inflammation from an old injury — many patients are looking for something between rest and surgery. Low-level laser therapy has become a popular option precisely because it's non-invasive, painless, and designed to work with the body's own healing processes rather than override them.",
+          "When an injury just won't quiet down, whether it's a nagging joint ache, a stubborn strain, or lingering inflammation from an old injury, many patients are looking for something between rest and surgery. Low-level laser therapy has become a popular option precisely because it's non-invasive, painless, and designed to work with the body's own healing processes rather than override them.",
         ],
       },
       {
         heading: "What Laser Therapy Actually Does",
         paragraphs: [
           "Laser therapy uses specific wavelengths of light delivered directly to injured tissue. That light energy is absorbed by cells and is believed to stimulate cellular activity, encouraging tissue repair, improving local circulation, and helping reduce the inflammatory response that keeps an injury feeling irritated and swollen.",
-          "Unlike heat or ice, which mainly manage symptoms, laser therapy targets the healing process itself — which is why it's often used alongside other treatments like chiropractic care or spinal decompression rather than as a stand-alone fix.",
+          "Unlike heat or ice, which mainly manage symptoms, laser therapy targets the healing process itself, which is why it's often used alongside other treatments like chiropractic care or spinal decompression rather than as a stand-alone fix.",
         ],
       },
       {
         heading: "What a Session Feels Like",
         paragraphs: [
-          "Sessions are quick and comfortable. Most patients feel little more than mild warmth over the treated area, and there's no downtime afterward — you can return to normal activity right away. Because it's non-invasive, laser therapy is a good fit for patients who want to avoid injections or who haven't found lasting relief from medication alone.",
+          "Sessions are quick and comfortable. Most patients feel little more than mild warmth over the treated area, and there's no downtime afterward, you can return to normal activity right away. Because it's non-invasive, laser therapy is a good fit for patients who want to avoid injections or who haven't found lasting relief from medication alone.",
         ],
       },
       {
         heading: "Conditions That Often Respond Well",
         paragraphs: [
-          "Laser therapy is commonly used for soft-tissue strains and sprains, tendinitis, joint inflammation, and as a supportive therapy during recovery from car accidents or sports injuries. It's frequently paired with other treatments in a broader recovery plan rather than used in isolation, since reducing inflammation makes other therapies — like adjustments or decompression — more effective.",
+          "Laser therapy is commonly used for soft-tissue strains and sprains, tendinitis, joint inflammation, and as a supportive therapy during recovery from car accidents or sports injuries. It's frequently paired with other treatments in a broader recovery plan rather than used in isolation, since reducing inflammation makes other therapies, like adjustments or decompression, more effective.",
         ],
       },
       {
         heading: "Is Laser Therapy Right for You?",
         paragraphs: [
-          "Every injury is different, which is why we start with an evaluation before recommending laser therapy as part of your plan. If you're dealing with pain or inflammation that hasn't improved on its own, our Ormond Beach team can help determine whether laser therapy — alone or combined with other treatments — is the right next step for your recovery.",
+          "Every injury is different, which is why we start with an evaluation before recommending laser therapy as part of your plan. If you're dealing with pain or inflammation that hasn't improved on its own, our Ormond Beach team can help determine whether laser therapy, alone or combined with other treatments, is the right next step for your recovery.",
         ],
       },
     ],
@@ -151,20 +151,20 @@ export const BLOG_POSTS: BlogPostEntry[] = [
     body: [
       {
         paragraphs: [
-          "Some injuries respond quickly to rest and basic treatment. Others — like plantar fasciitis, chronic tendinitis, or deep muscle knots that just won't release — seem to stick around no matter what you try. For pain that's settled in and become chronic, shockwave therapy offers a non-surgical option designed to jump-start the body's healing response in tissue that's stalled out.",
+          "Some injuries respond quickly to rest and basic treatment. Others, like plantar fasciitis, chronic tendinitis, or deep muscle knots that just won't release, seem to stick around no matter what you try. For pain that's settled in and become chronic, shockwave therapy offers a non-surgical option designed to jump-start the body's healing response in tissue that's stalled out.",
         ],
       },
       {
         heading: "How Shockwave Therapy Works",
         paragraphs: [
-          "Shockwave therapy delivers focused acoustic pulses to the affected area. These pulses are thought to stimulate blood flow and cellular repair processes in tissue that has become chronically inflamed or has developed scar-tissue-like density from repeated strain — essentially giving the body's own healing mechanisms a fresh signal to get back to work.",
+          "Shockwave therapy delivers focused acoustic pulses to the affected area. These pulses are thought to stimulate blood flow and cellular repair processes in tissue that has become chronically inflamed or has developed scar-tissue-like density from repeated strain, essentially giving the body's own healing mechanisms a fresh signal to get back to work.",
           "It's most often used for conditions where tissue healing has plateaued: things like chronic tendon pain, plantar fasciitis, and certain types of muscle and joint pain that haven't responded to more conservative approaches.",
         ],
       },
       {
         heading: "What to Expect During Treatment",
         paragraphs: [
-          "A shockwave session is relatively brief, and most patients describe the sensation as a pulsing pressure rather than sharp pain. There's no incision, no anesthesia, and typically no downtime — you can resume normal activities the same day. Results usually build gradually over a series of sessions rather than after a single visit, since the goal is to encourage a genuine healing response in the tissue.",
+          "A shockwave session is relatively brief, and most patients describe the sensation as a pulsing pressure rather than sharp pain. There's no incision, no anesthesia, and typically no downtime, you can resume normal activities the same day. Results usually build gradually over a series of sessions rather than after a single visit, since the goal is to encourage a genuine healing response in the tissue.",
         ],
       },
       {
@@ -201,26 +201,26 @@ export const BLOG_POSTS: BlogPostEntry[] = [
     body: [
       {
         paragraphs: [
-          "Chronic knee pain has a way of changing how you move through your day — stairs become a chore, standing up from a chair takes a second thought, and activities you used to enjoy start to feel like risks. For many patients facing knee osteoarthritis or long-standing joint pain, knee decompression therapy offers a non-surgical way to relieve pressure on the joint and support the body's own repair process.",
+          "Chronic knee pain has a way of changing how you move through your day, stairs become a chore, standing up from a chair takes a second thought, and activities you used to enjoy start to feel like risks. For many patients facing knee osteoarthritis or long-standing joint pain, knee decompression therapy offers a non-surgical way to relieve pressure on the joint and support the body's own repair process.",
         ],
       },
       {
         heading: "What Causes Chronic Knee Pain",
         paragraphs: [
-          "Over years of use, the cartilage that cushions the knee joint can wear down, joint space can narrow, and surrounding tissue can become chronically inflamed. This is common in osteoarthritis but can also stem from old injuries, repetitive strain, or simply the cumulative effect of weight-bearing activity over time. The result is often a joint that feels stiff, achy, or swollen — especially after activity.",
+          "Over years of use, the cartilage that cushions the knee joint can wear down, joint space can narrow, and surrounding tissue can become chronically inflamed. This is common in osteoarthritis but can also stem from old injuries, repetitive strain, or simply the cumulative effect of weight-bearing activity over time. The result is often a joint that feels stiff, achy, or swollen, especially after activity.",
         ],
       },
       {
         heading: "How Decompression Therapy Helps",
         paragraphs: [
-          "Knee decompression therapy uses a controlled, gentle traction to create space within the joint, temporarily reducing pressure on worn cartilage and surrounding structures. This can help relieve pain, improve circulation to the joint, and create a more favorable environment for the tissue to recover — all without surgery, injections, or a lengthy recovery period.",
+          "Knee decompression therapy uses a controlled, gentle traction to create space within the joint, temporarily reducing pressure on worn cartilage and surrounding structures. This can help relieve pain, improve circulation to the joint, and create a more favorable environment for the tissue to recover, all without surgery, injections, or a lengthy recovery period.",
           "Sessions are comfortable and non-invasive, and most patients can return to their normal routine immediately afterward.",
         ],
       },
       {
         heading: "What Results to Expect",
         paragraphs: [
-          "Like most non-surgical joint therapies, knee decompression tends to work best as part of a series of sessions rather than a single visit, with many patients noticing gradual improvement in pain and mobility over the course of their treatment plan. Your provider will typically combine decompression with other supportive care — such as targeted exercises — to help maintain results.",
+          "Like most non-surgical joint therapies, knee decompression tends to work best as part of a series of sessions rather than a single visit, with many patients noticing gradual improvement in pain and mobility over the course of their treatment plan. Your provider will typically combine decompression with other supportive care, such as targeted exercises, to help maintain results.",
         ],
       },
       {
@@ -251,20 +251,20 @@ export const BLOG_POSTS: BlogPostEntry[] = [
     body: [
       {
         paragraphs: [
-          "A herniated or bulging disc can turn everyday movement — bending, sitting, even sneezing — into a source of sharp pain or radiating sciatica down the leg. For patients looking to avoid surgery, spinal decompression therapy has become one of the most sought-after non-surgical treatments for disc-related back pain.",
+          "A herniated or bulging disc can turn everyday movement, bending, sitting, even sneezing, into a source of sharp pain or radiating sciatica down the leg. For patients looking to avoid surgery, spinal decompression therapy has become one of the most sought-after non-surgical treatments for disc-related back pain.",
         ],
       },
       {
         heading: "What Happens to a Disc Under Pressure",
         paragraphs: [
-          "The discs between your vertebrae act as cushions, but years of poor posture, repetitive strain, or a single injury can cause a disc to bulge or herniate — pressing on nearby nerves and causing pain, numbness, or tingling that can radiate into the hips or legs. Left untreated, this pressure tends to keep tissue inflamed and can make simple movements painful.",
+          "The discs between your vertebrae act as cushions, but years of poor posture, repetitive strain, or a single injury can cause a disc to bulge or herniate, pressing on nearby nerves and causing pain, numbness, or tingling that can radiate into the hips or legs. Left untreated, this pressure tends to keep tissue inflamed and can make simple movements painful.",
         ],
       },
       {
         heading: "How Spinal Decompression Works",
         paragraphs: [
           "Spinal decompression therapy uses a controlled, gentle stretching force applied to the spine, creating negative pressure within the affected disc. This can help retract bulging or herniated disc material away from the nerve, easing the pressure that's causing pain, while also encouraging nutrient-rich fluid to flow into the disc to support healing.",
-          "Sessions are comfortable — most patients simply lie on a treatment table while the machine does the work — and there's no cutting, no anesthesia, and no lengthy recovery required.",
+          "Sessions are comfortable, most patients simply lie on a treatment table while the machine does the work, and there's no cutting, no anesthesia, and no lengthy recovery required.",
         ],
       },
       {
@@ -301,26 +301,26 @@ export const BLOG_POSTS: BlogPostEntry[] = [
     body: [
       {
         paragraphs: [
-          "Back pain is one of the most common reasons people seek medical care, yet many patients aren't sure what their options are beyond pain medication or, in severe cases, surgery. Chiropractic care sits in between — a hands-on, non-surgical approach focused on restoring normal movement to the spine and relieving the pressure that's often the real source of the pain.",
+          "Back pain is one of the most common reasons people seek medical care, yet many patients aren't sure what their options are beyond pain medication or, in severe cases, surgery. Chiropractic care sits in between, a hands-on, non-surgical approach focused on restoring normal movement to the spine and relieving the pressure that's often the real source of the pain.",
         ],
       },
       {
         heading: "What Causes Most Back Pain",
         paragraphs: [
-          "Back pain frequently stems from joints in the spine that aren't moving the way they should — whether from poor posture, a sudden strain, or the slow accumulation of daily wear and tear. When a spinal joint becomes restricted, surrounding muscles tend to tighten and compensate, which can lead to the stiffness, aching, or even nerve-related pain many patients describe.",
+          "Back pain frequently stems from joints in the spine that aren't moving the way they should, whether from poor posture, a sudden strain, or the slow accumulation of daily wear and tear. When a spinal joint becomes restricted, surrounding muscles tend to tighten and compensate, which can lead to the stiffness, aching, or even nerve-related pain many patients describe.",
         ],
       },
       {
         heading: "How a Chiropractic Adjustment Helps",
         paragraphs: [
-          "A chiropractic adjustment applies a precise, controlled force to a restricted spinal joint, helping restore its normal range of motion. This can relieve pressure on surrounding nerves and soft tissue, reduce muscle tension, and — over a series of visits — help correct the movement patterns that led to pain in the first place.",
+          "A chiropractic adjustment applies a precise, controlled force to a restricted spinal joint, helping restore its normal range of motion. This can relieve pressure on surrounding nerves and soft tissue, reduce muscle tension, and, over a series of visits, help correct the movement patterns that led to pain in the first place.",
           "Chiropractic care is often paired with soft-tissue work and guided exercises so the spine doesn't just feel better temporarily, but moves better long-term.",
         ],
       },
       {
         heading: "What a First Visit Looks Like",
         paragraphs: [
-          "Your first chiropractic visit typically starts with a conversation about your symptoms and history, followed by a hands-on evaluation of your spine's movement and alignment. From there, your provider builds a treatment plan suited to your specific condition — whether that's occasional low back tightness or a more involved issue like sciatica.",
+          "Your first chiropractic visit typically starts with a conversation about your symptoms and history, followed by a hands-on evaluation of your spine's movement and alignment. From there, your provider builds a treatment plan suited to your specific condition, whether that's occasional low back tightness or a more involved issue like sciatica.",
         ],
       },
       {
@@ -444,7 +444,7 @@ export function getReadTimeMinutes(post: BlogPostEntry): number {
   return Math.max(1, Math.round(wordCount / 200));
 }
 
-// Topic groupings reused by the blog listing page's filter pills — the
+// Topic groupings reused by the blog listing page's filter pills, the
 // same service-based grouping used elsewhere in the site (matches
 // BLOG_TOPICS in lib/contact-content.ts) so only content about the
 // services we actually offer is categorized (no legacy weight-loss/

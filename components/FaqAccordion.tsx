@@ -57,7 +57,7 @@ function FaqRow({ item }: { item: FaqAccordionItem }) {
 }
 
 /**
- * Shared FAQ accordion — same visual style as the one built into
+ * Shared FAQ accordion, same visual style as the one built into
  * ServicePageBody, extracted so plain content pages (payment plans,
  * financing options, etc.) can reuse it without pulling in the whole
  * service-page layout.

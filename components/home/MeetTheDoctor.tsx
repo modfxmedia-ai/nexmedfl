@@ -22,7 +22,7 @@ function CredentialIcon({ index }: { index: number }) {
 }
 
 /**
- * Homepage "Meet the Doctor" section — introduces Dr. Noah Herbert with
+ * Homepage "Meet the Doctor" section, introduces Dr. Noah Herbert with
  * his real photo/bio, a floating "Meet Your Doctor" badge overlapping
  * the photo card, a 2x2 credential grid, and dual CTAs.
  */
@@ -39,7 +39,7 @@ export function MeetTheDoctor() {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 60% 50% at 85% 10%, rgba(34,199,240,0.08) 0%, transparent 55%)",
+            "radial-gradient(ellipse 60% 50% at 85% 10%, rgba(119,189,197,0.08) 0%, transparent 55%)",
         }}
       />
       <div
@@ -57,7 +57,7 @@ export function MeetTheDoctor() {
             aria-hidden
             className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-brand-cyan/20 to-brand-deep/20 blur-2xl"
           />
-          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[1.75rem] border border-surface-border shadow-[0_30px_70px_-30px_rgba(20,121,232,0.4)]">
+          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[1.75rem] border border-surface-border shadow-[0_30px_70px_-30px_rgba(1,36,83,0.4)]">
             <Image
               src={DOCTOR_HIGHLIGHT.image}
               alt={DOCTOR_HIGHLIGHT.name}
@@ -68,7 +68,7 @@ export function MeetTheDoctor() {
             />
           </div>
           <div className="absolute inset-x-0 bottom-0 flex justify-center">
-            <span className="inline-flex w-fit items-center gap-2 rounded-full border border-brand-cyan/25 bg-white px-4 py-2 text-[12.5px] font-bold uppercase tracking-[0.08em] text-brand-deep shadow-[0_16px_36px_-14px_rgba(20,121,232,0.5)]">
+            <span className="inline-flex w-fit items-center gap-2 rounded-full border border-brand-cyan/25 bg-white px-4 py-2 text-[12.5px] font-bold uppercase tracking-[0.08em] text-brand-deep shadow-[0_16px_36px_-14px_rgba(1,36,83,0.5)]">
               <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-brand-cyan to-brand-deep text-white">
                 <CredentialIcon index={3} />
               </span>
@@ -80,10 +80,10 @@ export function MeetTheDoctor() {
         {/* Copy */}
         <div>
           <Reveal>
-            <div className="inline-flex w-fit items-center gap-2 rounded-full border border-brand-cyan/30 bg-white/70 px-3 py-1.5 shadow-[0_8px_28px_-14px_rgba(20,121,232,0.35)] backdrop-blur">
+            <div className="inline-flex w-fit items-center gap-2 rounded-full border border-brand-cyan/30 bg-white/70 px-3 py-1.5 shadow-[0_8px_28px_-14px_rgba(1,36,83,0.35)] backdrop-blur">
               <span className="h-1.5 w-1.5 rounded-full bg-brand-cyan" />
               <span className="text-[11px] font-bold uppercase tracking-[0.22em] text-brand-deep">
-                Your Chiropractor
+                Your Physician
               </span>
             </div>
           </Reveal>
@@ -111,7 +111,7 @@ export function MeetTheDoctor() {
             {DOCTOR_HIGHLIGHT.credentials.map((credential, i) => (
               <div
                 key={credential}
-                className="nexmed-reveal-pill flex items-center gap-3 rounded-2xl border border-surface-border bg-bg-tinted px-4 py-3.5 text-[13.5px] font-medium leading-snug text-ink transition-all hover:-translate-y-[3px] hover:border-brand-cyan/40 hover:shadow-[0_16px_36px_-14px_rgba(20,121,232,0.35)]"
+                className="nexmed-reveal-pill flex items-center gap-3 rounded-2xl border border-surface-border bg-bg-tinted px-4 py-3.5 text-[13.5px] font-medium leading-snug text-ink transition-all hover:-translate-y-[3px] hover:border-brand-cyan/40 hover:shadow-[0_16px_36px_-14px_rgba(1,36,83,0.35)]"
                 style={
                   {
                     "--reveal-delay": `${0.15 + i * 0.08}s`,
@@ -130,7 +130,7 @@ export function MeetTheDoctor() {
           <Reveal delay={0.4} className="mt-8 flex flex-wrap gap-3">
             <Link
               href="/appointment-request/"
-              className="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-br from-brand-cyan to-brand-deep px-7 py-3.5 text-[15px] font-semibold text-white shadow-[0_18px_44px_-10px_rgba(20,121,232,0.55)] transition-all hover:scale-[1.03]"
+              className="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-br from-brand-cyan to-brand-deep px-7 py-3.5 text-[15px] font-semibold text-white shadow-[0_18px_44px_-10px_rgba(1,36,83,0.55)] transition-all hover:scale-[1.03]"
             >
               <span aria-hidden>&rarr;</span> Book with {DOCTOR_HIGHLIGHT.name.split(",")[0]}
             </Link>

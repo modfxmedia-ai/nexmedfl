@@ -41,7 +41,7 @@ function PhoneIcon() {
 }
 
 /**
- * /contact-us/ page body — intro, hours, benefits, LeadConnector form, and
+ * /contact-us/ page body, intro, hours, benefits, LeadConnector form, and
  * the shared LocationSection (address, phone, email, map) for the
  * location/"how to reach us" requirement.
  */
@@ -57,7 +57,7 @@ export function ContactUsPageBody() {
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "radial-gradient(ellipse 70% 60% at 15% 0%, rgba(34,199,240,0.1) 0%, transparent 55%)",
+              "radial-gradient(ellipse 70% 60% at 15% 0%, rgba(119,189,197,0.1) 0%, transparent 55%)",
           }}
         />
         <div
@@ -66,7 +66,7 @@ export function ContactUsPageBody() {
         />
 
         <div className="relative mx-auto max-w-3xl px-4 py-20 text-center sm:px-6 lg:px-8 lg:py-24">
-          <div className="mx-auto inline-flex w-fit items-center gap-2 rounded-full border border-brand-cyan/30 bg-white/70 px-3 py-1.5 shadow-[0_8px_28px_-14px_rgba(20,121,232,0.35)] backdrop-blur">
+          <div className="mx-auto inline-flex w-fit items-center gap-2 rounded-full border border-brand-cyan/30 bg-white/70 px-3 py-1.5 shadow-[0_8px_28px_-14px_rgba(1,36,83,0.35)] backdrop-blur">
             <span className="h-1.5 w-1.5 rounded-full bg-brand-cyan" />
             <span className="text-[11px] font-bold uppercase tracking-[0.22em] text-brand-deep">
               {content.eyebrow}
@@ -123,7 +123,7 @@ export function ContactUsPageBody() {
           </div>
 
           <Reveal delay={0.1}>
-            <div className="rounded-2xl border border-surface-border bg-white p-4 shadow-[0_24px_60px_-38px_rgba(20,121,232,0.3)] sm:p-6">
+            <div className="rounded-2xl border border-surface-border bg-white p-4 shadow-[0_24px_60px_-38px_rgba(1,36,83,0.3)] sm:p-6">
               <h2 className="text-xl font-bold tracking-tight text-ink sm:text-2xl">
                 {content.formHeading}
               </h2>
