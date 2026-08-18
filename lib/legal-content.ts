@@ -20,62 +20,68 @@ export interface LegalPageContent {
 export const PRIVACY_POLICY: LegalPageContent = {
   eyebrow: "Legal",
   heading: "Privacy Policy",
-  lastUpdated: "August 17, 2026",
+  lastUpdated: "August 18, 2026",
   intro:
-    "Ormond Spine & Nerve Center (\"we,\" \"us,\" or \"our\") respects your privacy. This Privacy Policy explains what information we collect through this website, how we use it, and the choices you have. It does not apply to protected health information created or received during treatment, which is governed by our HIPAA Notice of Privacy Practices.",
+    "Ormond Spine & Nerve Center is committed to protecting the privacy and confidentiality of your personal information. This Communication Privacy Policy outlines how we collect, use, disclose, and safeguard your communication-related data. By engaging with our services, you agree to the terms outlined in this policy. It does not apply to protected health information created or received during treatment, which is governed by our HIPAA Notice of Privacy Practices.",
   sections: [
     {
       heading: "Information We Collect",
       paragraphs: [
-        "We collect information you voluntarily provide through forms on this website, such as appointment requests and contact forms, which may include your name, phone number, email address, and the reason for your inquiry.",
-        "We also automatically collect limited technical information when you browse the site, such as your IP address, browser type, device type, and pages visited, typically through cookies and similar analytics technologies.",
+        "Contact Information: We may collect your name, email address, phone number, and other contact details when you communicate with Ormond Spine & Nerve Center.",
+        "Communication Content: We may collect information related to your communication with us, including emails, messages, and other forms of communication.",
       ],
     },
     {
       heading: "How We Use Your Information",
-      paragraphs: ["We use the information collected to:"],
+      paragraphs: [],
       list: [
-        "Respond to appointment requests and other inquiries",
-        "Communicate with you about scheduling, services, and billing",
-        "Improve the content, usability, and performance of this website",
-        "Comply with legal obligations and protect against fraud or misuse",
+        "Communication Processing: We use your contact information to communicate with you and respond to your inquiries, requests, or concerns.",
+        "Service-related Communications: We may send you service-related announcements, updates, and administrative messages.",
+        "Improving Services: Your communication data may be used to analyze trends, track user interactions, and improve our services.",
       ],
     },
     {
-      heading: "Cookies & Analytics",
+      heading: "Information Sharing and Disclosure",
       paragraphs: [
-        "This site may use cookies and third-party analytics tools to understand how visitors use the site and to improve our marketing. You can control or disable cookies through your browser settings; doing so may limit some site functionality.",
+        "Third-Party Service Providers: We may engage third-party service providers to assist with communication services. These providers are contractually obligated to maintain the confidentiality and security of your information.",
+        "Legal Requirements: We may disclose your information if required by law, regulation, or legal process.",
       ],
     },
     {
-      heading: "Sharing of Information",
+      heading: "Security Measures",
       paragraphs: [
-        "We do not sell your personal information. We may share information with trusted service providers who help us operate this website, our scheduling systems, or our marketing (for example, hosting providers or appointment-request platforms), who are required to protect it and use it only to provide those services.",
-        "We may also disclose information when required by law or to protect the rights, property, or safety of our patients, staff, or the public.",
-      ],
-    },
-    {
-      heading: "Data Security",
-      paragraphs: [
-        "We use reasonable administrative, technical, and physical safeguards designed to protect the information collected through this website. No method of transmission or storage is completely secure, and we cannot guarantee absolute security.",
+        "We implement reasonable security measures to protect against unauthorized access, disclosure, alteration, or destruction of your information.",
       ],
     },
     {
       heading: "Your Choices",
       paragraphs: [
-        "You may contact us at any time to ask what information we hold about you, request corrections, or ask that we no longer contact you for marketing purposes, using the details below.",
+        "You may choose not to receive non-essential communications from Ormond Spine & Nerve Center by following the opt-out instructions included in the communication.",
       ],
     },
     {
-      heading: "Children's Privacy",
+      heading: "Information Protection",
       paragraphs: [
-        "This website is not directed to children under 13, and we do not knowingly collect personal information from children through this site.",
+        "Your information will not be sold or distributed to third parties for marketing purposes.",
       ],
     },
     {
-      heading: "Changes to This Policy",
+      heading: "SMS Messaging Terms & Conditions",
       paragraphs: [
-        "We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated \"last updated\" date.",
+        "At Ormond Spine & Nerve Center you can opt in to receive text message notifications.",
+      ],
+      list: [
+        "Notifications may include appointment reminders, updates, and other information related to the services provided by Ormond Spine & Nerve Center.",
+        "Messaging frequency varies.",
+        "Standard messaging rates and data charges may apply.",
+        "You can opt out of receiving these SMS messages at any time by replying \"STOP\" or by contacting Ormond Spine & Nerve Center directly.",
+        "You can text \"Options\" for help information.",
+      ],
+    },
+    {
+      heading: "Consent",
+      paragraphs: [
+        "By engaging with our services and communicating with Ormond Spine & Nerve Center, you consent to the collection, use, and disclosure of your information as described in this Communication Privacy Policy.",
       ],
     },
     {
