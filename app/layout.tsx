@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { BookNowBanner } from "@/components/BookNowBanner";
+import { ChatWidget } from "@/components/ChatWidget";
 import { SITE_NAME, SITE_URL, SITE_DEFAULT_DESCRIPTION } from "@/lib/site-config";
 import "./globals.css";
 
@@ -44,6 +45,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         {children}
         <SiteFooter />
         <BookNowBanner />
+        <ChatWidget />
       </body>
     </html>
   );
