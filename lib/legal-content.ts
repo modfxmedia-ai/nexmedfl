@@ -3,9 +3,13 @@
 // handling of protected health information, these two pages cover
 // standard website data-collection/cookies and terms-of-use, respectively.
 
+// A paragraph can be a plain string, or a { label, text } pair rendered as
+// a bold sub-heading (e.g. "a. Contact Information") followed by its text.
+export type LegalParagraph = string | { label: string; text: string };
+
 export interface LegalSection {
   heading: string;
-  paragraphs: string[];
+  paragraphs: LegalParagraph[];
   list?: string[];
 }
 
@@ -22,51 +26,91 @@ export const PRIVACY_POLICY: LegalPageContent = {
   heading: "Privacy Policy",
   lastUpdated: "August 18, 2026",
   intro:
-    "Ormond Spine & Nerve Center is committed to protecting the privacy and confidentiality of your personal information. This Communication Privacy Policy outlines how we collect, use, disclose, and safeguard your communication-related data. By engaging with our services, you agree to the terms outlined in this policy. It does not apply to protected health information created or received during treatment, which is governed by our HIPAA Notice of Privacy Practices.",
+    "Ormond Spine & Nerve Center is committed to protecting the privacy and confidentiality of your personal information. This Communication Privacy Policy outlines how we collect, use, disclose, and safeguard your communication-related data. By engaging with our services, you agree to the terms outlined in this policy.",
   sections: [
     {
-      heading: "Information We Collect",
+      heading: "1. Information We Collect",
       paragraphs: [
-        "Contact Information: We may collect your name, email address, phone number, and other contact details when you communicate with Ormond Spine & Nerve Center.",
-        "Communication Content: We may collect information related to your communication with us, including emails, messages, and other forms of communication.",
+        {
+          label: "a. Contact Information",
+          text: "We may collect your name, email address, phone number, and other contact details when you communicate with Ormond Spine & Nerve Center.",
+        },
+        {
+          label: "b. Communication Content",
+          text: "We may collect information related to your communication with us, including emails, messages, and other forms of communication.",
+        },
       ],
     },
     {
-      heading: "How We Use Your Information",
-      paragraphs: [],
-      list: [
-        "Communication Processing: We use your contact information to communicate with you and respond to your inquiries, requests, or concerns.",
-        "Service-related Communications: We may send you service-related announcements, updates, and administrative messages.",
-        "Improving Services: Your communication data may be used to analyze trends, track user interactions, and improve our services.",
-      ],
-    },
-    {
-      heading: "Information Sharing and Disclosure",
+      heading: "2. How We Use Your Information",
       paragraphs: [
-        "Third-Party Service Providers: We may engage third-party service providers to assist with communication services. These providers are contractually obligated to maintain the confidentiality and security of your information.",
-        "Legal Requirements: We may disclose your information if required by law, regulation, or legal process.",
+        {
+          label: "a. Communication Processing",
+          text: "We use your contact information to communicate with you and respond to your inquiries, requests, or concerns.",
+        },
+        {
+          label: "b. Service-related Communications",
+          text: "We may send you service-related announcements, updates, and administrative messages.",
+        },
+        {
+          label: "c. Improving Services",
+          text: "Your communication data may be used to analyze trends, track user interactions, and improve our services.",
+        },
       ],
     },
     {
-      heading: "Security Measures",
+      heading: "3. Information Sharing and Disclosure",
       paragraphs: [
-        "We implement reasonable security measures to protect against unauthorized access, disclosure, alteration, or destruction of your information.",
+        {
+          label: "a. Third-Party Service Providers",
+          text: "We may engage third-party service providers to assist with communication services. These providers are contractually obligated to maintain the confidentiality and security of your information.",
+        },
+        {
+          label: "b. Legal Requirements",
+          text: "We may disclose your information if required by law, regulation, or legal process.",
+        },
       ],
     },
     {
-      heading: "Your Choices",
+      heading: "4. Security Measures",
       paragraphs: [
-        "You may choose not to receive non-essential communications from Ormond Spine & Nerve Center by following the opt-out instructions included in the communication.",
+        {
+          label: "a. Data Security",
+          text: "We implement reasonable security measures to protect against unauthorized access, disclosure, alteration, or destruction of your information.",
+        },
       ],
     },
     {
-      heading: "Information Protection",
+      heading: "5. Your Choices",
       paragraphs: [
-        "Your information will not be sold or distributed to third parties for marketing purposes.",
+        {
+          label: "a. Opting Out",
+          text: "You may choose not to receive non-essential communications from Ormond Spine & Nerve Center by following the opt-out instructions included in the communication.",
+        },
       ],
     },
     {
-      heading: "SMS Messaging Terms & Conditions",
+      heading: "6. Information Protection",
+      paragraphs: [
+        {
+          label: "a. No Sale or Distribution",
+          text: "Your information will not be sold or distributed to third parties for marketing purposes.",
+        },
+      ],
+    },
+    {
+      heading: "7. Contact Information",
+      paragraphs: [
+        {
+          label: "Ormond Spine & Nerve Center",
+          text: "141 Sagebrush Trail, Ormond Beach, FL 32174",
+        },
+        "drherbert@ormondspinenervecenter.com",
+        "(386) 361-3391",
+      ],
+    },
+    {
+      heading: "8. SMS Messaging Terms & Conditions",
       paragraphs: [
         "At Ormond Spine & Nerve Center you can opt in to receive text message notifications.",
       ],
@@ -79,15 +123,9 @@ export const PRIVACY_POLICY: LegalPageContent = {
       ],
     },
     {
-      heading: "Consent",
+      heading: "9. Consent",
       paragraphs: [
         "By engaging with our services and communicating with Ormond Spine & Nerve Center, you consent to the collection, use, and disclosure of your information as described in this Communication Privacy Policy.",
-      ],
-    },
-    {
-      heading: "Contact Us",
-      paragraphs: [
-        "If you have questions about this Privacy Policy, please contact us at info@ormondspinenervecenter.com, call 386-361-3391, or write to us at 141 Sagebrush Trail, Suite C, Ormond Beach, FL 32174.",
       ],
     },
   ],

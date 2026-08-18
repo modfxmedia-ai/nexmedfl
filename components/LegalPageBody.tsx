@@ -32,14 +32,25 @@ export function LegalPageBody({ content }: { content: LegalPageContent }) {
                 {section.heading}
               </h2>
               <div className="mt-3 space-y-3">
-                {section.paragraphs.map((paragraph) => (
-                  <p
-                    key={paragraph}
-                    className="text-[15px] leading-[1.75] text-ink-soft"
-                  >
-                    {paragraph}
-                  </p>
-                ))}
+                {section.paragraphs.map((paragraph) =>
+                  typeof paragraph === "string" ? (
+                    <p
+                      key={paragraph}
+                      className="text-[15px] leading-[1.75] text-ink-soft"
+                    >
+                      {paragraph}
+                    </p>
+                  ) : (
+                    <div key={paragraph.label}>
+                      <p className="text-[15px] font-semibold leading-[1.75] text-ink">
+                        {paragraph.label}
+                      </p>
+                      <p className="text-[15px] leading-[1.75] text-ink-soft">
+                        {paragraph.text}
+                      </p>
+                    </div>
+                  ),
+                )}
               </div>
               {section.list ? (
                 <ul className="mt-3 list-disc space-y-2 pl-5">
