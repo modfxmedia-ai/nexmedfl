@@ -7,6 +7,8 @@ export async function GET() {
     (post) => `  <url>
     <loc>${SITE_URL}${getBlogPostPath(post)}</loc>
     <lastmod>${post.dateModified}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>`
   ).join("\n");
 

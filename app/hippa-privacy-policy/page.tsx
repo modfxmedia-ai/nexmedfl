@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
 import { buildGraph } from "@/lib/schema";
 import { JsonLd } from "@/components/JsonLd";
-import { PagePlaceholder } from "@/components/PagePlaceholder";
+import { LegalPageBody } from "@/components/LegalPageBody";
+import { HIPAA_PRIVACY_POLICY } from "@/lib/legal-content";
 import { getStaticPage } from "@/lib/pages";
 
 const PAGE = getStaticPage("/hippa-privacy-policy/");
@@ -13,7 +14,7 @@ export default function Page() {
   return (
     <>
       <JsonLd data={buildGraph(PAGE)} />
-      <PagePlaceholder title={PAGE.title} path={PAGE.path} />
+      <LegalPageBody content={HIPAA_PRIVACY_POLICY} />
     </>
   );
 }

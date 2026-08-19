@@ -389,8 +389,7 @@ export const BLOG_POSTS: BlogPostEntry[] = [
     title: "Recognizing When Neuropathy Needs a Specialist in Ormond Beach",
     description:
       "Read the Ormond Spine & Nerve Center blog for expert tips on neuropathy, hormone therapy, and regenerative health. Check our Recognizing When Neuropathy Needs a Specialist in",
-    image:
-      "https://nexmedfl.com/wp-content/uploads/2026/04/getty-images-iZ554CtC-lQ-unsplash.jpg",
+    image: "/images/legacy/blog-neuropathy-specialist.jpg",
     imageWidth: "1920",
     imageHeight: "1280",
     imageCaption: "leg pain",
@@ -406,8 +405,7 @@ export const BLOG_POSTS: BlogPostEntry[] = [
     title: "Differentiating Numbness/Tingling/Burning Diagnoses",
     description:
       "Read the Ormond Spine & Nerve Center blog for expert tips on neuropathy, hormone therapy, and regenerative health. Check our Differentiating Numbness/Tingling/Burning Diagnoses",
-    image:
-      "https://nexmedfl.com/wp-content/uploads/2025/08/a_leg_with_a_burning_sensation.webp",
+    image: "/images/legacy/blog-burning-sensation.webp",
     imageWidth: "926",
     imageHeight: "601",
     datePublished: "2025-08-17T19:13:09+00:00",
@@ -422,8 +420,7 @@ export const BLOG_POSTS: BlogPostEntry[] = [
     title: "Can Neuropathy Be Reversed?",
     description:
       "Read the Ormond Spine & Nerve Center blog for expert tips on neuropathy, hormone therapy, and regenerative health. Check our Can Neuropathy Be Reversed? post for the latest news.",
-    image:
-      "https://nexmedfl.com/wp-content/uploads/2025/08/images-2025-08-18T002248.373.jpeg",
+    image: "/images/legacy/blog-neuropathy-reversed.jpeg",
     imageWidth: "300",
     imageHeight: "168",
     datePublished: "2025-08-17T19:10:36+00:00",
@@ -438,8 +435,7 @@ export const BLOG_POSTS: BlogPostEntry[] = [
     title: "Which Medications Can Cause Neuropathy?",
     description:
       "Read the Ormond Spine & Nerve Center blog for expert tips on neuropathy, hormone therapy, and regenerative health. Check our Which Medications Can Cause Neuropathy? post for the",
-    image:
-      "https://nexmedfl.com/wp-content/uploads/2025/08/11062b_22d41eefeced42a8a22262bdf9e6eb1dmv2-1.avif",
+    image: "/images/legacy/blog-medications-neuropathy.avif",
     imageWidth: "740",
     imageHeight: "489",
     datePublished: "2025-08-17T19:12:14+00:00",
@@ -454,8 +450,7 @@ export const BLOG_POSTS: BlogPostEntry[] = [
     title: "Which Neuropathy Supplement Is The Best?",
     description:
       "Read the Ormond Spine & Nerve Center blog for expert tips on neuropathy, hormone therapy, and regenerative health. Check our Which Neuropathy Supplement Is The Best? post for the",
-    image:
-      "https://nexmedfl.com/wp-content/uploads/2025/08/9b098e_c88df951b71f42e4babeec7adbdba022mv2.avif",
+    image: "/images/legacy/blog-neuropathy-supplement.avif",
     imageWidth: "740",
     imageHeight: "389",
     datePublished: "2025-08-17T19:07:31+00:00",

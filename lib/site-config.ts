@@ -2,10 +2,10 @@
 // Pure data only (no Node builtins) so this can be imported from both
 // Server and Client Components without breaking the Turbopack build.
 
-// NOTE: still pointing at the nexmedfl.com domain/CDN, update SITE_URL
-// (and the image hostname allow-list in next.config.ts) once the site's
-// real production domain is known.
-export const SITE_URL = "https://nexmedfl.com";
+// Falls back to the production domain; override with NEXT_PUBLIC_SITE_URL
+// (set in Vercel project settings) for preview/staging deployments.
+export const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://ormondspinenervecenter.com";
 export const SITE_NAME = "Ormond Spine & Nerve Center";
 export const SITE_DEFAULT_DESCRIPTION =
   "Ormond Spine & Nerve Center is a medical clinic in Ormond Beach, FL specializing in chiropractic care, spinal and knee decompression therapy, neuropathy treatment, shockwave, laser, and compression therapy.";
@@ -60,6 +60,7 @@ export const MAIN_NAV: NavLink[] = [
   { label: "Blog", href: "/blogs/" },
   { label: "Areas We Serve", href: "/service-areas/" },
   { label: "Contact Us", href: "/contact-us/" },
+  { label: "Careers", href: "/career-opportunities/" },
 ];
 
 export type HeaderNavItem = {
@@ -370,7 +371,7 @@ export const FOOTER_CONDITIONS: NavLink[] = [
 export const FOOTER_LEGAL: NavLink[] = [
   { label: "Privacy Policy", href: "/privacy-policy/" },
   { label: "Terms & Conditions", href: "/terms-and-conditions/" },
-  { label: "HIPPA Privacy Policy", href: "/hippa-privacy-policy/" },
+  { label: "HIPAA Privacy Policy", href: "/hippa-privacy-policy/" },
   { label: "No Surprises Act", href: "/no-suprises-act/" },
 ];
 

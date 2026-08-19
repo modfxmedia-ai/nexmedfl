@@ -9,7 +9,7 @@ import { ServicePageBody } from "@/components/ServicePageBody";
 const PAGE = getStaticPage("/compression-therapy/");
 const CONTENT = getServiceContent("/compression-therapy/");
 
-export const metadata: Metadata = buildMetadata(PAGE);
+export const metadata: Metadata = buildMetadata({ ...PAGE, image: PAGE.image ?? CONTENT.heroImage });
 
 export default function Page() {
   return (

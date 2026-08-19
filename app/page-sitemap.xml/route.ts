@@ -26,6 +26,8 @@ export async function GET() {
     (page) => `  <url>
     <loc>${SITE_URL}${page.path}</loc>
     <lastmod>${page.dateModified}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>${page.path === "/" ? "1.0" : "0.8"}</priority>
   </url>`
   );
 
@@ -33,6 +35,8 @@ export async function GET() {
     (path) => `  <url>
     <loc>${SITE_URL}${path}</loc>
     <lastmod>${SERVICE_AREA_LASTMOD}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>`
   );
 

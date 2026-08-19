@@ -203,7 +203,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     heading: "Knee Decompression Therapy in Ormond Beach, FL",
     intro:
       "For patients in Ormond Beach, FL, targeted unloading technology reduces pressure inside the knee joint, easing pain from osteoarthritis and chronic joint compression.",
-    heroImage: "/images/knee-decompression-therapy-v2.png",
+    heroImage: "/images/knee-decompression-therapy-v2.jpg",
     benefits: [
       {
         title: "Unloads the Joint Surface",

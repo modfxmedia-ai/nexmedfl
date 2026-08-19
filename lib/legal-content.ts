@@ -202,3 +202,123 @@ export const TERMS_CONDITIONS: LegalPageContent = {
     },
   ],
 };
+
+export const HIPAA_PRIVACY_POLICY: LegalPageContent = {
+  eyebrow: "Legal",
+  heading: "HIPAA Privacy Policy",
+  lastUpdated: "August 20, 2026",
+  intro:
+    "This Notice of Privacy Practices describes how Ormond Spine & Nerve Center may use and disclose your Protected Health Information (PHI) to carry out treatment, payment, and healthcare operations, and for other purposes permitted or required by law. It also describes your rights regarding your health information. We are required by the Health Insurance Portability and Accountability Act of 1996 (HIPAA) to maintain the privacy of your PHI and to provide you with this notice.",
+  sections: [
+    {
+      heading: "1. How We May Use and Disclose Your Health Information",
+      paragraphs: [
+        {
+          label: "Treatment",
+          text: "We may use and disclose your PHI to provide, coordinate, or manage your chiropractic and rehabilitative care, including sharing information with other healthcare providers involved in your treatment.",
+        },
+        {
+          label: "Payment",
+          text: "We may use and disclose your PHI to bill and collect payment for the treatment and services you receive, including submitting claims to your health insurance carrier.",
+        },
+        {
+          label: "Healthcare Operations",
+          text: "We may use and disclose your PHI for internal operations such as quality assessment, staff training, and business management activities necessary to run our practice.",
+        },
+        {
+          label: "As Required by Law",
+          text: "We will disclose your PHI when required to do so by federal, state, or local law, including in response to a valid court order or subpoena.",
+        },
+      ],
+    },
+    {
+      heading: "2. Your Rights Regarding Your Health Information",
+      paragraphs: [
+        {
+          label: "Right to Inspect and Copy",
+          text: "You have the right to inspect and obtain a copy of your health records, with limited exceptions.",
+        },
+        {
+          label: "Right to Amend",
+          text: "You have the right to request that we amend your health information if you believe it is incomplete or inaccurate.",
+        },
+        {
+          label: "Right to an Accounting of Disclosures",
+          text: "You have the right to request a list of certain disclosures we have made of your PHI.",
+        },
+        {
+          label: "Right to Request Restrictions",
+          text: "You have the right to request restrictions on certain uses and disclosures of your PHI, though we are not required to agree to all requests.",
+        },
+        {
+          label: "Right to Request Confidential Communications",
+          text: "You have the right to request that we communicate with you about your health information in a specific way or at a specific location.",
+        },
+        {
+          label: "Right to a Paper Copy of This Notice",
+          text: "You have the right to obtain a paper copy of this notice at any time, even if you agreed to receive it electronically.",
+        },
+        {
+          label: "Right to File a Complaint",
+          text: "If you believe your privacy rights have been violated, you may file a complaint with our office or with the U.S. Department of Health and Human Services, Office for Civil Rights. We will not retaliate against you for filing a complaint.",
+        },
+      ],
+    },
+    {
+      heading: "3. Changes to This Notice",
+      paragraphs: [
+        "We reserve the right to change this notice and to make the revised notice effective for PHI we already have as well as any information we receive in the future. The current notice will be posted on this page.",
+      ],
+    },
+    {
+      heading: "4. Contact Us",
+      paragraphs: [
+        {
+          label: "Ormond Spine & Nerve Center",
+          text: "141 Sagebrush Trail, Suite C, Ormond Beach, FL 32174",
+        },
+        "info@ormondspinenervecenter.com",
+        "386-361-3391",
+      ],
+    },
+  ],
+};
+
+export const NO_SURPRISES_ACT: LegalPageContent = {
+  eyebrow: "Legal",
+  heading: "No Surprises Act & Medical Billing Protections",
+  lastUpdated: "August 20, 2026",
+  intro:
+    "Under the federal No Surprises Act, you are protected from unexpected, or \"surprise,\" medical bills in certain situations. This page explains your rights and protections regarding balance billing and provides information on how to receive a Good Faith Estimate of expected charges before treatment.",
+  sections: [
+    {
+      heading: "1. Your Billing Rights",
+      paragraphs: [
+        "When you receive emergency care, or are treated by an out-of-network provider at an in-network facility, federal law protects you from \"balance billing,\" meaning the provider cannot bill you for the difference between what they charge and the amount your health plan agrees to pay, beyond your normal in-network cost-sharing (copayments, coinsurance, and deductibles).",
+        "These protections apply to certain emergency services and certain services provided by out-of-network providers at in-network facilities. They generally do not apply to routine, scheduled outpatient chiropractic and rehabilitative care obtained directly from our office, where you choose your provider in advance.",
+      ],
+    },
+    {
+      heading: "2. Right to a Good Faith Estimate",
+      paragraphs: [
+        "If you do not have insurance, or you are not planning to use your insurance for your visit, you have the right to receive a Good Faith Estimate of expected charges before you receive care.",
+        "You can ask your health care provider, and any other provider you choose, for a Good Faith Estimate before you schedule an item or service, or any time you request it.",
+        "If you receive a bill that is at least $400 more than your Good Faith Estimate, you have the right to dispute the bill.",
+      ],
+    },
+    {
+      heading: "3. How to Request a Good Faith Estimate",
+      paragraphs: [
+        "Contact our office at 386-361-3391 or info@ormondspinenervecenter.com to request a Good Faith Estimate before scheduling treatment. Please make sure to save a copy of your Good Faith Estimate.",
+      ],
+    },
+    {
+      heading: "4. Questions or Disputes",
+      paragraphs: [
+        "For questions about your rights under the No Surprises Act, or to start a dispute process, visit www.cms.gov/nosurprises or call the No Surprises Help Desk at 1-800-985-3059.",
+        "You may also contact our office directly with billing questions at 386-361-3391 or info@ormondspinenervecenter.com.",
+      ],
+    },
+  ],
+};
+

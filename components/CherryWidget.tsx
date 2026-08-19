@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import Script from "next/script";
 
 type CherryQueueFn = ((...args: unknown[]) => void) & { q?: unknown[][] };
 
@@ -16,9 +17,11 @@ const FONTS_HREF =
 /**
  * Cherry ("withcherry.com") patient financing widget, loader mirrors the
  * embed snippet provided by Cherry verbatim (stub-queue pattern, widget
- * script, and the exact `init` config/section list), adapted to run
- * inside a React effect instead of an inline <script> tag so it only
- * initializes once, client-side, on the payment plans page.
+ * script, and the exact `init` config/section list). The stub queue is
+ * set up eagerly in a React effect (must run before the widget script
+ * loads so `init` calls are queued correctly); the widget script itself
+ * is loaded via next/script with `lazyOnload` so it doesn't block this
+ * page's initial load, only used on the payment plans page.
  */
 export function CherryWidget() {
   useEffect(() => {
@@ -55,28 +58,23 @@ export function CherryWidget() {
         headerFontFamily: "Open Sans",
       },
     }, ["hero", "calculator", "howitworks", "faq"]);
-
-    if (!document.getElementById("_hw")) {
-      const script = document.createElement("script");
-      script.id = "_hw";
-      script.src = "https://files.withcherry.com/widgets/widget.js";
-      script.async = true;
-      const firstScript = document.getElementsByTagName("script")[0];
-      if (firstScript?.parentNode) {
-        firstScript.parentNode.insertBefore(script, firstScript);
-      } else {
-        document.head.appendChild(script);
-      }
-    }
   }, []);
 
   return (
-    <div id="all">
-      <div id="hero" />
-      <div id="calculator" />
-      <div id="howitworks" />
-      <div id="testimony" />
-      <div id="faq" />
-    </div>
+    <>
+      <Script
+        id="_hw"
+        src="https://files.withcherry.com/widgets/widget.js"
+        strategy="lazyOnload"
+      />
+      <div id="all">
+        <div id="hero" />
+        <div id="calculator" />
+        <div id="howitworks" />
+        <div id="testimony" />
+        <div id="faq" />
+      </div>
+    </>
   );
 }
+

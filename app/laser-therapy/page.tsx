@@ -9,7 +9,7 @@ import { ServicePageBody } from "@/components/ServicePageBody";
 const PAGE = getStaticPage("/laser-therapy/");
 const CONTENT = getServiceContent("/laser-therapy/");
 
-export const metadata: Metadata = buildMetadata(PAGE);
+export const metadata: Metadata = buildMetadata({ ...PAGE, image: PAGE.image ?? CONTENT.heroImage });
 
 export default function Page() {
   return (

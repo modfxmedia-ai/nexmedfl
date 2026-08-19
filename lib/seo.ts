@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { SITE_NAME, SITE_URL } from "./site-config";
 
+// Fallback OG/Twitter image (1200x630) for any page that doesn't pass its
+// own `image`, so every page always has a valid share-preview image.
+const DEFAULT_OG_IMAGE = "/images/og-default.jpg";
+
 export interface PageSeoInput {
   /** Path including leading and trailing slash, e.g. "/contact-us/" */
   path: string;
@@ -23,6 +27,7 @@ export function buildMetadata({
   type = "website",
 }: PageSeoInput): Metadata {
   const url = `${SITE_URL}${path}`;
+  const ogImage = image ?? DEFAULT_OG_IMAGE;
 
   return {
     title,
@@ -37,13 +42,13 @@ export function buildMetadata({
       siteName: SITE_NAME,
       locale: "en_US",
       type,
-      ...(image ? { images: [{ url: image }] } : {}),
+      images: [{ url: ogImage, width: 1200, height: 630 }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      ...(image ? { images: [image] } : {}),
+      images: [ogImage],
     },
   };
 }

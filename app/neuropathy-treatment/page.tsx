@@ -9,7 +9,7 @@ import { ServicePageBody } from "@/components/ServicePageBody";
 const PAGE = getStaticPage("/neuropathy-treatment/");
 const CONTENT = getServiceContent("/neuropathy-treatment/");
 
-export const metadata: Metadata = buildMetadata(PAGE);
+export const metadata: Metadata = buildMetadata({ ...PAGE, image: PAGE.image ?? CONTENT.heroImage });
 
 export default function Page() {
   return (

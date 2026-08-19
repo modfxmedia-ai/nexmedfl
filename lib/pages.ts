@@ -41,7 +41,7 @@ export const STATIC_PAGES: StaticPageEntry[] = [
     path: "/no-suprises-act/",
     title: "No Surprises Act and Medical Billing Protections | Ormond Spine & Nerve Center",
     description:
-      "Understand your rights under the No Surprises Act at Ormond Spine & Nerve Center. Learn about our transparent medical billing practices and protections against unexpected charges.",
+      "Learn your No Surprises Act rights at Ormond Spine & Nerve Center, including protection from surprise bills and how to request a Good Faith Estimate.",
     datePublished: "2025-08-19T22:31:47+00:00",
     dateModified: "2026-04-09T04:56:42+00:00",
   },
@@ -49,7 +49,7 @@ export const STATIC_PAGES: StaticPageEntry[] = [
     path: "/hippa-privacy-policy/",
     title: "HIPAA Privacy Policy and Patient Data Protection | Ormond Spine & Nerve Center",
     description:
-      "Read Ormond Spine & Nerve Center's HIPAA privacy policy to learn how we use and protect your medical information. Review your privacy rights and contact us with questions.",
+      "Read our HIPAA Notice of Privacy Practices to learn how Ormond Spine & Nerve Center protects your health information and what privacy rights you have.",
     datePublished: "2025-08-19T22:25:14+00:00",
     dateModified: "2026-04-09T04:56:29+00:00",
   },
@@ -65,7 +65,7 @@ export const STATIC_PAGES: StaticPageEntry[] = [
     path: "/terms-and-conditions/",
     title: "Terms & Conditions | Ormond Spine & Nerve Center",
     description:
-      "Review the Terms & Conditions governing your use of the Ormond Spine & Nerve Center website.",
+      "Review the Terms & Conditions governing your use of the Ormond Spine & Nerve Center website, including appointment requests and third-party links.",
     datePublished: "2026-08-17T00:00:00+00:00",
     dateModified: "2026-08-17T00:00:00+00:00",
   },
@@ -73,9 +73,8 @@ export const STATIC_PAGES: StaticPageEntry[] = [
     path: "/career-opportunities/",
     title: "Ormond Spine & Nerve Center Career Opportunities: Explore Open Positions & Apply",
     description:
-      "Explore Ormond Spine & Nerve Center career opportunities in Ormond Beach, FL. View open positions, learn about benefits, and apply online to join our healthcare team today.",
-    image:
-      "https://nexmedfl.com/wp-content/uploads/2025/08/COMING-SOON-copy-e1755484144871.avif",
+      "Interested in joining Ormond Spine & Nerve Center in Ormond Beach, FL? Learn about typical roles, clinic benefits, and how to send us your resume.",
+    image: "/images/legacy/career-opportunities-coming-soon.avif",
     datePublished: "2025-08-17T16:02:26+00:00",
     dateModified: "2026-04-09T04:55:54+00:00",
   },
@@ -84,8 +83,7 @@ export const STATIC_PAGES: StaticPageEntry[] = [
     title: "Book an Appointment | Ormond Spine & Nerve Center",
     description:
       "Request your appointment at Ormond Spine & Nerve Center in Ormond Beach, FL. Learn what to expect, how to prepare, and book your visit today.",
-    image:
-      "https://nexmedfl.com/wp-content/uploads/2025/08/call-center-smiling-female-support-600nw-1187046229-removebg-preview-e1755637568819.png",
+    image: "/images/legacy/appointment-request-support.png",
     datePublished: "2025-08-17T16:02:26+00:00",
     dateModified: "2026-08-05T00:00:00+00:00",
   },
@@ -94,8 +92,7 @@ export const STATIC_PAGES: StaticPageEntry[] = [
     title: "Contact Us | Ormond Spine & Nerve Center",
     description:
       "Contact Ormond Spine & Nerve Center in Ormond Beach, FL. Find our location, hours, phone, and email, or send us a message to get started today.",
-    image:
-      "https://nexmedfl.com/wp-content/uploads/2025/09/IMG_1548-1-1024x768.jpg",
+    image: "/images/legacy/contact-us-office.jpg",
     datePublished: "2025-08-17T16:02:58+00:00",
     dateModified: "2026-08-05T00:00:00+00:00",
   },
@@ -112,7 +109,7 @@ export const STATIC_PAGES: StaticPageEntry[] = [
     title: "Neuropathy Consultation | Ormond Spine & Nerve Center",
     description:
       "Book a neuropathy consultation at Ormond Spine & Nerve Center in Ormond Beach, FL. Learn what to expect and take the first step toward nerve pain relief.",
-    image: "https://nexmedfl.com/wp-content/uploads/2025/09/2649477.webp",
+    image: "/images/legacy/neuropathy-consultation.webp",
     datePublished: "2025-08-17T16:02:26+00:00",
     dateModified: "2026-08-05T00:00:00+00:00",
   },
@@ -121,8 +118,7 @@ export const STATIC_PAGES: StaticPageEntry[] = [
     title: "Patient Reviews | Ormond Spine & Nerve Center",
     description:
       "Read real patient reviews of Ormond Spine & Nerve Center in Ormond Beach, FL and see why patients trust us for chiropractic and pain relief care.",
-    image:
-      "https://nexmedfl.com/wp-content/uploads/2025/08/young-family-with-their-sons-home-having-fun_1303-20999-e1755551149385.avif",
+    image: "/images/legacy/reviews-family.avif",
     datePublished: "2025-08-17T16:02:26+00:00",
     dateModified: "2026-08-05T00:00:00+00:00",
   },
@@ -131,8 +127,7 @@ export const STATIC_PAGES: StaticPageEntry[] = [
     title: "Knee Pain Treatment in Ormond Beach, FL",
     description:
       "Non-surgical knee pain treatment in Ormond Beach, FL combining decompression, shockwave, and laser therapy to restore movement. Schedule a visit!",
-    image:
-      "https://nexmedfl.com/wp-content/uploads/2025/08/shutterstock_2468278869_1-e1755546015713.jpeg",
+    image: "/images/legacy/knee-pain-treatment-hero.jpeg",
     datePublished: "2025-08-17T16:02:26+00:00",
     dateModified: "2026-08-05T00:00:00+00:00",
   },
@@ -141,8 +136,7 @@ export const STATIC_PAGES: StaticPageEntry[] = [
     title: "Neuropathy Treatment in Ormond Beach, FL",
     description:
       "Neuropathy treatment in Ormond Beach, FL for nerve pain, numbness, and tingling in the hands and feet. Restore nerve health and mobility. Book now!",
-    image:
-      "https://nexmedfl.com/wp-content/uploads/2025/08/Neuropathy-iStock-893912334-1.jpg",
+    image: "/images/legacy/neuropathy-treatment-hero.jpg",
     datePublished: "2025-08-17T16:02:26+00:00",
     dateModified: "2026-08-05T00:00:00+00:00",
   },
@@ -159,8 +153,7 @@ export const STATIC_PAGES: StaticPageEntry[] = [
     title: "Meet Our Team | Ormond Spine & Nerve Center",
     description:
       "Meet the Ormond Beach, FL care team at Ormond Spine & Nerve Center, dedicated to chiropractic, spinal decompression, and neuropathy treatment.",
-    image:
-      "https://nexmedfl.com/wp-content/uploads/2025/08/hands-collaboration-healthcare-with-medicine-team-huddle-circle-hospital-insurance-medical-teamwork-motivation-solidarity-with-doctor-nurse-group-clinic_590464-90372-e1755483593747.avif",
+    image: "/images/legacy/meet-our-team-hero.avif",
     datePublished: "2025-08-17T16:02:26+00:00",
     dateModified: "2026-08-05T00:00:00+00:00",
   },

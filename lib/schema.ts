@@ -3,11 +3,13 @@ import { BUSINESS, SITE_NAME, SITE_URL, SOCIAL_LINKS } from "./site-config";
 /**
  * Pure JSON-LD graph builder, replicates the exact Rank Math `@graph`
  * emitted on the live nexmedfl.com site (verified field-by-field via curl
- * against the homepage, a static page, and a blog post). Do NOT add fields
- * that aren't present in the live output, the live graph intentionally
- * keeps the Organization node minimal (name/url/openingHours only) and
- * only includes `potentialAction`/`WebPage.about` on the homepage, and
- * only includes an `ImageObject` node when the page has a featured image.
+ * against the homepage, a static page, and a blog post), with one
+ * intentional enhancement: the LocalBusiness node now also includes
+ * `address` and `telephone` (sourced from `BUSINESS` in site-config.ts).
+ * The old site's Organization node omitted these, but they're standard,
+ * recommended LocalBusiness fields for local SEO / rich results and don't
+ * conflict with anything else scraped from the legacy site. Only include
+ * an `ImageObject` node when the page has a featured image.
  *
  * No Node built-ins are used here, so this module is safe to import from
  * both Server and Client Components.
@@ -86,6 +88,15 @@ export function buildGraph(input: GraphInput) {
         "@id": ORGANIZATION_ID,
         name: BUSINESS.name,
         url: SITE_URL,
+        telephone: BUSINESS.telephone,
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: BUSINESS.address.streetAddress,
+          addressLocality: BUSINESS.address.addressLocality,
+          addressRegion: BUSINESS.address.addressRegion,
+          postalCode: BUSINESS.address.postalCode,
+          addressCountry: BUSINESS.address.addressCountry,
+        },
         openingHours: BUSINESS.openingHours,
       },
       {

@@ -9,8 +9,7 @@ export const HERO = {
     "Ormond Spine & Nerve Center helps Ormond Beach, FL patients find lasting relief through advanced neuropathy care, spinal and knee decompression, and chiropractic treatment, combining medical expertise with modern technology to restore health, confidence, and quality of life.",
   ctaLabel: "Book An Appointment",
   ctaHref: "/contact-us/",
-  backgroundImage:
-    "https://nexmedfl.com/wp-content/uploads/2025/09/pexels-cottonbro-5934641-e1757018550981.jpg",
+  backgroundImage: "/images/legacy/hero-background.jpg",
 };
 
 export interface TrustItem {
@@ -78,7 +77,7 @@ export const WELCOME_PROGRAMS: WelcomeProgram[] = [
     description:
       "Gentle traction that unloads the knee joint, creating space to decrease pain and improve movement.",
     href: "/knee-decompression-therapy/",
-    image: "/images/knee-decompression-therapy.png",
+    image: "/images/knee-decompression-therapy.jpg",
   },
   {
     name: "Neuropathy Treatment Program",
@@ -255,8 +254,8 @@ export const TESTIMONIALS: Testimonial[] = [
 // Real in-office/patient photo gallery paired with the testimonials on the
 // live homepage.
 export const TESTIMONIAL_GALLERY: string[] = [
-  "https://nexmedfl.com/wp-content/uploads/2025/09/IMG_1547-1.jpg",
-  "https://nexmedfl.com/wp-content/uploads/2025/09/IMG_1544-1.jpg",
-  "https://nexmedfl.com/wp-content/uploads/2025/09/IMG_1549-1.jpg",
-  "https://nexmedfl.com/wp-content/uploads/2025/09/IMG_1548-1.jpg",
+  "/images/legacy/testimonial-gallery-1.jpg",
+  "/images/legacy/testimonial-gallery-2.jpg",
+  "/images/legacy/testimonial-gallery-3.jpg",
+  "/images/legacy/testimonial-gallery-4.jpg",
 ];
