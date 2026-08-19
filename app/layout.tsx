@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -6,6 +7,8 @@ import { BookNowBanner } from "@/components/BookNowBanner";
 import { ChatWidget } from "@/components/ChatWidget";
 import { SITE_NAME, SITE_URL, SITE_DEFAULT_DESCRIPTION } from "@/lib/site-config";
 import "./globals.css";
+
+const GA_MEASUREMENT_ID = "G-EK21FME40L";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,6 +44,19 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} ${playfairDisplay.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <Script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
         <SiteHeader />
         {children}
         <SiteFooter />

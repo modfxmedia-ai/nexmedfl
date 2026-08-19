@@ -58,6 +58,7 @@ export const MAIN_NAV: NavLink[] = [
   { label: "Reviews", href: "/reviews/" },
   { label: "Appointment Request", href: "/appointment-request/" },
   { label: "Blog", href: "/blogs/" },
+  { label: "Areas We Serve", href: "/service-areas/" },
   { label: "Contact Us", href: "/contact-us/" },
 ];
 
