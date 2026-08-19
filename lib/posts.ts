@@ -32,6 +32,56 @@ export const BLOG_POSTS: BlogPostEntry[] = [
   {
     year: "2026",
     month: "08",
+    day: "15",
+    slug: "compression-therapy-for-circulation-and-recovery",
+    title: "Compression Therapy: Supporting Circulation and Recovery Between Visits",
+    description:
+      "Learn how Normatec dynamic compression therapy improves circulation, reduces swelling, and speeds recovery when paired with your broader treatment plan.",
+    image: "/images/compression-therapy.jpg",
+    imageWidth: "960",
+    imageHeight: "1280",
+    imageCaption: "compression therapy",
+    datePublished: "2026-08-15T14:00:00+00:00",
+    dateModified: "2026-08-15T14:00:00+00:00",
+    section: "Medical Care",
+    relatedServiceHref: "/compression-therapy/",
+    relatedServiceLabel: "Compression Therapy",
+    body: [
+      {
+        paragraphs: [
+          "Not every recovery tool needs to be a stand-alone treatment. Sometimes the biggest gains come from supporting the body's own circulation and drainage systems between sessions, and that's exactly where compression therapy fits in. For patients managing swelling, tired or achy limbs, or general poor circulation, it's a simple, relaxing way to keep the body's healing processes moving.",
+        ],
+      },
+      {
+        heading: "How Compression Therapy Works",
+        paragraphs: [
+          "Our Normatec dynamic compression system uses inflatable sleeves that apply rhythmic, sequential pressure to the legs or arms, starting at the extremities and moving upward. This mimics the body's natural muscle-pump action, encouraging blood flow back toward the heart and helping move excess fluid out of swollen or fatigued tissue.",
+          "Because the pressure builds in sequence rather than all at once, it feels more like a firm, wave-like squeeze than a static wrap, comfortable enough that many patients use the time to simply relax while the sleeves do the work.",
+        ],
+      },
+      {
+        heading: "Who Tends to Benefit",
+        paragraphs: [
+          "Compression therapy is a popular add-on for patients dealing with leg swelling, chronic muscle fatigue, or circulation concerns that make the legs feel heavy by the end of the day. It also pairs well with more active treatments like laser or shockwave therapy, giving the tissue extra support as it recovers between visits.",
+        ],
+      },
+      {
+        heading: "What a Session Looks Like",
+        paragraphs: [
+          "Sessions are typically 20 to 30 minutes, fully seated, with adjustable pressure zones and intensity tailored to your comfort. There's no downtime afterward, and most patients describe the feeling as similar to a deep, rhythmic massage focused on circulation rather than muscle tension.",
+        ],
+      },
+      {
+        heading: "Ask If Compression Therapy Fits Your Plan",
+        paragraphs: [
+          "If you've noticed persistent swelling, heaviness, or fatigue in your legs, compression therapy may be a helpful piece of your overall care. Our Ormond Beach team can evaluate whether it makes sense alongside your existing treatment plan.",
+        ],
+      },
+    ],
+  },
+  {
+    year: "2026",
+    month: "08",
     day: "08",
     slug: "car-accident-early-chiropractic-care",
     title: "What to Do After a Car Accident: Why Early Chiropractic Care Matters",
@@ -461,6 +511,7 @@ const BLOG_TOPIC_BY_SLUG: Record<string, string> = {
   "which-neuropathy-supplement-is-the-best": "Neuropathy & Nerve Health",
   "how-laser-therapy-speeds-healing": "Recovery & Advanced Therapies",
   "shockwave-therapy-accelerating-recovery": "Recovery & Advanced Therapies",
+  "compression-therapy-for-circulation-and-recovery": "Recovery & Advanced Therapies",
 };
 
 export function getBlogTopic(post: BlogPostEntry): string {
