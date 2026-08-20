@@ -373,6 +373,7 @@ export const FOOTER_LEGAL: NavLink[] = [
   { label: "Terms & Conditions", href: "/terms-and-conditions/" },
   { label: "HIPAA Privacy Policy", href: "/hippa-privacy-policy/" },
   { label: "No Surprises Act", href: "/no-suprises-act/" },
+  { label: "Sitemap", href: "/sitemap/" },
 ];
 
 // Footer "Get in Touch" CTA band, copy taken verbatim from the live footer.

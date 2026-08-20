@@ -294,6 +294,14 @@ export const STATIC_PAGES: StaticPageEntry[] = [
     datePublished: "2026-08-06T00:00:00+00:00",
     dateModified: "2026-08-06T00:00:00+00:00",
   },
+  {
+    path: "/sitemap/",
+    title: "Sitemap | Ormond Spine & Nerve Center",
+    description:
+      "Browse a full list of every page on the Ormond Spine & Nerve Center website, including services, conditions, service areas, and blog posts.",
+    datePublished: "2026-08-20T00:00:00+00:00",
+    dateModified: "2026-08-20T00:00:00+00:00",
+  },
 ];
 
 export function getStaticPage(path: string): StaticPageEntry {
