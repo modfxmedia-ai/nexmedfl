@@ -1,7 +1,8 @@
 import { SITE_URL } from "@/lib/site-config";
 
-// Legacy WP/Rank Math URL, kept for back-compat (e.g. existing external
-// links/search console history). Same content as the standard /sitemap.xml.
+// Standard Next.js/Google-convention sitemap location. Same content as
+// sitemap_index.xml (kept for back-compat with the legacy WP/Rank Math
+// URL) - both list the two child sitemaps.
 export async function GET() {
   const now = new Date().toISOString();
 

@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
   BUSINESS,
   FOOTER_CONDITIONS,
@@ -36,28 +39,34 @@ function SocialIcon({ label, href }: { label: string; href: string }) {
 }
 
 export function SiteFooter() {
+  const pathname = usePathname();
+  // Redundant on the contact page, which already has its own contact form/CTA.
+  const hideCta = pathname?.startsWith("/contact-us");
+
   return (
     <footer id="site-footer" className="bg-ink text-white/80">
       {/* CTA band */}
-      <div className="border-b border-white/10">
-        <div className="mx-auto flex max-w-[1280px] flex-col items-start gap-6 px-4 py-14 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
-          <div className="max-w-2xl">
-            <p className="text-sm font-semibold uppercase tracking-wide text-brand-cyan">
-              {FOOTER_CTA.eyebrow}
-            </p>
-            <h2 className="mt-2 text-2xl font-semibold text-white sm:text-3xl">
-              {FOOTER_CTA.heading}
-            </h2>
-            <p className="mt-3 text-base text-white/70">{FOOTER_CTA.body}</p>
+      {!hideCta && (
+        <div className="border-b border-white/10">
+          <div className="mx-auto flex max-w-[1280px] flex-col items-start gap-6 px-4 py-14 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
+            <div className="max-w-2xl">
+              <p className="text-sm font-semibold uppercase tracking-wide text-brand-cyan">
+                {FOOTER_CTA.eyebrow}
+              </p>
+              <h2 className="mt-2 text-2xl font-semibold text-white sm:text-3xl">
+                {FOOTER_CTA.heading}
+              </h2>
+              <p className="mt-3 text-base text-white/70">{FOOTER_CTA.body}</p>
+            </div>
+            <Link
+              href={FOOTER_CTA.buttonHref}
+              className="shrink-0 rounded-full bg-brand-deep px-7 py-3.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-cta-hover active:bg-brand-cta-active"
+            >
+              {FOOTER_CTA.buttonLabel}
+            </Link>
           </div>
-          <Link
-            href={FOOTER_CTA.buttonHref}
-            className="shrink-0 rounded-full bg-brand-deep px-7 py-3.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-cta-hover active:bg-brand-cta-active"
-          >
-            {FOOTER_CTA.buttonLabel}
-          </Link>
         </div>
-      </div>
+      )}
 
       {/* Column grid */}
       <div className="mx-auto max-w-[1280px] px-4 py-14 sm:px-6 lg:px-8">
@@ -156,9 +165,14 @@ export function SiteFooter() {
             >
               {BUSINESS.email}
             </a>
-            <p className="mt-2 text-sm text-white/60">
+            <a
+              href={BUSINESS.mapsHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 block text-sm text-white/60 transition-colors hover:text-brand-cyan"
+            >
               {BUSINESS.addressDisplay}
-            </p>
+            </a>
             <div className="mt-5 flex gap-3">
               <SocialIcon label="Facebook" href={SOCIAL_LINKS.facebook} />
               <SocialIcon label="Instagram" href={SOCIAL_LINKS.instagram} />

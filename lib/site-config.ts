@@ -30,6 +30,8 @@ export const BUSINESS = {
     addressCountry: "US",
   },
   addressDisplay: "141 Sagebrush Trail, Suite C Ormond Beach, FL 32174",
+  mapsHref:
+    "https://www.google.com/maps/search/?api=1&query=141+Sagebrush+Trail+Suite+C+Ormond+Beach+FL+32174",
   openingHours: ["Tuesday,Wednesday,Thursday,Friday 08:30-17:00"],
   // Human-readable hours string reused across contact-focused pages.
   hoursDisplay: "Tue–Fri · 8:30 AM – 5:00 PM",
