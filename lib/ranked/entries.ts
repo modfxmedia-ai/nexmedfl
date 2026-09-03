@@ -1,6 +1,6 @@
 import { BLOG_POSTS, type BlogPostEntry } from "@/lib/posts";
-import { DEFAULT_CTA } from "./config";
-import { getLiveRankedBlogPost, getLiveRankedBlogPosts } from "./posts";
+import { assignUniqueBlogCovers, DEFAULT_CTA } from "./config";
+import { getLiveRankedBlogPosts } from "./posts";
 import type { BlogPostData } from "./types";
 
 export function blogPostDataToEntry(post: BlogPostData): BlogPostEntry {
@@ -38,8 +38,11 @@ export async function getPublishedBlogEntries(): Promise<BlogPostEntry[]> {
   const taken = new Set(local.map((p) => p.slug));
   const ranked = await getLiveRankedBlogPosts();
   const extras = ranked.filter((p) => !taken.has(p.slug)).map(blogPostDataToEntry);
+  const uniqued = assignUniqueBlogCovers([...local, ...extras], {
+    reservedSlugs: taken,
+  });
 
-  return [...local, ...extras].sort(
+  return uniqued.sort(
     (a, b) =>
       new Date(b.datePublished).getTime() - new Date(a.datePublished).getTime(),
   );
@@ -51,23 +54,14 @@ export async function findPublishedBlogPost(
   day: string,
   slug: string,
 ): Promise<BlogPostEntry | undefined> {
-  const local = BLOG_POSTS.find(
+  const posts = await getPublishedBlogEntries();
+  return posts.find(
     (post) =>
       post.year === year &&
       post.month === month &&
       post.day === day &&
       post.slug === slug,
   );
-  if (local) return local;
-
-  const ranked = await getLiveRankedBlogPost(slug);
-  if (!ranked) return undefined;
-
-  const entry = blogPostDataToEntry(ranked);
-  if (entry.year === year && entry.month === month && entry.day === day) {
-    return entry;
-  }
-  return undefined;
 }
 
 export async function getPublishedBlogEntryParams(): Promise<
