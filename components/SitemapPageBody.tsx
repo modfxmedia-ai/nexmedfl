@@ -7,7 +7,7 @@ import {
   type NavLink,
 } from "@/lib/site-config";
 import { SERVICE_AREA_CITIES } from "@/lib/service-area-content";
-import { BLOG_POSTS, getBlogPostPath } from "@/lib/posts";
+import { getBlogPostPath, type BlogPostEntry } from "@/lib/posts";
 
 const MAIN_PAGES: NavLink[] = [
   { label: "Home", href: "/" },
@@ -34,10 +34,6 @@ const SERVICE_AREA_LINKS: NavLink[] = [
   })),
 ];
 
-const BLOG_LINKS: NavLink[] = BLOG_POSTS.map((post) => ({
-  label: post.title,
-  href: getBlogPostPath(post),
-}));
 
 const LEGAL_LINKS = FOOTER_LEGAL.filter((link) => link.href !== "/sitemap/");
 
@@ -68,7 +64,11 @@ function LinkColumn({ heading, links }: { heading: string; links: NavLink[] }) {
  * site grouped by section. Complements (does not replace) the machine
  * XML sitemaps at /sitemap_index.xml, /page-sitemap.xml, /post-sitemap.xml.
  */
-export function SitemapPageBody() {
+export function SitemapPageBody({ posts }: { posts: BlogPostEntry[] }) {
+  const blogLinks: NavLink[] = posts.map((post) => ({
+    label: post.title,
+    href: getBlogPostPath(post),
+  }));
   return (
     <main>
       <section className="relative overflow-hidden bg-white">
@@ -118,7 +118,7 @@ export function SitemapPageBody() {
           </Reveal>
           <div className="sm:col-span-1 lg:col-span-3">
             <Reveal delay={0.05}>
-              <LinkColumn heading="Blog Posts" links={BLOG_LINKS} />
+              <LinkColumn heading="Blog Posts" links={blogLinks} />
             </Reveal>
           </div>
         </div>

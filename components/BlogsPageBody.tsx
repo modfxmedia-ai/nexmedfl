@@ -1,5 +1,5 @@
 import { Reveal } from "@/components/Reveal";
-import { BLOG_POSTS, getBlogTopic, getReadTimeMinutes } from "@/lib/posts";
+import { getBlogTopic, getReadTimeMinutes, type BlogPostEntry } from "@/lib/posts";
 import { BLOG_INTRO, BLOG_TOPICS } from "@/lib/contact-content";
 import { BlogFilterGrid } from "@/components/blog/BlogFilterGrid";
 
@@ -9,18 +9,18 @@ import { BlogFilterGrid } from "@/components/blog/BlogFilterGrid";
  * every post. Individual post bodies are rendered on their own
  * /[slug]/ route.
  */
-export function BlogsPageBody() {
-  const topicsCovered = new Set(BLOG_POSTS.map((post) => getBlogTopic(post))).size;
-  const postsWithFullBody = BLOG_POSTS.filter((post) => post.body && post.body.length > 0);
+export function BlogsPageBody({ posts }: { posts: BlogPostEntry[] }) {
+  const topicsCovered = new Set(posts.map((post) => getBlogTopic(post))).size;
+  const postsWithFullBody = posts.filter((post) => post.body && post.body.length > 0);
   const avgReadTime = Math.max(
     1,
     Math.round(
       postsWithFullBody.reduce((sum, post) => sum + getReadTimeMinutes(post), 0) /
-        postsWithFullBody.length
+        Math.max(postsWithFullBody.length, 1)
     )
   );
   const heroStats = [
-    { value: `${BLOG_POSTS.length}+`, label: "Articles" },
+    { value: `${posts.length}+`, label: "Articles" },
     { value: `${topicsCovered}`, label: "Topics Covered" },
     { value: `${avgReadTime} min`, label: "Avg. Read Time" },
   ];
@@ -113,7 +113,7 @@ export function BlogsPageBody() {
 
       {/* Filterable post grid */}
       <section className="mx-auto max-w-6xl px-4 pb-20 pt-16 sm:px-6 lg:px-8 lg:pt-20">
-        <BlogFilterGrid posts={BLOG_POSTS} />
+        <BlogFilterGrid posts={posts} />
       </section>
     </main>
   );

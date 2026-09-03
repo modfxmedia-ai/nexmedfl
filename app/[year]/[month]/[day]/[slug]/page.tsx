@@ -5,8 +5,15 @@ import { buildGraph } from "@/lib/schema";
 import { JsonLd } from "@/components/JsonLd";
 import { PagePlaceholder } from "@/components/PagePlaceholder";
 import { BlogPostBody } from "@/components/BlogPostBody";
-import { BLOG_POSTS, findBlogPost, getBlogPostPath } from "@/lib/posts";
+import { getBlogPostPath } from "@/lib/posts";
+import {
+  findPublishedBlogPost,
+  getPublishedBlogEntries,
+  getPublishedBlogEntryParams,
+} from "@/lib/ranked/entries";
 import { SITE_URL } from "@/lib/site-config";
+
+export const revalidate = 3600;
 
 // JSON-LD requires a fully-qualified image URL; post.image may be a
 // relative local path (e.g. "/images/blog/...") for posts using locally
@@ -16,24 +23,18 @@ function absoluteImage(image?: string): string | undefined {
   return image.startsWith("http") ? image : `${SITE_URL}${image}`;
 }
 
-export function generateStaticParams() {
-  return BLOG_POSTS.map((post) => ({
-    year: post.year,
-    month: post.month,
-    day: post.day,
-    slug: post.slug,
-  }));
+export async function generateStaticParams() {
+  return getPublishedBlogEntryParams().catch(() => []);
 }
 
-// Only the known posts above are valid, any other /YYYY/MM/DD/slug/
-// combination should 404 instead of being treated as a dynamic route.
-export const dynamicParams = false;
+// New Ranked slugs must resolve before the next full build.
+export const dynamicParams = true;
 
 export async function generateMetadata(
   props: PageProps<"/[year]/[month]/[day]/[slug]">
 ): Promise<Metadata> {
   const { year, month, day, slug } = await props.params;
-  const post = findBlogPost(year, month, day, slug);
+  const post = await findPublishedBlogPost(year, month, day, slug);
   if (!post) return {};
 
   return buildMetadata({
@@ -49,7 +50,10 @@ export default async function BlogPostPage(
   props: PageProps<"/[year]/[month]/[day]/[slug]">
 ) {
   const { year, month, day, slug } = await props.params;
-  const post = findBlogPost(year, month, day, slug);
+  const [post, posts] = await Promise.all([
+    findPublishedBlogPost(year, month, day, slug),
+    getPublishedBlogEntries(),
+  ]);
   if (!post) notFound();
 
   const path = getBlogPostPath(post);
@@ -72,7 +76,7 @@ export default async function BlogPostPage(
         })}
       />
       {post.body ? (
-        <BlogPostBody post={post} />
+        <BlogPostBody post={post} posts={posts} />
       ) : (
         <PagePlaceholder title={post.title} path={path} />
       )}

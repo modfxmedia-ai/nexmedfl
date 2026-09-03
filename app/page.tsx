@@ -14,12 +14,16 @@ import { ConditionsTeaser } from "@/components/home/ConditionsTeaser";
 import { TestimonialsCarousel } from "@/components/home/TestimonialsCarousel";
 import { BlogTeaser } from "@/components/home/BlogTeaser";
 import { LocationSection } from "@/components/home/LocationSection";
+import { getPublishedBlogEntries } from "@/lib/ranked/entries";
+
+export const revalidate = 3600;
 
 const PAGE = getStaticPage("/");
 
 export const metadata: Metadata = buildMetadata(PAGE);
 
-export default function Home() {
+export default async function Home() {
+  const posts = await getPublishedBlogEntries();
   return (
     <>
       <JsonLd data={buildGraph(PAGE)} />
@@ -35,7 +39,7 @@ export default function Home() {
         <HowItWorks />
         <StatsSection />
         <TestimonialsCarousel />
-        <BlogTeaser />
+        <BlogTeaser posts={posts} />
         <LocationSection />
         {/* "Get in Touch" CTA band is intentionally not repeated here, it's
             already rendered site-wide by SiteFooter (via app/layout.tsx),

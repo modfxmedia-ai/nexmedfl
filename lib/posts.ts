@@ -509,6 +509,29 @@ const BLOG_TOPIC_BY_SLUG: Record<string, string> = {
   "compression-therapy-for-circulation-and-recovery": "Recovery & Advanced Therapies",
 };
 
+function inferBlogTopic(title: string, description = ""): string {
+  const text = `${title} ${description}`.toLowerCase();
+  if (/neuropath|nerve|numb|tingl|burning/.test(text)) {
+    return "Neuropathy & Nerve Health";
+  }
+  if (/knee|joint|meniscus|osteo/.test(text)) {
+    return "Knee & Joint";
+  }
+  if (/shockwave|laser|compression|recovery|circulation/.test(text)) {
+    return "Recovery & Advanced Therapies";
+  }
+  if (
+    /chiropract|spinal|spine|disc|sciatica|whiplash|back pain|neck|accident/.test(
+      text,
+    )
+  ) {
+    return "Spine & Chiropractic";
+  }
+  return "Uncategorized";
+}
+
 export function getBlogTopic(post: BlogPostEntry): string {
-  return BLOG_TOPIC_BY_SLUG[post.slug] ?? "Uncategorized";
+  return (
+    BLOG_TOPIC_BY_SLUG[post.slug] ?? inferBlogTopic(post.title, post.description)
+  );
 }

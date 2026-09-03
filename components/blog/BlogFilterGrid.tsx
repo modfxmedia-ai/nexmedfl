@@ -101,12 +101,10 @@ export function PostCard({ post, delay, large = false }: { post: BlogPostEntry; 
 export function BlogFilterGrid({ posts }: { posts: BlogPostEntry[] }) {
   const [active, setActive] = useState<string>("All");
 
-  const MAX_VISIBLE_POSTS = 6;
-
   const filtered = useMemo(() => {
-    const list =
-      active === "All" ? posts : posts.filter((post) => getBlogTopic(post) === active);
-    return list.slice(0, MAX_VISIBLE_POSTS);
+    return active === "All"
+      ? posts
+      : posts.filter((post) => getBlogTopic(post) === active);
   }, [active, posts]);
 
   const featured = active === "All" ? filtered[0] : undefined;

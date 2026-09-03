@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { motion } from "motion/react";
 import { Reveal } from "@/components/Reveal";
-import { BLOG_POSTS } from "@/lib/posts";
+import type { BlogPostEntry } from "@/lib/posts";
 import { PostCard } from "@/components/blog/BlogFilterGrid";
 
 // Latest 3 posts for the homepage teaser. Entrance animation uses the
@@ -12,7 +12,6 @@ import { PostCard } from "@/components/blog/BlogFilterGrid";
 // opacity:0 with this Motion v12 + React 19 + Next 16 Turbopack stack).
 // The "View all articles" link below uses motion/react purely for a
 // hover-driven micro-interaction, which is unaffected by that bug.
-const LATEST_POSTS = BLOG_POSTS.slice(0, 3);
 
 function ViewAllLink() {
   return (
@@ -42,7 +41,8 @@ function ViewAllLink() {
   );
 }
 
-export function BlogTeaser() {
+export function BlogTeaser({ posts }: { posts: BlogPostEntry[] }) {
+  const latest = posts.slice(0, 3);
   return (
     <section className="relative overflow-hidden bg-white py-20 lg:py-24">
       <div
@@ -81,7 +81,7 @@ export function BlogTeaser() {
         </div>
 
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {LATEST_POSTS.map((post, i) => (
+          {latest.map((post, i) => (
             <PostCard key={post.slug} post={post} delay={Math.min(i * 0.08, 0.24)} />
           ))}
         </div>

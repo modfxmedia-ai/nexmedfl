@@ -11,6 +11,22 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "secure.gravatar.com",
       },
+      {
+        protocol: "https",
+        hostname: "*.public.blob.vercel-storage.com",
+      },
+      {
+        protocol: "https",
+        hostname: "*.blob.vercel-storage.com",
+      },
+    ],
+  },
+  // Keep cron/webhook bundles small: never file-trace public media.
+  outputFileTracingExcludes: {
+    "*": [
+      "./public/images/**",
+      "./public/**/*.mp4",
+      "./public/**/*.webm",
     ],
   },
 };

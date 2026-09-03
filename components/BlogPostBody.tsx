@@ -4,7 +4,6 @@ import { Reveal } from "@/components/Reveal";
 import { ReadingProgressBar } from "@/components/blog/ReadingProgressBar";
 import { PostCard } from "@/components/blog/BlogFilterGrid";
 import {
-  BLOG_POSTS,
   getBlogPostPath,
   getBlogTopic,
   getReadTimeMinutes,
@@ -25,12 +24,35 @@ function formatDate(iso: string): string {
  * with topic + read-time pills, the article sections, a closing CTA
  * card, and a "related reading" card grid.
  */
-export function BlogPostBody({ post }: { post: BlogPostEntry }) {
+function renderInlineMarkdown(text: string) {
+  const parts = text.split(/(\[[^\]]+\]\([^)]+\))/g);
+  return parts.map((part, index) => {
+    const match = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (!match) return part;
+    return (
+      <a
+        key={`${match[2]}-${index}`}
+        href={match[2]}
+        className="font-semibold text-brand-deep underline decoration-brand-cyan/40 underline-offset-2 hover:decoration-brand-deep"
+      >
+        {match[1]}
+      </a>
+    );
+  });
+}
+
+export function BlogPostBody({
+  post,
+  posts,
+}: {
+  post: BlogPostEntry;
+  posts: BlogPostEntry[];
+}) {
   const topic = getBlogTopic(post);
   const readTime = getReadTimeMinutes(post);
-  const related = BLOG_POSTS.filter(
-    (p) => p.slug !== post.slug && getBlogTopic(p) === topic
-  ).slice(0, 3);
+  const related = posts
+    .filter((p) => p.slug !== post.slug && getBlogTopic(p) === topic)
+    .slice(0, 3);
 
   return (
     <main>
@@ -114,7 +136,7 @@ export function BlogPostBody({ post }: { post: BlogPostEntry }) {
                         key={pIndex}
                         className="text-[15px] leading-[1.8] text-ink-soft"
                       >
-                        {paragraph}
+                        {renderInlineMarkdown(paragraph)}
                       </p>
                     ))}
                   </div>

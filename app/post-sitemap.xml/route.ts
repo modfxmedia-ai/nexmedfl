@@ -1,9 +1,13 @@
 import { SITE_URL } from "@/lib/site-config";
-import { BLOG_POSTS, getBlogPostPath } from "@/lib/posts";
+import { getBlogPostPath } from "@/lib/posts";
+import { getPublishedBlogEntries } from "@/lib/ranked/entries";
+
+export const revalidate = 3600;
 
 // Mirrors the live site's Rank Math "post-sitemap.xml" (blog posts only).
 export async function GET() {
-  const urls = BLOG_POSTS.map(
+  const posts = await getPublishedBlogEntries();
+  const urls = posts.map(
     (post) => `  <url>
     <loc>${SITE_URL}${getBlogPostPath(post)}</loc>
     <lastmod>${post.dateModified}</lastmod>
