@@ -10,12 +10,12 @@ export function getLocalBlogPosts(): BlogPostData[] {
     metaDescription: post.description,
     h1: post.title,
     publishDate: post.datePublished.slice(0, 10),
-    intro: post.body?.[0]?.paragraphs[0] ?? post.description,
+    intro: post.body?.[0]?.paragraphs?.[0] ?? post.description,
     coverImage: post.image || DEFAULT_COVER,
     coverAlt: post.imageCaption || DEFAULT_COVER_ALT,
     sections: (post.body ?? []).map((block) => ({
       heading: block.heading || post.title,
-      body: block.paragraphs,
+      body: [...(block.paragraphs ?? []), ...(block.bullets ?? [])],
     })),
     cta: post.relatedServiceHref
       ? {

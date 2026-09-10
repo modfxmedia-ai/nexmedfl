@@ -1,6 +1,6 @@
 // Client-safe pure data describing every blog post on the site.
 // Used to generate post-sitemap.xml, the /blogs/ listing page, and the
-// dynamic /[year]/[month]/[day]/[slug]/ route's generateStaticParams.
+// dynamic /blogs/[slug]/ route's generateStaticParams.
 
 export interface BlogBodyBlock {
   heading?: string;
@@ -1539,22 +1539,11 @@ export const BLOG_POSTS: BlogPostEntry[] = [
 ];
 
 export function getBlogPostPath(post: BlogPostEntry): string {
-  return `/${post.year}/${post.month}/${post.day}/${post.slug}/`;
+  return `/blogs/${post.slug}/`;
 }
 
-export function findBlogPost(
-  year: string,
-  month: string,
-  day: string,
-  slug: string
-): BlogPostEntry | undefined {
-  return BLOG_POSTS.find(
-    (post) =>
-      post.year === year &&
-      post.month === month &&
-      post.day === day &&
-      post.slug === slug
-  );
+export function findBlogPost(slug: string): BlogPostEntry | undefined {
+  return BLOG_POSTS.find((post) => post.slug === slug);
 }
 
 /** Estimated reading time (whole minutes, minimum 1) from the post body word count. */

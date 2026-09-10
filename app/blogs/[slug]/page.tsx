@@ -31,10 +31,10 @@ export async function generateStaticParams() {
 export const dynamicParams = true;
 
 export async function generateMetadata(
-  props: PageProps<"/[year]/[month]/[day]/[slug]">
+  props: PageProps<"/blogs/[slug]">
 ): Promise<Metadata> {
-  const { year, month, day, slug } = await props.params;
-  const post = await findPublishedBlogPost(year, month, day, slug);
+  const { slug } = await props.params;
+  const post = await findPublishedBlogPost(slug);
   if (!post) return {};
 
   return buildMetadata({
@@ -47,11 +47,11 @@ export async function generateMetadata(
 }
 
 export default async function BlogPostPage(
-  props: PageProps<"/[year]/[month]/[day]/[slug]">
+  props: PageProps<"/blogs/[slug]">
 ) {
-  const { year, month, day, slug } = await props.params;
+  const { slug } = await props.params;
   const [post, posts] = await Promise.all([
-    findPublishedBlogPost(year, month, day, slug),
+    findPublishedBlogPost(slug),
     getPublishedBlogEntries(),
   ]);
   if (!post) notFound();

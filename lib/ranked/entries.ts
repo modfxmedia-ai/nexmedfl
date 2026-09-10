@@ -49,29 +49,15 @@ export async function getPublishedBlogEntries(): Promise<BlogPostEntry[]> {
 }
 
 export async function findPublishedBlogPost(
-  year: string,
-  month: string,
-  day: string,
   slug: string,
 ): Promise<BlogPostEntry | undefined> {
   const posts = await getPublishedBlogEntries();
-  return posts.find(
-    (post) =>
-      post.year === year &&
-      post.month === month &&
-      post.day === day &&
-      post.slug === slug,
-  );
+  return posts.find((post) => post.slug === slug);
 }
 
 export async function getPublishedBlogEntryParams(): Promise<
-  { year: string; month: string; day: string; slug: string }[]
+  { slug: string }[]
 > {
   const posts = await getPublishedBlogEntries();
-  return posts.map((post) => ({
-    year: post.year,
-    month: post.month,
-    day: post.day,
-    slug: post.slug,
-  }));
+  return posts.map((post) => ({ slug: post.slug }));
 }
