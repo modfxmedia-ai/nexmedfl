@@ -131,7 +131,7 @@ export function BlogPostBody({
                     </h2>
                   )}
                   <div className={block.heading ? "mt-3 space-y-4" : "space-y-4"}>
-                    {block.paragraphs.map((paragraph, pIndex) => (
+                    {block.paragraphs?.map((paragraph, pIndex) => (
                       <p
                         key={pIndex}
                         className="text-[15px] leading-[1.8] text-ink-soft"
@@ -139,6 +139,18 @@ export function BlogPostBody({
                         {renderInlineMarkdown(paragraph)}
                       </p>
                     ))}
+                    {block.bullets && block.bullets.length > 0 && (
+                      <ul className="list-disc space-y-2 pl-5">
+                        {block.bullets.map((item, bIndex) => (
+                          <li
+                            key={bIndex}
+                            className="text-[15px] leading-[1.8] text-ink-soft"
+                          >
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                   </div>
                 </div>
               </Reveal>

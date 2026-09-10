@@ -4,7 +4,9 @@
 
 export interface BlogBodyBlock {
   heading?: string;
-  paragraphs: string[];
+  paragraphs?: string[];
+  /** Optional bullet list rendered after the paragraphs in this block. */
+  bullets?: string[];
 }
 
 export interface BlogPostEntry {
@@ -29,6 +31,265 @@ export interface BlogPostEntry {
 }
 
 export const BLOG_POSTS: BlogPostEntry[] = [
+  {
+    year: "2026",
+    month: "09",
+    day: "04",
+    slug: "inside-holistic-pain-management-in-huntington-beach-for-active-adults",
+    title: "A Whole-Body Approach to Pain Relief for Active Adults",
+    description:
+      "See how combining chiropractic care, targeted rehab, and recovery therapies helps active adults in Ormond Beach stay in the water, on the trail, and on the move.",
+    image: "/images/legacy/testimonial-gallery-1.jpg",
+    imageWidth: "1600",
+    imageHeight: "1000",
+    imageCaption: "active recovery",
+    datePublished: "2026-09-04T14:00:00+00:00",
+    dateModified: "2026-09-04T14:00:00+00:00",
+    section: "Medical Care",
+    relatedServiceHref: "/chiropractic-care/",
+    relatedServiceLabel: "Chiropractic Care",
+    body: [
+      {
+        paragraphs: [
+          "Chronic aches have a way of turning simple things into risky ones. A quick swim, an easy run along the beach path, or a casual paddle session can suddenly feel questionable once your knee, shoulder, or low back starts flaring up again. As fall routines, rec leagues, and weekend plans pick back up, a lot of active adults around Ormond Beach notice those same old aches creeping back in.",
+        ],
+      },
+      {
+        heading: "What Holistic Pain Management Really Means",
+        paragraphs: [
+          "Holistic pain management simply means treating the whole person instead of just the sore spot. Pain is rarely caused by one joint or muscle working in isolation, it's shaped by how you move, how you sleep, what you eat, and how much stress your nervous system is carrying.",
+          "That doesn't mean trading science for guesswork. A holistic plan can still be structured and evidence-based, it just pulls from more than one discipline so nothing gets treated in a vacuum. In practice, that usually means four connected pieces working together:",
+        ],
+        bullets: [
+          "A precise assessment to understand what's actually driving the pain",
+          "Hands-on care to calm irritation and free up restricted joints and tissue",
+          "Corrective movement work to retrain how your body handles load",
+          "Supportive recovery therapies that help the body heal from the inside out",
+        ],
+      },
+      {
+        heading: "Why Active Adults Need More Than Rest and Ice",
+        paragraphs: [
+          "Once fall schedules fill back in, activity levels shift fast. Kids go back to school, weekend leagues start up again, and a lot of people in Ormond Beach settle into more regular routines:",
+        ],
+        bullets: [
+          "Longer walks or runs along the beachside path",
+          "Early-morning surf or paddle sessions",
+          "Evening pickleball or tennis with friends",
+          "Group fitness classes and strength training",
+        ],
+      },
+      {
+        paragraphs: [
+          "Old injuries tend to wake up right around this time. The usual response, rest for a few days, ice the sore spot, stretch a little more, then jump back in, can quiet a short-term flare without touching what's really going on underneath. Chronic or recurring pain is often tied to patterns that rest and ice simply don't reach:",
+        ],
+        bullets: [
+          "Movement dysfunction, like a stiff hip quietly changing how the spine moves",
+          "Muscle imbalances, where some muscles do all the work while others sit idle",
+          "A nervous system that's learned to overreact to normal, everyday loads",
+        ],
+      },
+      {
+        heading: "Inside an Integrative Pain Clinic Near Ormond Beach",
+        paragraphs: [
+          "A first visit for ongoing pain shouldn't feel rushed. We want the full picture, your training habits, your work setup, your sleep routine, and whatever you've already tried, before recommending anything. A typical first session usually includes:",
+        ],
+        bullets: [
+          "A detailed history of injuries, flare-ups, and past care",
+          "Functional movement testing, like squats, lunges, or simple reach patterns",
+          "Orthopedic and neurologic checks of the affected joints and nerves",
+          "A conversation about lifestyle factors like stress, nutrition, and recovery",
+        ],
+      },
+      {
+        heading: "Ready to Move Without Limits?",
+        paragraphs: [
+          "If nagging aches keep interrupting your active routine, a full evaluation can help identify what's really driving the pattern. Our Ormond Beach team can build a plan that supports the activities you don't want to give up.",
+        ],
+      },
+    ],
+  },
+  {
+    year: "2026",
+    month: "08",
+    day: "28",
+    slug: "unlocking-neuromuscular-rehabilitation-for-back-pain-in-orange-county",
+    title: "Retraining Your Body to Move Better After Chronic Back Pain",
+    description:
+      "Learn how movement-focused rehabilitation helps retrain the muscles and nerves supporting your spine, so back pain relief actually lasts.",
+    image: "/images/back-pain-featured.jpg",
+    imageWidth: "1600",
+    imageHeight: "1000",
+    imageCaption: "back pain rehabilitation",
+    datePublished: "2026-08-28T14:00:00+00:00",
+    dateModified: "2026-08-28T14:00:00+00:00",
+    section: "Medical Care",
+    relatedServiceHref: "/chiropractic-care/",
+    relatedServiceLabel: "Chiropractic Care",
+    body: [
+      {
+        paragraphs: [
+          "Back pain can drain your energy, limit what you do, and turn simple things into a struggle. When it keeps returning, it's easy to feel stuck between reaching for more medication or starting to think about surgery. There's a middle path that focuses on retraining how your body moves, so you can keep up with work, family, and everything Ormond Beach has to offer.",
+        ],
+      },
+      {
+        heading: "Move Freely Again with Targeted Neuromuscular Care",
+        paragraphs: [
+          "Back pain is common here. Long commutes on A1A or I-95, hours at a desk, weekend sports, and caring for family can all add up. When your back hurts, you may find yourself avoiding things you enjoy, like walking the beach at sunset, playing golf, or just getting through a weekend without wincing.",
+          "Neuromuscular rehabilitation is a modern, movement-based way of helping your brain and body communicate better. Instead of only calming pain, it focuses on how your muscles fire, how your joints move, and how your nervous system reacts to stress and motion. The goal isn't just to feel better for a few days, it's to move better so your back can handle real life again.",
+        ],
+      },
+      {
+        heading: "Why Back Pain Persists Even After Rest and Medication",
+        paragraphs: [
+          "Plenty of people rest, take pain medication, try some stretching, and still deal with back pain that keeps coming back. Often, the deeper issue is neuromuscular dysfunction, meaning the way your nerves and muscles coordinate has changed. Common drivers of lasting back pain include:",
+        ],
+        bullets: [
+          "Imbalanced muscle firing, where one side of the back or hips works harder than the other",
+          "Repetitive movement patterns, like bending or twisting the same stressful way over and over",
+          "Protective muscle guarding, where the nervous system keeps muscles tight to defend a sensitive area",
+        ],
+      },
+      {
+        paragraphs: [
+          "Chronic sitting, past injuries, and ongoing stress can slowly change how the brain and spinal cord control movement, leading the body to lean on quick compensations that load joints, discs, and ligaments in ways they weren't built to handle all day. Passive care, like medication, ice, or a generic exercise printout, can feel good short-term, but if the brain and muscles aren't retrained, the same pattern tends to return.",
+        ],
+      },
+      {
+        heading: "What Neuromuscular Rehabilitation Really Means",
+        paragraphs: [
+          "Neuromuscular rehabilitation means carefully assessing and retraining how your nerves, muscles, and joints coordinate movement, balance, and stability. The aim is to lower pain, improve control, and reduce the odds of another flare-up. A typical plan often includes:",
+        ],
+        bullets: [
+          "Detailed movement analysis, watching how you bend, twist, walk, and squat",
+          "Muscle activation testing, to see which muscles are underactive and which are overworking",
+          "Individual corrective exercises, built around your body and your daily demands",
+        ],
+      },
+      {
+        paragraphs: [
+          "In one integrated visit, chiropractic adjustments, soft-tissue work, and neuromuscular re-education can all be combined, which allows for more precise changes to how your joints move, direct release of tight, overworked muscles, and immediate practice of new movement patterns while your body is more open to change.",
+          "Here in Ormond Beach, care is also built around local activity: surfers and paddlers who need strong hips and mobile spines, golfers who need rotation without jamming the low back, pickleball and tennis players who need quick, safe changes of direction, and anyone spending long stretches behind the wheel on I-95.",
+        ],
+      },
+      {
+        heading: "Inside an Ormond Beach Back Pain Plan",
+        paragraphs: [
+          "On a first visit for back pain, we start with a full conversation about your story, how long the pain has been around, what makes it worse, and what you've already tried. From there, hands-on orthopedic and neurologic tests are blended with movement screens to see how your spine, hips, and core are working together, since sleep, stress, and general health all factor into how your body heals. A typical back pain care plan can include:",
+        ],
+        bullets: [
+          "Specific spinal and joint adjustments to restore motion and reduce irritation",
+          "Targeted neuromuscular exercises for deep core and hip control",
+          "Balance and stability drills that teach the body to react smoothly",
+          "Home strategies that reinforce the new patterns you learn in the clinic",
+        ],
+      },
+      {
+        paragraphs: [
+          "Care usually progresses in stages: calming pain and irritation first, then rebuilding strength and mobility, and finally working on confidence, so you can get back to the beach, the golf course, or the floor with kids and grandkids without holding your breath.",
+        ],
+      },
+      {
+        heading: "Avoiding Unnecessary Surgery With Root-Cause Care",
+        paragraphs: [
+          "Ready to take the next step? Our Ormond Beach team can build a plan that addresses why your back pain keeps coming back, not just where it hurts.",
+        ],
+      },
+    ],
+  },
+  {
+    year: "2026",
+    month: "08",
+    day: "21",
+    slug: "orange-county-functional-medicine-links-gut-health-and-chronic-pain",
+    title: "How Sleep, Stress, and Daily Habits Affect Chronic Pain Recovery",
+    description:
+      "Chronic pain isn't only about the joint that hurts. Discover how sleep, stress, and daily habits can influence how well your body responds to treatment.",
+    image: "/images/legacy/contact-us-office.jpg",
+    imageWidth: "1600",
+    imageHeight: "1000",
+    imageCaption: "wellness consultation",
+    datePublished: "2026-08-21T14:00:00+00:00",
+    dateModified: "2026-08-21T14:00:00+00:00",
+    section: "Medical Care",
+    body: [
+      {
+        paragraphs: [
+          "Chronic pain and fatigue are frustrating, especially when your lab work looks normal and you're told everything is fine. A lot of people in and around Ormond Beach get stuck in that gap, living with back pain, joint pain, headaches, or brain fog while trying to keep up with work, family, and an active lifestyle.",
+        ],
+      },
+      {
+        paragraphs: [
+          "More people are starting to ask a different question: what if pain isn't just about a joint or a disc, but about how the whole body is working together? That's where a functional medicine lens comes in, looking at how systems like the gut, immune system, and nervous system connect instead of chasing symptoms one by one.",
+          "Busy seasons, travel, later nights, and eating on the run can make things worse. When sleep, food, and routines get thrown off, pain often rises. Our Ormond Beach team brings together chiropractic care, neuromuscular rehab, and functional medicine to look underneath these patterns for root causes, not just quick fixes.",
+        ],
+      },
+      {
+        heading: "How Your Gut Can Drive Chronic Pain",
+        paragraphs: [
+          "The gut isn't just a food tube, it's a major immune and nerve center that communicates with the brain and the rest of the body all day long. When something's off in the gut, that signal can show up as pain in places that don't seem related, like the knees, low back, or neck. Common gut-related triggers include:",
+        ],
+        bullets: [
+          "Frequent takeout or convenience foods",
+          "High-sugar snacks and drinks",
+          "Extra alcohol at gatherings or while traveling",
+          "Past or recent antibiotic use that changed gut bacteria",
+        ],
+      },
+      {
+        paragraphs: [
+          "When the gut lining gets irritated, tiny gaps can form, sometimes called \"leaky gut.\" Undigested particles and other substances can slip through and provoke the immune system, which may then stay on high alert and send out inflammatory signals that make nerves and muscles more sensitive. Over time, the pain system can get stuck running at a higher volume than it should. Signs that gut health and pain might be linked include:",
+        ],
+        bullets: [
+          "Bloating, gas, or reflux",
+          "Loose stools, constipation, or IBS-type swings",
+          "Brain fog or low focus after meals",
+          "Migraines or frequent headaches",
+          "Widespread aches that flare with stress or certain foods",
+        ],
+      },
+      {
+        heading: "Why Functional Medicine Starts With the Gut",
+        paragraphs: [
+          "A functional medicine approach takes a root-cause view, asking not just \"where does it hurt?\" but \"why is this system overloaded?\" For many people with chronic pain, a gut assessment is one of the first steps, and can include:",
+        ],
+        bullets: [
+          "A detailed history of digestion, energy, sleep, and past infections",
+          "Targeted testing to look at bacteria, yeast, and inflammation markers",
+          "Food sensitivity discussions or structured elimination plans",
+          "Checks for nutrient gaps that may affect tissue repair",
+        ],
+      },
+      {
+        paragraphs: [
+          "This is a different path than relying only on imaging, injections, or long-term pain medication. Those tools can help in the short term, but they often don't explain why pain keeps returning or spreading. Patients are treated as partners, with time spent on:",
+        ],
+        bullets: [
+          "A clear health story from childhood to now",
+          "Work, family, and movement patterns that stress the body",
+          "Travel habits, late nights, and eating routines that fit real life",
+          "Personal goals, like getting back to the beach, playing with kids, or getting through the workday without constant discomfort",
+        ],
+      },
+      {
+        heading: "A Whole-Body Plan for Pain Relief Without Surgery",
+        paragraphs: [
+          "Our approach brings three pieces together under one roof: chiropractic care, neuromuscular rehabilitation, and functional medicine, looking at how joints move, how muscles fire, and how internal systems support or stress those tissues. A typical plan may include:",
+        ],
+        bullets: [
+          "Targeted manual therapy to improve joint and soft-tissue motion",
+          "Corrective exercises to retrain movement patterns and support weak areas",
+          "Nervous system retraining so the brain stops overreacting to normal motion",
+        ],
+      },
+      {
+        heading: "Take the Next Step",
+        paragraphs: [
+          "Ready to look deeper than the painful spot? Request your appointment today and let our Ormond Beach team build a plan around your whole health picture.",
+        ],
+      },
+    ],
+  },
   {
     year: "2026",
     month: "08",
@@ -75,6 +336,106 @@ export const BLOG_POSTS: BlogPostEntry[] = [
         heading: "Ask If Compression Therapy Fits Your Plan",
         paragraphs: [
           "If you've noticed persistent swelling, heaviness, or fatigue in your legs, compression therapy may be a helpful piece of your overall care. Our Ormond Beach team can evaluate whether it makes sense alongside your existing treatment plan.",
+        ],
+      },
+    ],
+  },
+  {
+    year: "2026",
+    month: "08",
+    day: "14",
+    slug: "common-mistakes-in-herniated-disc-treatment-in-orange-county",
+    title: "Common Mistakes to Avoid When Treating a Herniated Disc",
+    description:
+      "Avoid these common missteps in herniated disc recovery and learn why a root-cause, non-surgical approach tends to work best.",
+    image: "/images/legacy/reviews-family.avif",
+    imageWidth: "1600",
+    imageHeight: "1000",
+    imageCaption: "disc recovery",
+    datePublished: "2026-08-14T14:00:00+00:00",
+    dateModified: "2026-08-14T14:00:00+00:00",
+    section: "Medical Care",
+    relatedServiceHref: "/spinal-decompression-therapy/",
+    relatedServiceLabel: "Spinal Decompression Therapy",
+    body: [
+      {
+        paragraphs: [
+          "A herniated disc can turn ordinary movement into a painful guessing game. A herniated disc happens when the soft center of a spinal disc pushes out and irritates a nearby nerve, and when it isn't treated the right way, it can lead to chronic pain, numbness, weakness, and lost mobility.",
+          "Getting smart, early care matters. Many people looking for herniated disc treatment fall into the same traps, then wonder why they're still hurting months later. Here in Ormond Beach, people want to stay active, surfing, walking the beach, playing golf, or keeping up with kids and grandkids, so avoiding these common mistakes can protect your spine and your routine.",
+        ],
+      },
+      {
+        heading: "Relying on Rest and Pain Pills Alone",
+        paragraphs: [
+          "Many people are told to rest and take pain medication, then wait to see what happens. That might sound gentle and safe, but for a herniated disc, it's usually not enough. Pain relief alone doesn't mean the disc has healed or that pressure is off the nerve, and relying only on medication can bring side effects over time, such as:",
+        ],
+        bullets: [
+          "Gut irritation or discomfort",
+          "Brain fog and trouble focusing",
+          "Sleep changes",
+          "Risk of dependence or needing higher doses",
+        ],
+      },
+      {
+        paragraphs: [
+          "While pain might feel better for a few hours, the real problem inside the spine can keep getting worse. Too much rest brings its own issues too, weeks of avoiding movement can:",
+        ],
+        bullets: [
+          "Weaken core and hip muscles",
+          "Stiffen joints",
+          "Throw off posture",
+          "Make it easier to re-injure the disc",
+        ],
+      },
+      {
+        heading: "Ignoring the Root Cause",
+        paragraphs: [
+          "When your back or neck is screaming, all the attention goes to the exact spot that hurts. But that disc didn't give out in a vacuum, there's almost always a deeper story. Common root causes include:",
+        ],
+        bullets: [
+          "Slouched posture at a desk or on the couch",
+          "Weak core and glute muscles",
+          "Old sports injuries that never healed well",
+          "Repetitive tasks like lifting, twisting, or driving",
+        ],
+      },
+      {
+        paragraphs: [
+          "Good herniated disc treatment should ask why the disc failed, not just where it hurts. Our Ormond Beach team blends chiropractic care with functional medicine testing to look at inflammation, nutrient status, and general metabolic health, since a body that's inflamed, under-fueled, or stressed all the time has a harder time healing.",
+        ],
+      },
+      {
+        heading: "Rushing Into Surgery Too Soon",
+        paragraphs: [
+          "There are times when spine surgery is the right call, sudden bowel or bladder changes or fast-spreading weakness are not moments to wait. But many people with herniated discs are offered surgery before trying a thorough, conservative plan. Surgery carries its own set of risks, including:",
+        ],
+        bullets: [
+          "Scar tissue that can irritate nerves",
+          "Ongoing pain even after a technically successful surgery",
+          "Long recovery times away from work or activity",
+          "Extra stress on nearby spinal segments over time",
+        ],
+      },
+      {
+        paragraphs: [
+          "For many disc cases, non-surgical care is a safer first step. A well-designed plan that blends chiropractic care, targeted rehab, and lifestyle changes can often reduce pain and improve function enough that surgery is no longer needed, or can at least be delayed.",
+        ],
+      },
+      {
+        heading: "Settling for Cookie-Cutter Care",
+        paragraphs: [
+          "A young surfer with leg pain, a desk worker with neck and arm symptoms, and a retired golfer with back stiffness don't need the same plan, yet many people get the same quick adjustment, the same few exercises, and the same schedule. One-size-fits-all care ignores important details like:",
+        ],
+        bullets: [
+          "How severe the disc herniation is",
+          "Your age and activity goals",
+          "What's actually driving the problem, not just where it hurts",
+        ],
+      },
+      {
+        heading: "Get a Plan Built Around Your Specific Disc Issue",
+        paragraphs: [
+          "Every herniated disc case is different, and your care should reflect that. Our Ormond Beach team can evaluate your specific situation and build a non-surgical plan aimed at addressing the root cause, not just the symptom.",
         ],
       },
     ],
@@ -134,6 +495,73 @@ export const BLOG_POSTS: BlogPostEntry[] = [
   {
     year: "2026",
     month: "08",
+    day: "07",
+    slug: "signs-non-surgical-spine-treatment-in-orange-county-is-working",
+    title: "Signs Your Non-Surgical Spine Treatment Plan Is Working",
+    description:
+      "Learn the everyday signs that your non-surgical spine treatment plan is helping, from easier mornings to more confident movement.",
+    image: "/images/legacy/testimonial-gallery-2.jpg",
+    imageWidth: "1600",
+    imageHeight: "1000",
+    imageCaption: "spine treatment progress",
+    datePublished: "2026-08-07T14:00:00+00:00",
+    dateModified: "2026-08-07T14:00:00+00:00",
+    section: "Medical Care",
+    relatedServiceHref: "/spinal-decompression-therapy/",
+    relatedServiceLabel: "Spinal Decompression Therapy",
+    body: [
+      {
+        paragraphs: [
+          "Non-surgical spine treatment can be a smart way to deal with stubborn back or neck pain when you still want to stay active. Many people want relief without surgery, long downtime, or relying on pain medication every day, and that's where careful, root-focused care can make a real difference.",
+          "Around Ormond Beach, life is full of beach days, sunset walks, and family plans, and when your spine hurts, all of that feels harder. Recognizing real signs of progress, not just a single good day, but steady change over time, helps you know your plan is actually working.",
+        ],
+      },
+      {
+        heading: "Everyday Pain Is Finally Getting Out of Your Way",
+        paragraphs: [
+          "One of the first signs that a non-surgical spine plan is working is that pain stops running the show. It may not vanish overnight, but your relationship with it starts to shift. You may notice:",
+        ],
+        bullets: [
+          "Less morning stiffness or a faster \"warm up\" time",
+          "Shorter pain flares that settle down sooner",
+          "Fewer spikes that derail your plans",
+          "Lower average pain from day to day",
+        ],
+      },
+      {
+        paragraphs: [
+          "Progress is often gradual and not always a straight line, but looking at a couple of weeks at a time and seeing more good days than bad is a strong sign your body is responding. Needing less help from pain medication, always with your prescribing doctor's guidance, is another hopeful sign, as is better sleep and energy, which often shows up within the first several weeks of consistent care.",
+        ],
+      },
+      {
+        heading: "Movement Feels Safer, Stronger, and More Natural",
+        paragraphs: [
+          "Spine pain isn't just about how you feel, it's also about what you stop doing because you're afraid to hurt yourself. A good sign of progress is when movement starts to feel less scary, turning your head more easily, grabbing a bag out of the trunk, or loading a beach chair into the car without that sharp catch in your back.",
+          "Strength and stability show up in small daily wins:",
+        ],
+        bullets: [
+          "Carrying groceries with less strain",
+          "Standing through a kids' game without constant clock-watching",
+          "Walking along the pier or through a shopping center without needing to sit right away",
+        ],
+      },
+      {
+        heading: "Your Body's Signals Are Lining Up",
+        paragraphs: [
+          "Pain is only one piece of the puzzle. Your provider also tracks spinal mobility, strength, and how consistently you can stay active without a big flare-up afterward, playing nine holes of golf instead of just putting, joining friends for pickleball, or paddleboarding a bit more often, with any soreness fading faster than it used to.",
+        ],
+      },
+      {
+        heading: "Keep Track of Your Progress",
+        paragraphs: [
+          "If you're not sure whether your current plan is on the right track, talk with your provider about what changes to expect and when. Our Ormond Beach team monitors these signs closely to adjust your care as you improve.",
+        ],
+      },
+    ],
+  },
+  {
+    year: "2026",
+    month: "08",
     day: "01",
     slug: "how-laser-therapy-speeds-healing",
     title: "How Laser Therapy Speeds Healing and Reduces Inflammation",
@@ -177,6 +605,309 @@ export const BLOG_POSTS: BlogPostEntry[] = [
         heading: "Is Laser Therapy Right for You?",
         paragraphs: [
           "Every injury is different, which is why we start with an evaluation before recommending laser therapy as part of your plan. If you're dealing with pain or inflammation that hasn't improved on its own, our Ormond Beach team can help determine whether laser therapy, alone or combined with other treatments, is the right next step for your recovery.",
+        ],
+      },
+    ],
+  },
+  {
+    year: "2026",
+    month: "07",
+    day: "31",
+    slug: "hidden-triggers-of-nerve-pain-and-when-to-seek-treatment-in-orange-county",
+    title: "Hidden Triggers of Nerve Pain and When to Seek Treatment",
+    description:
+      "Nerve pain often starts quietly. Learn common hidden triggers of nerve irritation and when it's time to get evaluated.",
+    image: "/images/legacy/neuropathy-treatment-hero.jpg",
+    imageWidth: "1600",
+    imageHeight: "1000",
+    imageCaption: "nerve pain evaluation",
+    datePublished: "2026-07-31T14:00:00+00:00",
+    dateModified: "2026-07-31T14:00:00+00:00",
+    section: "Medical Care",
+    relatedServiceHref: "/neuropathy-treatment/",
+    relatedServiceLabel: "Neuropathy Treatment",
+    body: [
+      {
+        paragraphs: [
+          "Nerve pain can sneak up quietly. It may feel like burning in your foot, pins and needles in your hand, an electric shock down your leg, or a strange mix of numbness and weakness. Many people shrug it off and blame a hard workout, a long drive, or sleeping in a strange position.",
+          "The problem is, nerves often start whispering before they start screaming. When those early signals are ignored, irritation can build and recovery can take longer. Here's a look at common hidden triggers of nerve pain, how to know when it's no longer safe to wait and see, and why a whole-body, non-surgical approach can help people stay active around Ormond Beach.",
+        ],
+      },
+      {
+        heading: "Silent Clues Your Nerves Are Crying for Help",
+        paragraphs: [
+          "Nerve pain doesn't always feel like a sharp stab. It can show up as:",
+        ],
+        bullets: [
+          "Burning or hot sensations",
+          "Tingling or \"pins and needles\"",
+          "Electric shock-like zaps",
+          "Numbness or \"dead\" areas",
+          "Weakness or clumsiness in a limb",
+        ],
+      },
+      {
+        paragraphs: [
+          "Because these symptoms come and go, many people assume it's just muscle soreness or a stiff joint. Ignored long enough, swelling and pressure around the nerve can build, the brain can become more sensitive to pain signals, and recovery can take longer and feel harder. Our Ormond Beach team focuses on finding the root cause of nerve pain, not just dulling it, combining chiropractic care, neuromuscular rehabilitation, and functional medicine.",
+        ],
+      },
+      {
+        heading: "Everyday Habits That Quietly Irritate Your Nerves",
+        paragraphs: [
+          "You don't need a big injury for nerves to get upset. Posture and tech strain are a big one, long commutes, laptop work, and hours looking down at a phone can:",
+        ],
+        bullets: [
+          "Compress nerves in the neck and shoulders",
+          "Tighten muscles around the upper back and chest",
+          "Irritate nerves in the wrists and forearms",
+        ],
+      },
+      {
+        paragraphs: [
+          "This can show up as numb hands at night, sciatica-like pain down the leg, or headaches starting at the base of the skull. Sudden increases in activity, like running, pickleball, or higher-intensity workouts, can also strain muscles that sit close to nerves, sometimes called nerve entrapments. Repetitive work tasks, heavy lifting, and long hours of sitting or standing can slowly irritate nerves too, and simple changes in ergonomics and movement habits can lower the risk.",
+        ],
+      },
+      {
+        heading: "Underlying Health Conditions That Magnify Nerve Pain",
+        paragraphs: [
+          "Sometimes the nerve isn't the only problem, the body's inner health can make nerve pain feel louder. Poorly controlled blood sugar, chronic inflammation, and autoimmune issues can all make nerves more sensitive, so even a small pinch can feel like big pain. Nutrient and hormone imbalances can slow nerve healing, especially gaps in:",
+        ],
+        bullets: ["B vitamins", "Vitamin D", "Magnesium"],
+      },
+      {
+        paragraphs: [
+          "Gut health, sleep, and stress levels also play a role. Poor sleep gives the nervous system less time to reset, and ongoing stress can tighten muscles, raise inflammation, and change how the brain reads pain.",
+        ],
+      },
+      {
+        heading: "When \"Wait and See\" Becomes Too Risky",
+        paragraphs: [
+          "Burning, tingling, numbness, or weakness that sticks around or keeps returning is worth having evaluated sooner rather than later. Our Ormond Beach team can help identify what's driving your symptoms and build a plan to calm the irritation before it becomes harder to treat.",
+        ],
+      },
+    ],
+  },
+  {
+    year: "2026",
+    month: "07",
+    day: "24",
+    slug: "missed-signs-you-need-non-surgical-spine-treatment-in-orange-county",
+    title: "Subtle Signs You Shouldn't Ignore From Your Spine",
+    description:
+      "Some spine warning signs are easy to dismiss as normal aches. Learn the subtle signals that mean it's time for an evaluation.",
+    image: "/images/spinal-decompression-therapy.jpg",
+    imageWidth: "1600",
+    imageHeight: "1000",
+    imageCaption: "spine evaluation",
+    datePublished: "2026-07-24T14:00:00+00:00",
+    dateModified: "2026-07-24T14:00:00+00:00",
+    section: "Medical Care",
+    relatedServiceHref: "/chiropractic-care/",
+    relatedServiceLabel: "Chiropractic Care",
+    body: [
+      {
+        paragraphs: [
+          "A lot of spine problems don't start with a sharp, obvious injury. They creep in slowly, disguised as ordinary stiffness or soreness that gets blamed on a long drive or an awkward night's sleep. Because these signals are so easy to write off, many people don't get evaluated until the problem has grown more serious.",
+          "Non-surgical spine treatment can step in long before surgery is even a question. When problems are caught early, it's often possible to calm irritation, restore movement, and protect the spine from bigger damage. Our Ormond Beach team focuses on root-cause care, not quick symptom cover-ups.",
+        ],
+      },
+      {
+        heading: "Everyday \"Normal\" Aches That Are Warning Lights",
+        paragraphs: [
+          "A lot of people write off back and neck stiffness as part of getting older or being active, blaming soreness on sleeping wrong or too much driving, a pattern that can go on for months or years. Common \"normal\" aches that may actually be warning lights include:",
+        ],
+        bullets: [
+          "Pain or stiffness that's worse in the morning and takes a long shower or warm-up to loosen",
+          "A back that tightens up every time you sit at a desk",
+          "Discomfort that shows up on every commute, especially in traffic",
+          "Soreness that lingers longer than typical workout soreness",
+          "A \"locked\" feeling in the neck or mid-back when you try to turn or twist",
+        ],
+      },
+      {
+        paragraphs: [
+          "These background aches can point to joint irritation, early disc stress, muscle imbalances, or poor movement patterns that overload certain areas of the spine. A comprehensive spinal assessment, including movement analysis, posture review, and neuromuscular testing, can give real answers and help catch these patterns before they turn into bigger structural problems.",
+        ],
+      },
+      {
+        heading: "Subtle Nerve Symptoms You Should Never Brush Off",
+        paragraphs: [
+          "Spine problems aren't just about dull aches. Nerve irritation often starts in quiet, sneaky ways that are easy to dismiss. Milder nerve-related signs can look like:",
+        ],
+        bullets: [
+          "Occasional tingling in a hand, foot, or a few toes",
+          "\"Pins and needles\" after sitting that takes longer and longer to fade",
+          "A light burning line down the arm or leg with certain movements",
+          "Brief, sharp \"zaps\" of pain with certain neck or back positions",
+        ],
+      },
+      {
+        paragraphs: [
+          "This is different from simple muscle tightness. Nerve irritation can feel electric, burning even when the area isn't tender to touch, or strangely numb in a very specific zone. Non-surgical spine treatment often focuses on taking pressure off irritated nerves before they suffer long-term damage, through targeted spinal adjustments, gentle decompression, soft-tissue therapy, and corrective exercise.",
+        ],
+      },
+      {
+        heading: "Get Evaluated Before It Becomes a Bigger Problem",
+        paragraphs: [
+          "If any of these subtle signs sound familiar, it's worth getting checked out rather than waiting to see if they resolve on their own. Our Ormond Beach team offers thorough spinal evaluations to catch problems early.",
+        ],
+      },
+    ],
+  },
+  {
+    year: "2026",
+    month: "07",
+    day: "17",
+    slug: "disc-herniation-vs-sciatica-whats-causing-leg-pain-in-irvine",
+    title: "Disc Herniation vs. Sciatica: What's Really Causing Your Leg Pain",
+    description:
+      "Leg pain isn't always sciatica, and it isn't always a disc problem either. Learn the difference and what it means for your treatment.",
+    image: "/images/blog/disc-herniation-vs-sciatica-whats-really-causing-your-leg-pain.avif",
+    imageWidth: "1199",
+    imageHeight: "675",
+    imageCaption: "leg pain evaluation",
+    datePublished: "2026-07-17T14:00:00+00:00",
+    dateModified: "2026-07-17T14:00:00+00:00",
+    section: "Medical Care",
+    relatedServiceHref: "/spinal-decompression-therapy/",
+    relatedServiceLabel: "Spinal Decompression Therapy",
+    body: [
+      {
+        paragraphs: [
+          "Leg pain can turn a simple day out around Ormond Beach into a struggle. Beach days, long walks, flights, and kids' sports all mean more standing, sitting, and twisting, which can wake up old back and leg issues fast.",
+          "Many people call any pain down the leg \"sciatica.\" Others are told they have a \"disc problem\" and aren't sure what that really means. These aren't the same thing, and they don't always need the same type of care.",
+        ],
+      },
+      {
+        heading: "What's Really Going On: Disc Herniation vs. Sciatica",
+        paragraphs: [
+          "Your spine is made of bones called vertebrae, with a cushioning disc between each one. A disc herniation happens when part of the disc's softer center pushes out through a weak spot in the outer shell, which can press on or irritate a nearby nerve root, causing pain, tingling, or weakness along that nerve's path.",
+          "Sciatica is different, it isn't something you can see on an image. It's a pattern of symptoms that happens when the sciatic nerve, which runs from the lower back through the buttock and down the back of the leg, gets irritated. Sciatica can be caused by several problems, such as:",
+        ],
+        bullets: [
+          "A lumbar disc herniation",
+          "Narrowing of the spinal canal, called stenosis",
+          "A tight or irritated piriformis muscle in the buttock",
+          "Swollen or irritated joints in the low back",
+        ],
+      },
+      {
+        paragraphs: [
+          "This difference matters because care should focus on the source, not just the place that hurts. Treating a disc problem isn't the same as treating a tight hip muscle or an irritated joint, and chasing leg pain while ignoring the true cause usually means relief is short-lived.",
+        ],
+      },
+      {
+        heading: "How to Tell if It's Your Disc or Sciatic Nerve",
+        paragraphs: [
+          "Only a trained professional can make a real diagnosis, but there are common patterns that can give you clues. Possible disc herniation signs often include:",
+        ],
+        bullets: [
+          "Sharp, shooting pain when bending forward, sitting for a long time, or getting out of a chair",
+          "Pain that gets worse with coughing, sneezing, or straining",
+          "Pain that starts in the low back or hip, then travels into the leg",
+          "A sense that your back feels \"stuck\" or locked when you try to move",
+        ],
+      },
+      {
+        paragraphs: ["Typical sciatica patterns can look a bit different:"],
+        bullets: [
+          "Burning, searing, or electric pain from the buttock down the back of the leg",
+          "Numbness or tingling in a strip or patch, like the calf, outer shin, or foot",
+          "Symptoms that change when you walk, stand, or shift how you sit",
+          "Pain that may be strongest low in the leg, even if the back doesn't hurt much",
+        ],
+      },
+      {
+        heading: "When Leg Pain Is an Emergency (and When It Is Not)",
+        paragraphs: [
+          "Most leg and back pain isn't a medical emergency, but some signs should never be ignored. Get urgent care right away if you notice:",
+        ],
+        bullets: [
+          "Sudden or fast-growing weakness in one or both legs",
+          "Trouble lifting your foot so it drags when you walk",
+          "Loss of control of your bladder or bowels",
+          "Numbness in the area that would touch a bike seat, called saddle anesthesia",
+          "Severe pain after a fall, crash, or sports injury",
+        ],
+      },
+      {
+        heading: "Get a Clear Answer, Not a Guess",
+        paragraphs: [
+          "Our Ormond Beach team can help pinpoint what's actually driving your leg pain and build a plan around the real cause, not just a guess.",
+        ],
+      },
+    ],
+  },
+  {
+    year: "2026",
+    month: "07",
+    day: "10",
+    slug: "choosing-a-functional-medicine-doctor-in-irvine-for-chronic-pain",
+    title: "What to Look for in a Chronic Pain Care Team",
+    description:
+      "Choosing the right care team for chronic pain matters. Here's what to look for before committing to a treatment plan.",
+    image: "/images/legacy/testimonial-gallery-4.jpg",
+    imageWidth: "1600",
+    imageHeight: "1000",
+    imageCaption: "care team consultation",
+    datePublished: "2026-07-10T14:00:00+00:00",
+    dateModified: "2026-07-10T14:00:00+00:00",
+    section: "Medical Care",
+    body: [
+      {
+        paragraphs: [
+          "Chronic pain can feel extra frustrating during the busy season. Friends are at the beach, kids are out of school, and there are gatherings, sports, and weekend trips all around Ormond Beach. When your back, neck, or joints hurt, even simple plans can start to feel stressful instead of fun.",
+          "Many people are told to rest, take a pill, or wait it out. That might calm things down for a short time, but it often doesn't change why the pain keeps coming back. A functional medicine approach looks deeper, trying to understand what's going on inside your body so you can feel and move better for the long term.",
+        ],
+      },
+      {
+        heading: "What Makes Functional Medicine Different for Pain",
+        paragraphs: [
+          "Traditional pain care is often focused on the body part that hurts, knee pain gets all the attention on the knee, headaches get all the attention on the head. Functional medicine looks at your whole system instead of one spot, including:",
+        ],
+        bullets: [
+          "Inflammation and immune health",
+          "Hormone balance and stress response",
+          "Gut health and how you absorb nutrients",
+          "Nervous system function and pain signaling",
+        ],
+      },
+      {
+        paragraphs: [
+          "All of these can affect how your body feels pain, heals, and recovers after activity. An integrated approach adds layers like lab testing, nutrition support, lifestyle changes, and hands-on therapy for muscles and joints, which is especially helpful for long-lasting conditions like fibromyalgia, arthritis, migraines, chronic back and neck pain, and pain that lingers after surgery or injury.",
+        ],
+      },
+      {
+        heading: "Key Qualities to Look for in a Functional Medicine Doctor",
+        paragraphs: [
+          "When you search for a functional medicine doctor near Ormond Beach, you'll see many options and titles, and not all are the same, especially for chronic pain and metabolic issues. A few things worth looking for:",
+        ],
+      },
+      {
+        heading: "Training and Credentials",
+        bullets: [
+          "Experience with sports medicine or musculoskeletal care",
+          "Training in neuromuscular rehabilitation or movement-based work",
+          "Education in functional lab interpretation and metabolic health",
+        ],
+      },
+      {
+        heading: "Comprehensive Assessment Style",
+        bullets: [
+          "Takes a detailed history of your pain, lifestyle, sleep, stress, and digestion",
+          "Reviews past imaging and lab work rather than just repeating the same tests",
+          "Orders targeted new labs when needed, not huge generic panels that don't match your case",
+        ],
+      },
+      {
+        paragraphs: [
+          "A collaborative mindset matters too, a provider who connects patterns across your whole health picture rather than chasing one symptom at a time, and who partners with you on decisions along the way.",
+        ],
+      },
+      {
+        heading: "Find a Team That Fits Your Goals",
+        paragraphs: [
+          "If you've been cycling through care without lasting results, it may be time for a more thorough evaluation. Our Ormond Beach team takes the time to understand your specific situation before building a plan.",
         ],
       },
     ],
@@ -234,6 +965,79 @@ export const BLOG_POSTS: BlogPostEntry[] = [
   {
     year: "2026",
     month: "07",
+    day: "03",
+    slug: "what-to-expect-from-herniated-disc-treatment-in-orange-county",
+    title: "What to Expect From Non-Surgical Herniated Disc Treatment",
+    description:
+      "Curious what non-surgical herniated disc treatment actually involves? Here's what a typical care plan and recovery timeline look like.",
+    image: "/images/legacy/testimonial-gallery-3.jpg",
+    imageWidth: "1600",
+    imageHeight: "1000",
+    imageCaption: "disc treatment plan",
+    datePublished: "2026-07-03T14:00:00+00:00",
+    dateModified: "2026-07-03T14:00:00+00:00",
+    section: "Medical Care",
+    relatedServiceHref: "/spinal-decompression-therapy/",
+    relatedServiceLabel: "Spinal Decompression Therapy",
+    body: [
+      {
+        paragraphs: [
+          "Herniated disc pain can take you out of the life you love fast. One day you're at the beach or playing pickleball, and the next your back or leg pain is so sharp you don't even want to bend to tie your shoes. For active people around Ormond Beach, that kind of pain can shut down work, family time, and weekend plans.",
+          "The good news is herniated disc treatment has changed a lot. Care is no longer only about bed rest, pain medication, and hoping things calm down, these days it can be targeted, active, and non-surgical, with a clear plan to help you move again.",
+        ],
+      },
+      {
+        heading: "Understanding Your Herniated Disc Diagnosis",
+        paragraphs: [
+          "A herniated disc happens when the soft inner part of a spinal disc pushes out through its outer layer, which can press on a nearby nerve and set off a mix of symptoms, such as:",
+        ],
+        bullets: [
+          "Sharp or burning pain in the back, neck, or along a leg or arm",
+          "Numbness, tingling, or that \"pins and needles\" feeling",
+          "Weakness in a leg, foot, arm, or hand",
+          "Pain that gets worse with sitting, bending, or driving too long",
+        ],
+      },
+      {
+        paragraphs: [
+          "Red flag signs that need prompt medical attention include loss of bowel or bladder control, sudden strong weakness, or pain with fever or major trauma. A real diagnosis is more than a quick glance and a prescription, a thorough evaluation usually includes detailed health and injury history, orthopedic and neurological testing, and a posture and movement assessment. Imaging can be helpful, but it isn't always needed on day one, since many people have disc changes on MRI with no pain at all.",
+          "A good provider looks past the disc itself, checking for contributing factors like tight hips or hamstrings, weak glutes or deep core muscles, stiff joints in the spine or pelvis, and long hours sitting, driving, or working in one posture.",
+        ],
+      },
+      {
+        heading: "What Non-Surgical Care Looks Like Day to Day",
+        paragraphs: [
+          "Non-surgical care isn't a one-and-done visit, it tends to follow a rhythm over several weeks. Early on, visits are more frequent, focused on calming pain and helping you move a little better. As symptoms ease, care shifts toward restoring strength and preventing a repeat episode. A typical session may include some mix of:",
+        ],
+        bullets: [
+          "Gentle, specific spinal and joint adjustments to improve motion",
+          "Soft-tissue work to relax tight muscles and reduce guarding",
+          "Spinal decompression or traction to reduce pressure on the disc and nerve",
+          "Guided corrective exercises to start waking up the right muscles",
+        ],
+      },
+      {
+        paragraphs: [
+          "Between visits, home care plays a big role too: short bouts of icing or heat used at the right times, simple mobility drills, ergonomic tweaks for your desk or car seat, and a plan for what to do if you have a small flare so you don't panic. Relief can show up quickly, sometimes within days to a few weeks for newer cases, while lasting change with better strength and control usually takes several weeks to a few months of consistent care.",
+        ],
+      },
+      {
+        heading: "How an Integrated Approach Transforms Disc Recovery",
+        paragraphs: [
+          "Our Ormond Beach team focuses on more than the disc itself, blending chiropractic care, neuromuscular rehabilitation, and functional medicine to address both the irritated tissue and the reasons it got overloaded in the first place.",
+        ],
+      },
+      {
+        heading: "Start With a Clear Evaluation",
+        paragraphs: [
+          "If you've been diagnosed with a herniated disc and aren't sure what comes next, a thorough evaluation is the best place to start. Our Ormond Beach team can walk you through what a non-surgical plan would look like for your specific case.",
+        ],
+      },
+    ],
+  },
+  {
+    year: "2026",
+    month: "07",
     day: "02",
     slug: "knee-decompression-therapy-chronic-knee-pain",
     title: "Understanding Knee Decompression Therapy for Chronic Knee Pain",
@@ -277,6 +1081,357 @@ export const BLOG_POSTS: BlogPostEntry[] = [
         heading: "Take the Next Step Toward Pain-Free Movement",
         paragraphs: [
           "If chronic knee pain has been holding you back, it's worth exploring options before considering surgery. Our Ormond Beach team offers knee decompression therapy alongside a full evaluation to determine what's really driving your symptoms and how to best relieve them.",
+        ],
+      },
+    ],
+  },
+  {
+    year: "2026",
+    month: "06",
+    day: "26",
+    slug: "understanding-non-surgical-spine-treatment-in-orange-county",
+    title: "Understanding Non-Surgical Spine Treatment",
+    description:
+      "Surgery isn't the only option for many spine problems. Learn what non-surgical spine treatment involves and who tends to benefit most.",
+    image: "/images/legacy/meet-our-team-hero.avif",
+    imageWidth: "1600",
+    imageHeight: "1000",
+    imageCaption: "non-surgical spine care",
+    datePublished: "2026-06-26T14:00:00+00:00",
+    dateModified: "2026-06-26T14:00:00+00:00",
+    section: "Medical Care",
+    relatedServiceHref: "/spinal-decompression-therapy/",
+    relatedServiceLabel: "Spinal Decompression Therapy",
+    body: [
+      {
+        paragraphs: [
+          "Spine pain can change your whole season. Instead of walking the pier, heading to the beach, or cheering at a ball game, you might be stuck on the sidelines thinking about your back or neck every time you move. Many adults around Ormond Beach know that feeling all too well.",
+          "More people are starting to ask a simple question: is surgery really the only way? For many spine problems, the answer is no. Non-surgical spine treatment is becoming a top choice for people who want to stay active, avoid long recoveries, and limit heavy medication when possible.",
+        ],
+      },
+      {
+        heading: "Why So Many People Are Avoiding Spine Surgery",
+        paragraphs: [
+          "Spine issues are very common here. Long commutes, desk work, and active weekends can all add up over time, leading to problems such as:",
+        ],
+        bullets: [
+          "Disc bulges and herniations",
+          "Spinal stenosis, or narrowing around the nerves",
+          "Sciatica and radiating leg pain",
+          "Facet joint pain in the low back or neck",
+          "Posture-related pain from phones, laptops, or driving",
+        ],
+      },
+      {
+        paragraphs: [
+          "Surgery can sometimes be the right choice, especially in true emergencies, but it also comes with possible downsides worth thinking through carefully:",
+        ],
+        bullets: [
+          "Long recovery periods away from favorite activities",
+          "Limits on bending, lifting, or twisting",
+          "Post-surgical pain or stiffness",
+          "Risk that symptoms don't fully improve",
+          "A chance of needing more procedures later",
+        ],
+      },
+      {
+        paragraphs: [
+          "There's growing support for trying conservative care first when there's no red-flag emergency, like loss of bowel or bladder control, severe trauma, or fast, progressive weakness. Addressing spine issues early, while you can still move, often gives more options to stabilize and support the body.",
+        ],
+      },
+      {
+        heading: "What Non-Surgical Spine Treatment Looks Like",
+        paragraphs: [
+          "Non-surgical spine treatment isn't just one single therapy, it's a thoughtful mix of approaches that work together. Chiropractic and joint-focused methods may include:",
+        ],
+        bullets: [
+          "Gentle spinal adjustments tailored to comfort and safety",
+          "Joint mobilization to improve motion without strong force",
+          "Traction or decompression to ease pressure on discs and nerves",
+        ],
+      },
+      {
+        paragraphs: ["Neuromuscular rehabilitation focuses on how you move in real life, often including:"],
+        bullets: [
+          "Corrective exercises to retrain weak or tight areas",
+          "Movement retraining so everyday motions feel safer and easier",
+          "Core stabilization to support the spine",
+          "Neuromuscular re-education so muscles and nerves \"talk\" better",
+        ],
+      },
+      {
+        paragraphs: ["Functional medicine looks inside the body for issues that may slow healing or increase pain, such as:"],
+        bullets: [
+          "Systemic inflammation",
+          "Nutritional gaps that may affect tissues",
+          "Metabolic problems that influence recovery",
+          "Stress and sleep patterns that impact pain levels",
+        ],
+      },
+      {
+        heading: "How We Address Root Causes of Pain",
+        paragraphs: [
+          "When someone comes in with spine pain, we start by listening. A detailed history gives clues about what might be driving the problem, how it started, what makes it better or worse, and what you want to get back to doing.",
+        ],
+      },
+      {
+        heading: "Explore Your Options Before Considering Surgery",
+        paragraphs: [
+          "If you've been told surgery might be in your future, it's worth exploring non-surgical options first. Our Ormond Beach team can evaluate your spine and let you know whether a conservative plan makes sense for you.",
+        ],
+      },
+    ],
+  },
+  {
+    year: "2026",
+    month: "06",
+    day: "19",
+    slug: "why-shoulder-pain-keeps-coming-back-after-rest-and-pt",
+    title: "Why Shoulder Pain Keeps Coming Back After Rest and Therapy",
+    description:
+      "If shoulder pain keeps returning after rest or physical therapy, the shoulder may not be the whole story. Here's what else could be involved.",
+    image: "/images/chiropractic-care.jpg",
+    imageWidth: "1600",
+    imageHeight: "1000",
+    imageCaption: "shoulder pain evaluation",
+    datePublished: "2026-06-19T14:00:00+00:00",
+    dateModified: "2026-06-19T14:00:00+00:00",
+    section: "Medical Care",
+    relatedServiceHref: "/chiropractic-care/",
+    relatedServiceLabel: "Chiropractic Care",
+    body: [
+      {
+        paragraphs: [
+          "Shoulder pain that keeps returning after rest or a round of physical therapy can feel confusing and discouraging. Things calm down when you back off workouts or overhead activities, then as soon as you reach, lift, or get back to your routine, the ache or sharp pinch is right there again. Many people around Ormond Beach want to stay active, keep working, and care for family, and recurring shoulder pain can make all of that harder than it should be.",
+        ],
+      },
+      {
+        heading: "Why Shoulder Pain Often Returns After Short-Term Relief",
+        paragraphs: [
+          "When chronic shoulder pain calms down after rest, ice, heat, or basic therapy, it's easy to assume the problem is solved. Often, though, those strategies soothe symptoms in the short term instead of fully addressing the joint mechanics, muscle balance, and movement patterns still in the background. Everyday habits can quietly keep irritating the same tissues, even during or after care:",
+        ],
+        bullets: [
+          "Long hours at a computer with the head shifted forward and shoulders rounded",
+          "Repetitive overhead reaching, lifting, or throwing for work or recreation",
+          "Sleeping with the arm pinned overhead or tucked under the body",
+          "Carrying bags or kids on the same side all the time",
+        ],
+      },
+      {
+        paragraphs: [
+          "If rehab stops as soon as pain eases, the shoulder may not have regained full strength, flexibility, and control. Things can feel fine with light daily activities, then flare once intensity or load increases, a common pattern that doesn't automatically mean something is severely wrong structurally.",
+        ],
+      },
+      {
+        heading: "The Shoulder as Part of a Larger Movement System",
+        paragraphs: [
+          "The shoulder doesn't work in isolation, it's part of a chain that includes the neck, upper back, ribcage, and core. If any link in that chain is stiff, weak, or out of sync, the shoulder often ends up working overtime. Over time, many people develop altered movement patterns without realizing it, such as:",
+        ],
+        bullets: [
+          "Shrugging the shoulder toward the ear instead of using mid-back muscles",
+          "Arching the low back when lifting the arm overhead",
+          "Turning the whole trunk instead of rotating the shoulder smoothly",
+        ],
+      },
+      {
+        paragraphs: [
+          "Even after pain fades, these patterns can linger, since the nervous system remembers protective habits that developed during earlier pain or injury. When neuromuscular control is off, certain muscles might work too hard while others stay quiet, setting the stage for future flare-ups.",
+        ],
+      },
+      {
+        heading: "How Stress, Sleep, and Whole-Body Health Influence Shoulder Pain",
+        paragraphs: [
+          "Recurring shoulder pain isn't just about joints and muscles, whole-body health plays a powerful role too. Ongoing stress can increase overall muscle tension, especially around the neck and shoulders, making minor irritations feel like major problems. Poor or inconsistent sleep can change how sensitive the nervous system feels, and low energy during the day can affect the way you move, since many people unconsciously slouch or compensate when tired.",
+        ],
+      },
+      {
+        heading: "What a More Comprehensive Shoulder Evaluation Can Explore",
+        paragraphs: [
+          "If chronic shoulder pain keeps coming back, a more thorough evaluation may be worth considering, starting with questions like:",
+        ],
+        bullets: [
+          "What sports, workouts, or hobbies do you enjoy, and how often?",
+          "What are your work demands, including lifting, reaching, or computer use?",
+          "Have you had previous injuries anywhere in your body, not just the shoulder?",
+          "When, exactly, does the pain tend to show up or get worse?",
+        ],
+      },
+      {
+        paragraphs: [
+          "From there, a detailed assessment might look at shoulder mobility, shoulder blade control, and how the neck and upper back move, since watching how you perform functional tasks like reaching overhead, pushing, or carrying often reveals more than testing a single joint in isolation.",
+        ],
+      },
+      {
+        heading: "Moving Forward When Your Shoulder Pain Keeps Coming Back",
+        paragraphs: [
+          "It can help to view persistent symptoms as useful feedback that more information is needed. It may help to jot down which activities or positions come before pain increases, how your sleep has been leading up to a flare, and any changes in stress or workload.",
+        ],
+      },
+      {
+        heading: "Break the Cycle of Recurring Shoulder Pain",
+        paragraphs: [
+          "Our Ormond Beach team can assess how your shoulder fits into your overall movement and build a more complete plan.",
+        ],
+      },
+    ],
+  },
+  {
+    year: "2026",
+    month: "06",
+    day: "19",
+    slug: "why-numbness-and-tingling-dont-go-away",
+    title: "Why Numbness and Tingling Don't Go Away",
+    description:
+      "Numbness and tingling that stick around are worth paying attention to. Learn what can cause persistent nerve symptoms and when to get checked.",
+    image: "/images/neuropathy-treatment.jpg",
+    imageWidth: "1600",
+    imageHeight: "1000",
+    imageCaption: "numbness and tingling",
+    datePublished: "2026-06-19T15:00:00+00:00",
+    dateModified: "2026-06-19T15:00:00+00:00",
+    section: "Medical Care",
+    relatedServiceHref: "/neuropathy-treatment/",
+    relatedServiceLabel: "Neuropathy Treatment",
+    body: [
+      {
+        paragraphs: [
+          "Numbness, tingling, and that familiar \"pins and needles\" feeling can be easy to ignore at first, especially if they come and go. When those sensations start showing up more often, last longer, or spread to new areas, they can become distracting and worrying. Many people start searching for causes and quickly find there are many possibilities, some simple and some more complex.",
+        ],
+      },
+      {
+        heading: "When \"Pins and Needles\" Stop Being Harmless",
+        paragraphs: [
+          "Most of us have had a foot fall asleep after sitting with legs crossed too long, and the numbness fades once we move. Persistent or frequently recurring numbness, tingling, burning, or buzzing sensations are different, and they're worth understanding rather than dismissing.",
+        ],
+      },
+      {
+        heading: "How Nerves Work and Why Sensation Changes",
+        paragraphs: [
+          "The nervous system is the body's communication network. The brain and spinal cord form the central hub, and nerves branch out to the skin, muscles, and organs. If something irritates or disrupts these signals, the messages can get distorted, showing up as:",
+        ],
+        bullets: [
+          "Numbness or decreased sensation",
+          "Tingling, buzzing, or \"pins and needles\"",
+          "Burning or electric shock-like pain",
+          "Weakness or a feeling that muscles aren't responding normally",
+        ],
+      },
+      {
+        heading: "Common Structural Triggers Behind Nerve Symptoms",
+        paragraphs: [
+          "The spinal cord travels through the center of the spine, and nerves exit between the vertebrae to supply different areas of the body. Common structural contributors include:",
+        ],
+        bullets: [
+          "Herniated or bulging discs that can press on nerve roots",
+          "Spinal stenosis, or narrowing of spaces where nerves travel",
+          "Entrapment neuropathies, where a nerve is compressed as it passes through a tight tunnel or between tissues",
+          "Muscular tightness or joint irritation that affects how a nerve glides or is loaded",
+        ],
+      },
+      {
+        heading: "Metabolic, Lifestyle, and Whole-Body Factors",
+        paragraphs: [
+          "Not all causes of nerve pain are mechanical. Blood sugar balance, nutritional intake, and circulation are often discussed in relation to certain nerve symptoms. Long-term habits can create a background that makes nerves more vulnerable, for example:",
+        ],
+        bullets: [
+          "Limited movement or long periods of sitting",
+          "Repetitive tasks that load the same areas day after day",
+          "Ongoing high stress and poor sleep quality",
+          "Dietary patterns that may influence inflammation or recovery",
+        ],
+      },
+      {
+        heading: "When the Nervous System Itself Becomes Sensitive",
+        paragraphs: [
+          "Sometimes the main issue isn't a single structural problem, but a nervous system that's become more sensitive over time. With repeated pain, ongoing stress, or a history of injuries, the brain and spinal cord can start responding differently to incoming signals, and sensations that were once easy to tune out may start to feel louder or more widespread.",
+        ],
+      },
+      {
+        heading: "Patterns That May Signal It's Time to Get Checked",
+        paragraphs: [
+          "Only you and your healthcare providers can decide when it's time for a formal evaluation, but general patterns that often prompt people to seek help include:",
+        ],
+        bullets: [
+          "Symptoms that are steadily getting more frequent or intense",
+          "Numbness or tingling that starts to affect balance, coordination, or grip",
+          "Sensations that spread from one area to another, like from the low back down the leg",
+          "Nerve-related symptoms that begin to interfere with work, exercise, or daily tasks",
+        ],
+      },
+      {
+        paragraphs: [
+          "Sudden severe changes in sensation, new problems with bladder or bowel control, or significant weakness warrant timely, in-person assessment. Our Ormond Beach team can help identify what's behind your symptoms and build a plan to address it.",
+        ],
+      },
+    ],
+  },
+  {
+    year: "2026",
+    month: "06",
+    day: "19",
+    slug: "brain-fog-and-fatigue-functional-medicine-clues-to-explore",
+    title: "When Poor Sleep and Stress Show Up as Brain Fog and Fatigue",
+    description:
+      "Brain fog and fatigue can be frustrating when lab work looks normal. Learn how sleep, stress, and daily habits may be contributing.",
+    image: "/images/blog/when-poor-sleep-and-stress-show-up-as-brain-fog-and-fatigue.webp",
+    imageWidth: "2400",
+    imageHeight: "1350",
+    imageCaption: "wellness and recovery",
+    datePublished: "2026-06-19T16:00:00+00:00",
+    dateModified: "2026-06-19T16:00:00+00:00",
+    section: "Medical Care",
+    body: [
+      {
+        paragraphs: [
+          "Brain fog and fatigue can creep into daily life in surprisingly disruptive ways. Words disappear mid-sentence, a simple email takes three attempts to finish, and a cup of coffee becomes less about enjoyment and more about getting through the afternoon. It can feel especially discouraging when basic lab work comes back normal, yet focus, memory, and stamina still feel far from it.",
+        ],
+      },
+      {
+        heading: "What Brain Fog and Fatigue May Be Telling You",
+        paragraphs: [
+          "Clear thinking and steady energy depend on a consistent supply of oxygen, nutrients, and balanced blood sugar. When those inputs are steady, it's usually easier to find words, remember small details, and move through the day without feeling like you're dragging yourself from task to task. Short or fragmented sleep, chronic stress, digestive issues, and nutrient gaps may each create small shifts that don't always show up as glaring red flags on a single lab test, but stacked together, the combined effect can feel like mental static and low fuel.",
+        ],
+      },
+      {
+        heading: "Everyday Patterns That Can Cloud Your Thinking",
+        paragraphs: [
+          "Some of the most helpful clues hide in daily routine. Irregular bedtimes and late-night screen time can leave you technically sleeping enough hours but still waking up unrefreshed. Blood sugar swings, long gaps between meals, sugary snacks, or energy drinks, can create a quick spike in energy followed by a crash. It can help to notice:",
+        ],
+        bullets: [
+          "What time of day your brain fog and fatigue are strongest",
+          "Whether certain meals or snacks seem to help or hurt your focus",
+          "How you feel after nights of poor sleep versus better sleep",
+          "How your brain feels on high-stress days versus calmer days",
+        ],
+      },
+      {
+        heading: "Hidden Body Clues Worth Paying Attention To",
+        paragraphs: [
+          "Beyond daily habits, the body often shares extra context through digestion, bloating or feeling unusually tired after meals can sit in the background of brain fog and fatigue. Circulation and musculoskeletal health can play a role too, if joints feel stiff or movement is limited, blood flow and oxygen delivery to the brain and muscles may not be as efficient as they could be. Mood and motivation often travel alongside cognitive clarity, and looking at these clues together, rather than in isolation, can guide more thoughtful conversations about testing and lifestyle shifts.",
+        ],
+      },
+      {
+        heading: "Lifestyle Signals Worth Tracking Before Your Next Visit",
+        paragraphs: [
+          "A simple daily log for a week or two can help gather better information, not to judge yourself, but to notice patterns. Consider making rough notes on:",
+        ],
+        bullets: [
+          "Bedtime, wake time, and perceived sleep quality",
+          "What you eat and drink, including caffeine and alcohol",
+          "Movement, stretching, or workouts",
+          "Screen time, especially in the evening",
+          "Your level of brain fog and fatigue at different times of day",
+        ],
+      },
+      {
+        paragraphs: [
+          "Some people find that staying hydrated, eating more slowly, or adding short movement breaks makes a difference. Before your visit, it can help to jot down specific questions, any patterns you noticed in your log, and a short list of your health priorities and goals.",
+        ],
+      },
+      {
+        heading: "Moving From Frustration to a More Informed Next Step",
+        paragraphs: [
+          "Feeling mentally foggy and physically drained can be discouraging, especially if you've been told everything looks fine. Your experience matters, and it's reasonable to keep asking questions until the patterns behind your brain fog and fatigue feel better understood. Our Ormond Beach team can help you connect these patterns to a plan that supports better focus and energy.",
         ],
       },
     ],
@@ -381,82 +1536,6 @@ export const BLOG_POSTS: BlogPostEntry[] = [
       },
     ],
   },
-  {
-    year: "2026",
-    month: "04",
-    day: "06",
-    slug: "when-neuropathy-needs-a-specialist",
-    title: "Recognizing When Neuropathy Needs a Specialist in Ormond Beach",
-    description:
-      "Read the Ormond Spine & Nerve Center blog for expert tips on neuropathy, hormone therapy, and regenerative health. Check our Recognizing When Neuropathy Needs a Specialist in",
-    image: "/images/legacy/blog-neuropathy-specialist.jpg",
-    imageWidth: "1920",
-    imageHeight: "1280",
-    imageCaption: "leg pain",
-    datePublished: "2026-04-06T06:42:18+00:00",
-    dateModified: "2026-04-08T06:47:32+00:00",
-    section: "Medical Care",
-  },
-  {
-    year: "2025",
-    month: "08",
-    day: "17",
-    slug: "differentiating-numbness-tingling-burning-diagnoses",
-    title: "Differentiating Numbness/Tingling/Burning Diagnoses",
-    description:
-      "Read the Ormond Spine & Nerve Center blog for expert tips on neuropathy, hormone therapy, and regenerative health. Check our Differentiating Numbness/Tingling/Burning Diagnoses",
-    image: "/images/legacy/blog-burning-sensation.webp",
-    imageWidth: "926",
-    imageHeight: "601",
-    datePublished: "2025-08-17T19:13:09+00:00",
-    dateModified: "2025-08-17T19:47:16+00:00",
-    section: "Uncategorized",
-  },
-  {
-    year: "2025",
-    month: "08",
-    day: "17",
-    slug: "can-neuropathy-be-reversed",
-    title: "Can Neuropathy Be Reversed?",
-    description:
-      "Read the Ormond Spine & Nerve Center blog for expert tips on neuropathy, hormone therapy, and regenerative health. Check our Can Neuropathy Be Reversed? post for the latest news.",
-    image: "/images/legacy/blog-neuropathy-reversed.jpeg",
-    imageWidth: "300",
-    imageHeight: "168",
-    datePublished: "2025-08-17T19:10:36+00:00",
-    dateModified: "2025-08-17T19:23:04+00:00",
-    section: "Uncategorized",
-  },
-  {
-    year: "2025",
-    month: "08",
-    day: "17",
-    slug: "which-medications-can-cause-neuropathy",
-    title: "Which Medications Can Cause Neuropathy?",
-    description:
-      "Read the Ormond Spine & Nerve Center blog for expert tips on neuropathy, hormone therapy, and regenerative health. Check our Which Medications Can Cause Neuropathy? post for the",
-    image: "/images/legacy/blog-medications-neuropathy.avif",
-    imageWidth: "740",
-    imageHeight: "489",
-    datePublished: "2025-08-17T19:12:14+00:00",
-    dateModified: "2025-08-17T19:12:14+00:00",
-    section: "Uncategorized",
-  },
-  {
-    year: "2025",
-    month: "08",
-    day: "17",
-    slug: "which-neuropathy-supplement-is-the-best",
-    title: "Which Neuropathy Supplement Is The Best?",
-    description:
-      "Read the Ormond Spine & Nerve Center blog for expert tips on neuropathy, hormone therapy, and regenerative health. Check our Which Neuropathy Supplement Is The Best? post for the",
-    image: "/images/legacy/blog-neuropathy-supplement.avif",
-    imageWidth: "740",
-    imageHeight: "389",
-    datePublished: "2025-08-17T19:07:31+00:00",
-    dateModified: "2025-08-17T19:07:32+00:00",
-    section: "Uncategorized",
-  },
 ];
 
 export function getBlogPostPath(post: BlogPostEntry): string {
@@ -480,12 +1559,15 @@ export function findBlogPost(
 
 /** Estimated reading time (whole minutes, minimum 1) from the post body word count. */
 export function getReadTimeMinutes(post: BlogPostEntry): number {
+  const countWords = (text: string) => text.split(/\s+/).length;
   const wordCount =
-    post.body?.reduce(
-      (total, block) =>
-        total + block.paragraphs.reduce((sum, p) => sum + p.split(/\s+/).length, 0),
-      0
-    ) ?? 0;
+    post.body?.reduce((total, block) => {
+      const paragraphWords =
+        block.paragraphs?.reduce((sum, p) => sum + countWords(p), 0) ?? 0;
+      const bulletWords =
+        block.bullets?.reduce((sum, b) => sum + countWords(b), 0) ?? 0;
+      return total + paragraphWords + bulletWords;
+    }, 0) ?? 0;
   return Math.max(1, Math.round(wordCount / 200));
 }
 
@@ -499,14 +1581,19 @@ const BLOG_TOPIC_BY_SLUG: Record<string, string> = {
   "spinal-decompression-therapy-non-surgical-disc-relief": "Spine & Chiropractic",
   "car-accident-early-chiropractic-care": "Spine & Chiropractic",
   "knee-decompression-therapy-chronic-knee-pain": "Knee & Joint",
-  "when-neuropathy-needs-a-specialist": "Neuropathy & Nerve Health",
-  "differentiating-numbness-tingling-burning-diagnoses": "Neuropathy & Nerve Health",
-  "can-neuropathy-be-reversed": "Neuropathy & Nerve Health",
-  "which-medications-can-cause-neuropathy": "Neuropathy & Nerve Health",
-  "which-neuropathy-supplement-is-the-best": "Neuropathy & Nerve Health",
   "how-laser-therapy-speeds-healing": "Recovery & Advanced Therapies",
   "shockwave-therapy-accelerating-recovery": "Recovery & Advanced Therapies",
   "compression-therapy-for-circulation-and-recovery": "Recovery & Advanced Therapies",
+  "unlocking-neuromuscular-rehabilitation-for-back-pain-in-orange-county": "Spine & Chiropractic",
+  "common-mistakes-in-herniated-disc-treatment-in-orange-county": "Spine & Chiropractic",
+  "signs-non-surgical-spine-treatment-in-orange-county-is-working": "Spine & Chiropractic",
+  "missed-signs-you-need-non-surgical-spine-treatment-in-orange-county": "Spine & Chiropractic",
+  "disc-herniation-vs-sciatica-whats-causing-leg-pain-in-irvine": "Spine & Chiropractic",
+  "what-to-expect-from-herniated-disc-treatment-in-orange-county": "Spine & Chiropractic",
+  "understanding-non-surgical-spine-treatment-in-orange-county": "Spine & Chiropractic",
+  "why-shoulder-pain-keeps-coming-back-after-rest-and-pt": "Knee & Joint",
+  "hidden-triggers-of-nerve-pain-and-when-to-seek-treatment-in-orange-county": "Neuropathy & Nerve Health",
+  "why-numbness-and-tingling-dont-go-away": "Neuropathy & Nerve Health",
 };
 
 function inferBlogTopic(title: string, description = ""): string {

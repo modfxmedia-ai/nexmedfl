@@ -102,9 +102,8 @@ export function BlogFilterGrid({ posts }: { posts: BlogPostEntry[] }) {
   const [active, setActive] = useState<string>("All");
 
   const filtered = useMemo(() => {
-    return active === "All"
-      ? posts
-      : posts.filter((post) => getBlogTopic(post) === active);
+    // Show every post in the selected topic so no article becomes unreachable from the index.
+    return active === "All" ? posts : posts.filter((post) => getBlogTopic(post) === active);
   }, [active, posts]);
 
   const featured = active === "All" ? filtered[0] : undefined;
