@@ -15,7 +15,8 @@ export function getLocalBlogPosts(): BlogPostData[] {
     coverAlt: post.imageCaption || DEFAULT_COVER_ALT,
     sections: (post.body ?? []).map((block) => ({
       heading: block.heading || post.title,
-      body: [...(block.paragraphs ?? []), ...(block.bullets ?? [])],
+      paragraphs: block.paragraphs ?? [],
+      bullets: block.bullets ?? [],
     })),
     cta: post.relatedServiceHref
       ? {

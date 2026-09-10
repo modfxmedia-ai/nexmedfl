@@ -9,7 +9,7 @@ export interface BlogPostData {
   intro: string;
   coverImage: string;
   coverAlt: string;
-  sections: { heading: string; body: string[] }[];
+  sections: { heading: string; paragraphs: string[]; bullets: string[] }[];
   cta: { label: string; href: string };
   relatedPosts?: { title: string; slug: string }[];
 }

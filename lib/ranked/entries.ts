@@ -1,6 +1,5 @@
 import { BLOG_POSTS, type BlogPostEntry } from "@/lib/posts";
 import { assignUniqueBlogCovers, DEFAULT_CTA } from "./config";
-import { getLiveRankedBlogPosts } from "./posts";
 import type { BlogPostData } from "./types";
 
 export function blogPostDataToEntry(post: BlogPostData): BlogPostEntry {
@@ -25,7 +24,8 @@ export function blogPostDataToEntry(post: BlogPostData): BlogPostEntry {
       ...(post.intro ? [{ paragraphs: [post.intro] }] : []),
       ...post.sections.map((section) => ({
         heading: section.heading,
-        paragraphs: section.body,
+        paragraphs: section.paragraphs,
+        bullets: section.bullets,
       })),
     ],
     relatedServiceHref: ctaIsDefault ? undefined : post.cta.href,
@@ -35,11 +35,9 @@ export function blogPostDataToEntry(post: BlogPostData): BlogPostEntry {
 
 export async function getPublishedBlogEntries(): Promise<BlogPostEntry[]> {
   const local = BLOG_POSTS;
-  const taken = new Set(local.map((p) => p.slug));
-  const ranked = await getLiveRankedBlogPosts();
-  const extras = ranked.filter((p) => !taken.has(p.slug)).map(blogPostDataToEntry);
-  const uniqued = assignUniqueBlogCovers([...local, ...extras], {
-    reservedSlugs: taken,
+  // Ranked CMS merge disabled — only hand-written local posts are served.
+  const uniqued = assignUniqueBlogCovers(local, {
+    reservedSlugs: new Set(local.map((p) => p.slug)),
   });
 
   return uniqued.sort(
