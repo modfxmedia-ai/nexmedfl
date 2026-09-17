@@ -39,7 +39,7 @@ export async function generateMetadata(
 
   return buildMetadata({
     path: getBlogPostPath(post),
-    title: post.title,
+    title: post.metaTitle ?? post.title,
     description: post.description,
     image: post.image,
     type: "article",
